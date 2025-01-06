@@ -1,0 +1,104 @@
+.headerWrapper {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.logoImage {
+  margin-right: 0.5rem;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.menuItem {
+  position: relative;
+}
+
+.subMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.subMenuSection {
+  margin-right: 2rem;
+}
+
+.subMenuSection p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.subMenuColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.subMenuColumn a {
+  margin-bottom: 0.5rem;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burgerMenu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .burgerMenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+
+  .burgerMenu a {
+    margin-bottom: 0.5rem;
+  }
+}
