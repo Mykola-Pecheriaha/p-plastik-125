@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './HeaderMenu.module.css';
+import ConsultationButton from '../ConsultationButton/ConsultationButton';
 
 const HeaderMenu: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -184,6 +185,8 @@ const HeaderMenu: React.FC = () => {
               )}
             </div>
           </nav>
+
+          <ConsultationButton />
 
           <div className={styles.burger} onClick={toggleMenu}>
             ☰ Menu

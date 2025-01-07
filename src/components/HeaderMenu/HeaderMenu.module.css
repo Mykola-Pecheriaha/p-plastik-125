@@ -34,7 +34,7 @@
 
 .nav {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .menuItem {
@@ -51,8 +51,8 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
-  min-width: 600px;
-  max-width: 900px;
+  min-width: 200px;
+  max-width: 600px;
   z-index: 1000;
 }
 
