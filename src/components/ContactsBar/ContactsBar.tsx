@@ -6,18 +6,17 @@ import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const ContactsBar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [isBurgerVisible, setIsBurgerVisible] = useState<boolean>(false);
-  const headerRef = useRef<HTMLDivElement>(null);
+  const [isDesktop, setIsDesktop] = useState<boolean>(true);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = (): void => {
     setIsMenuOpen((prev) => !prev);
   };
 
   const handleResize = (): void => {
-    if (headerRef.current) {
-      const headerWidth = headerRef.current.offsetWidth;
-      const contentWidth = headerRef.current.scrollWidth;
-      setIsBurgerVisible(contentWidth > headerWidth);
+    setIsDesktop(window.innerWidth > 768);
+    if (window.innerWidth > 768) {
+      setIsMenuOpen(false);
     }
   };
 
@@ -29,111 +28,81 @@ const ContactsBar: React.FC = () => {
     };
   }, []);
 
-  return (
-    <div className={styles.contactsBarContainer}>
-      <div
-        className={`${styles.contactsBar} ${
-          isBurgerVisible ? styles.hidden : ''
-        }`}
-        ref={headerRef}
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const contactInfo = (
+    <>
+      <p>
+        Телефон: <a href="tel:+38(050) 7575411">+38(050) 75 75 411</a>
+      </p>
+      <p>
+        Email: <a href="mailto:Pecheryag@gmail.com">Pecheryag@gmail.com</a>
+      </p>
+      <p>
+        <a
+          href="https://goo.gl/maps/youraddress"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          корпус 1 вул.Героїв Майдану 226, (вхід з вул.Рівенська), Chernivtsi,
+          Ukraine
+        </a>
+      </p>
+    </>
+  );
+
+  const socialLinks = (
+    <div className={styles.socialLinks}>
+      <a
+        href="https://www.facebook.com/profile.php?id=100003098763675"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <div className={styles.contactInfo}>
-          <p>
-            Телефон: <a href="tel:+38(050) 7575411">+38(050) 75 75 411</a>
-          </p>
-          <p>
-            Email: <a href="mailto:Pecheryag@gmail.com">Pecheryag@gmail.com</a>
-          </p>
-          <p>
-            <a
-              href="https://goo.gl/maps/youraddress"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              корпус 1 вул.Героїв Майдану 226, (вхід з вул.Рівенська),
-              Chernivtsi, Ukraine
-            </a>
-          </p>
-        </div>
-        <div className={styles.socialLinks}>
-          <a
-            href="https://www.facebook.com/profile.php?id=100003098763675"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook size={24} />
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram size={24} />
-          </a>
-          <a
-            href="https://youtube.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaYoutube size={24} />
-          </a>
-        </div>
-      </div>
+        <FaFacebook size={24} />
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+        <FaInstagram size={24} />
+      </a>
+      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+        <FaYoutube size={24} />
+      </a>
+    </div>
+  );
 
-      {isBurgerVisible && (
-        <button
-          className={styles.burgerButton}
-          onClick={toggleMenu}
-          aria-label="Toggle Menu"
-        >
-          ☰
-        </button>
-      )}
-
-      {isBurgerVisible && isMenuOpen && (
-        <div
-          className={`${styles.burgerMenu} ${isMenuOpen ? styles.show : ''}`}
-        >
-          <p>
-            Телефон: <a href="tel:+38(050) 7575411">+38(050) 75 75 411</a>
-          </p>
-          <p>
-            Email: <a href="mailto:Pecheryag@gmail.com">Pecheryag@gmail.com</a>
-          </p>
-          <p>
-            <a
-              href="https://goo.gl/maps/youraddress"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              корпус 1 вул.Героїв Майдану 226, (вхід з вул.Рівенська),
-              Chernivtsi, Ukraine
-            </a>
-          </p>
-          <div className={styles.socialLinks}>
-            <a
-              href="https://www.facebook.com/profile.php?id=100003098763675"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {/* <FaFacebook size={24} /> */}
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram size={24} />
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaYoutube size={24} />
-            </a>
-          </div>
+  return (
+    <div className={styles.contactsBarContainer} ref={menuRef}>
+      {isDesktop ? (
+        <div className={styles.contactsBar}>
+          <div className={styles.contactInfo}>{contactInfo}</div>
+          {socialLinks}
         </div>
+      ) : (
+        <>
+          <button
+            className={styles.burgerButton}
+            onClick={toggleMenu}
+            aria-label="Toggle Menu"
+          >
+            ☰
+          </button>
+          {isMenuOpen && (
+            <div className={styles.burgerMenu}>
+              {contactInfo}
+              {socialLinks}
+            </div>
+          )}
+        </>
       )}
     </div>
   );

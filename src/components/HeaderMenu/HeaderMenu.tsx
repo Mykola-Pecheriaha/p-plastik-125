@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './HeaderMenu.module.css';
@@ -8,14 +8,34 @@ import styles from './HeaderMenu.module.css';
 const HeaderMenu: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
   };
 
   const handleSubMenuToggle = (menuName: string | null) => {
     setActiveSubMenu(menuName);
   };
+
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false);
+    setActiveSubMenu(null);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+        setActiveSubMenu(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <header className={styles.headerWrapper}>
@@ -30,7 +50,7 @@ const HeaderMenu: React.FC = () => {
           />
           <strong>PlastikP</strong>
         </div>
-        <div className={styles.headerRight}>
+        <div className={styles.headerRight} ref={menuRef}>
           <nav className={styles.nav}>
             <Link href="/">Головна</Link>
 
@@ -48,17 +68,9 @@ const HeaderMenu: React.FC = () => {
                       <Link href="/results/otto-plastic">
                         Пластика вушних раковин
                       </Link>
-                    </div>
-                  </div>
-                  <div className={styles.subMenuSection}>
-                    <div className={styles.subMenuColumn}>
                       <Link href="/results/breast-plastic">
                         Пластика грудей
                       </Link>
-                    </div>
-                  </div>
-                  <div className={styles.subMenuSection}>
-                    <div className={styles.subMenuColumn}>
                       <Link href="/results/bodi-plastic">Пластика тіла</Link>
                       <Link href="/results/tumors-skin">Пухлини шкіри</Link>
                     </div>
@@ -140,7 +152,7 @@ const HeaderMenu: React.FC = () => {
             >
               <Link href="/aboutDoctor">Про лікаря ↓</Link>
               {activeSubMenu === 'aboutDoctor' && (
-                <div className={styles.subMenu}>
+                <div className={`${styles.subMenu} ${styles.columnSubMenu}`}>
                   <Link href="/aboutDoctor/team">Команда</Link>
                   <Link href="/aboutDoctor/reviews">Відгуки</Link>
                   <Link href="/aboutDoctor/askDoctor">Запитати лікаря</Link>
@@ -160,7 +172,7 @@ const HeaderMenu: React.FC = () => {
             >
               <Link href="/operating">Відділення ↓</Link>
               {activeSubMenu === 'operating' && (
-                <div className={styles.subMenu}>
+                <div className={`${styles.subMenu} ${styles.columnSubMenu}`}>
                   <Link href="/operating/operatingRoom">Операційна</Link>
                   <Link href="/operating/reviews">Підготовка до операції</Link>
                   <Link href="/operating/preparation">Операційні моменти</Link>
@@ -179,21 +191,183 @@ const HeaderMenu: React.FC = () => {
 
           {isMenuOpen && (
             <div className={styles.burgerMenu}>
-              <Link href="/" onClick={toggleMenu}>
+              <Link href="/" onClick={handleMenuItemClick}>
                 Головна
               </Link>
-              <Link href="/results" onClick={toggleMenu}>
-                Результати
-              </Link>
-              <Link href="/services" onClick={toggleMenu}>
-                Послуги
-              </Link>
-              <Link href="/aboutDoctor" onClick={toggleMenu}>
-                Про лікаря
-              </Link>
-              <Link href="/operating/" onClick={toggleMenu}>
-                Відділення
-              </Link>
+              <div className={styles.burgerMenuItem}>
+                <span onClick={() => handleSubMenuToggle('results')}>
+                  Результати ↓
+                </span>
+                {activeSubMenu === 'results' && (
+                  <div className={styles.burgerSubMenu}>
+                    <Link
+                      href="/results/face-plastic"
+                      onClick={handleMenuItemClick}
+                    >
+                      Пластика обличчя
+                    </Link>
+                    <Link
+                      href="/results/otto-plastic"
+                      onClick={handleMenuItemClick}
+                    >
+                      Пластика вушних раковин
+                    </Link>
+                    <Link
+                      href="/results/breast-plastic"
+                      onClick={handleMenuItemClick}
+                    >
+                      Пластика грудей
+                    </Link>
+                    <Link
+                      href="/results/bodi-plastic"
+                      onClick={handleMenuItemClick}
+                    >
+                      Пластика тіла
+                    </Link>
+                    <Link
+                      href="/results/tumors-skin"
+                      onClick={handleMenuItemClick}
+                    >
+                      Пухлини шкіри
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <div className={styles.burgerMenuItem}>
+                <span onClick={() => handleSubMenuToggle('services')}>
+                  Послуги ↓
+                </span>
+                {activeSubMenu === 'services' && (
+                  <div className={styles.burgerSubMenu}>
+                    <Link
+                      href="/services/face-lift"
+                      onClick={handleMenuItemClick}
+                    >
+                      Підтяжка обличчя та шиї
+                    </Link>
+                    <Link
+                      href="/services/blefaro-plastic"
+                      onClick={handleMenuItemClick}
+                    >
+                      Блефаропластика
+                    </Link>
+                    <Link
+                      href="/services/chino-plasty"
+                      onClick={handleMenuItemClick}
+                    >
+                      Пластика підборіддя
+                    </Link>
+                    <Link
+                      href="/services/breast-augmentation"
+                      onClick={handleMenuItemClick}
+                    >
+                      Збільшення грудей
+                    </Link>
+                    <Link
+                      href="/services/breast-reduction"
+                      onClick={handleMenuItemClick}
+                    >
+                      Зменшення грудей
+                    </Link>
+                    <Link
+                      href="/services/abdominoplasty"
+                      onClick={handleMenuItemClick}
+                    >
+                      Абдомінопластика
+                    </Link>
+                    <Link
+                      href="/services/liposuction"
+                      onClick={handleMenuItemClick}
+                    >
+                      Ліпосакція
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <div className={styles.burgerMenuItem}>
+                <span onClick={() => handleSubMenuToggle('aboutDoctor')}>
+                  Про лікаря ↓
+                </span>
+                {activeSubMenu === 'aboutDoctor' && (
+                  <div className={styles.burgerSubMenu}>
+                    <Link
+                      href="/aboutDoctor/team"
+                      onClick={handleMenuItemClick}
+                    >
+                      Команда
+                    </Link>
+                    <Link
+                      href="/aboutDoctor/reviews"
+                      onClick={handleMenuItemClick}
+                    >
+                      Відгуки
+                    </Link>
+                    <Link
+                      href="/aboutDoctor/askDoctor"
+                      onClick={handleMenuItemClick}
+                    >
+                      Запитати лікаря
+                    </Link>
+                    <Link
+                      href="/aboutDoctor/usefulInformation"
+                      onClick={handleMenuItemClick}
+                    >
+                      Корисна інформація
+                    </Link>
+                    <Link
+                      href="/aboutDoctor/brieflyAbout"
+                      onClick={handleMenuItemClick}
+                    >
+                      Коротко про нас
+                    </Link>
+                    <Link
+                      href="/aboutDoctor/Contacts"
+                      onClick={handleMenuItemClick}
+                    >
+                      Контакти
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <div className={styles.burgerMenuItem}>
+                <span onClick={() => handleSubMenuToggle('operating')}>
+                  Відділення ↓
+                </span>
+                {activeSubMenu === 'operating' && (
+                  <div className={styles.burgerSubMenu}>
+                    <Link
+                      href="/operating/operatingRoom"
+                      onClick={handleMenuItemClick}
+                    >
+                      Операційна
+                    </Link>
+                    <Link
+                      href="/operating/reviews"
+                      onClick={handleMenuItemClick}
+                    >
+                      Підготовка до операції
+                    </Link>
+                    <Link
+                      href="/operating/preparation"
+                      onClick={handleMenuItemClick}
+                    >
+                      Операційні моменти
+                    </Link>
+                    <Link
+                      href="/operating/postoperative"
+                      onClick={handleMenuItemClick}
+                    >
+                      Післяопераційні моменти
+                    </Link>
+                    <Link
+                      href="/operating/rehabilitation"
+                      onClick={handleMenuItemClick}
+                    >
+                      Реабілітація
+                    </Link>
+                  </div>
+                )}
+              </div>
             </div>
           )}
         </div>
