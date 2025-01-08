@@ -155,39 +155,41 @@ const HeaderMenu: React.FC = () => {
 
             <div
               className={styles.menuItem}
-              onMouseEnter={() => handleSubMenuToggle('aboutDoctor')}
+              onMouseEnter={() => handleSubMenuToggle('about-doctor')}
               onMouseLeave={() => handleSubMenuToggle(null)}
             >
-              <Link href="/aboutDoctor">Про лікаря ↓</Link>
-              {activeSubMenu === 'aboutDoctor' && (
+              <Link href="/about-doctor">Про лікаря ↓</Link>
+              {activeSubMenu === 'about-doctor' && (
                 <div className={`${styles.subMenu} ${styles.columnSubMenu}`}>
-                  <Link href="/aboutDoctor/team">Команда</Link>
-                  <Link href="/aboutDoctor/reviews">Відгуки</Link>
-                  <Link href="/aboutDoctor/askDoctor">Запитати лікаря</Link>
-                  <Link href="/aboutDoctor/usefulInformation">
+                  <Link href="/about-doctor/team">Команда</Link>
+                  <Link href="/about-doctor/reviews">Відгуки</Link>
+                  <Link href="/about-doctor/ask-doctor">Запитати лікаря</Link>
+                  <Link href="/about-doctor/useful-information">
                     Корисна інформація
                   </Link>
-                  <Link href="/aboutDoctor/brieflyAbout">Коротко про нас</Link>
-                  <Link href="/aboutDoctor/Contacts">Контакти</Link>
+                  <Link href="/about-doctor/about-us">Коротко про нас</Link>
+                  <Link href="/about-doctor/contacts">Контакти</Link>
                 </div>
               )}
             </div>
 
             <div
               className={styles.menuItem}
-              onMouseEnter={() => handleSubMenuToggle('operating')}
+              onMouseEnter={() => handleSubMenuToggle('operative')}
               onMouseLeave={() => handleSubMenuToggle(null)}
             >
-              <Link href="/operating">Відділення ↓</Link>
-              {activeSubMenu === 'operating' && (
+              <Link href="/operative">Відділення ↓</Link>
+              {activeSubMenu === 'operative' && (
                 <div className={`${styles.subMenu} ${styles.columnSubMenu}`}>
-                  <Link href="/operating/operatingRoom">Операційна</Link>
-                  <Link href="/operating/reviews">Підготовка до операції</Link>
-                  <Link href="/operating/preparation">Операційні моменти</Link>
-                  <Link href="/operating/postoperative">
+                  <Link href="/operative/operative-moments">Операційна</Link>
+                  <Link href="/operative/preparation-surgery">
+                    Підготовка до операції
+                  </Link>
+                  {/* <Link href="/operative/preparation">Операційні моменти</Link> */}
+                  <Link href="/operative/postoperative-moments">
                     Післяопераційні моменти
                   </Link>
-                  <Link href="/operating/rehabilitation">Реабілітація</Link>
+                  <Link href="/operative/rehabilitation">Реабілітація</Link>
                 </div>
               )}
             </div>
@@ -297,43 +299,43 @@ const HeaderMenu: React.FC = () => {
                 )}
               </div>
               <div className={styles.burgerMenuItem}>
-                <span onClick={() => handleSubMenuToggle('aboutDoctor')}>
+                <span onClick={() => handleSubMenuToggle('about-doctor')}>
                   Про лікаря ↓
                 </span>
-                {activeSubMenu === 'aboutDoctor' && (
+                {activeSubMenu === 'about-doctor' && (
                   <div className={styles.burgerSubMenu}>
                     <Link
-                      href="/aboutDoctor/team"
+                      href="/about-doctor/team"
                       onClick={handleMenuItemClick}
                     >
                       Команда
                     </Link>
                     <Link
-                      href="/aboutDoctor/reviews"
+                      href="/about-doctor/reviews"
                       onClick={handleMenuItemClick}
                     >
                       Відгуки
                     </Link>
                     <Link
-                      href="/aboutDoctor/askDoctor"
+                      href="/about-doctor/ask-doctor"
                       onClick={handleMenuItemClick}
                     >
                       Запитати лікаря
                     </Link>
                     <Link
-                      href="/aboutDoctor/usefulInformation"
+                      href="/about-doctor/useful-information"
                       onClick={handleMenuItemClick}
                     >
                       Корисна інформація
                     </Link>
                     <Link
-                      href="/aboutDoctor/brieflyAbout"
+                      href="/about-doctor/about-us"
                       onClick={handleMenuItemClick}
                     >
                       Коротко про нас
                     </Link>
                     <Link
-                      href="/aboutDoctor/Contacts"
+                      href="/about-doctor/сontacts"
                       onClick={handleMenuItemClick}
                     >
                       Контакти
@@ -342,37 +344,32 @@ const HeaderMenu: React.FC = () => {
                 )}
               </div>
               <div className={styles.burgerMenuItem}>
-                <span onClick={() => handleSubMenuToggle('operating')}>
+                <span onClick={() => handleSubMenuToggle('operative')}>
                   Відділення ↓
                 </span>
-                {activeSubMenu === 'operating' && (
+                {activeSubMenu === 'operative' && (
                   <div className={styles.burgerSubMenu}>
                     <Link
-                      href="/operating/operatingRoom"
+                      href="/operative/operative-moments"
                       onClick={handleMenuItemClick}
                     >
-                      Операційна
+                      Операційн
                     </Link>
                     <Link
-                      href="/operating/reviews"
+                      href="/operative/preparation-surgery"
                       onClick={handleMenuItemClick}
                     >
-                      Підготовка до операції
+                      Підготовка до опер
                     </Link>
                     <Link
-                      href="/operating/preparation"
-                      onClick={handleMenuItemClick}
-                    >
-                      Операційні моменти
-                    </Link>
-                    <Link
-                      href="/operating/postoperative"
+                      href="/operative/postoperative-moments"
                       onClick={handleMenuItemClick}
                     >
                       Післяопераційні моменти
                     </Link>
+
                     <Link
-                      href="/operating/rehabilitation"
+                      href="/operative/rehabilitation"
                       onClick={handleMenuItemClick}
                     >
                       Реабілітація

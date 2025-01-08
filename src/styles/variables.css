@@ -1,6 +1,7 @@
 :root {
   /* Кольори */
   --primary-color: #0070f3;
+  --primary-color-dark: #0950a1ff;
   --secondary-color: #ff4081;
   --background-color: #f5f5f5;
   --text-color: #333;

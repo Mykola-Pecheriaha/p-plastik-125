@@ -1,0 +1,120 @@
+.galleryWrapper {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 16px;
+  display: inline-block;
+  background-color: #f9f9f9;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.mainContent {
+  display: flex;
+  align-items: center;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #333;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 16px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.likeSection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.likes {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.likeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: red;
+}
+
+.footerContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: black;
+}
+
+.fullscreenButton {
+  margin-left: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+}

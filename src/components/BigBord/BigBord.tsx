@@ -16,7 +16,7 @@ const BigBord: React.FC = () => {
 
           {/* Кнопка "Зв'язатися з нами" */}
           {/* Використовуємо Link для кнопки */}
-          <Link href="/hospital/contacts" passHref>
+          <Link href="/about-doctor/contacts">
             <button className={styles.contactButton}>Зв`язатися з нами</button>
           </Link>
         </div>

@@ -1,0 +1,88 @@
+.plasticSurgeons {
+  display: flex;
+  flex-direction: column; /* Заголовок вгорі, контент внизу */
+  align-items: center;
+  width: 100%;
+  padding: 20px; /* Відступи навколо всієї сторінки */
+}
+
+.plasticSurgeonsTitle {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.containerplasticSurgeons {
+  display: flex;
+  flex-direction: row; /* Контент розділений на дві частини */
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Обмеження ширини сторінки */
+  margin: 0 auto;
+  gap: 30px; /* Відступ між галереєю та текстовим блоком */
+}
+
+.plasticSurgeonsImage {
+  flex: 1; /* Займає 50% простору */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* Відступи навколо галереї */
+}
+
+.plasticSurgeonsText {
+  flex: 1; /* Займає 50% простору */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding: 10px; /* Відступи навколо текстового блоку */
+}
+
+.subTitle {
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.6; /* Зручне читання тексту */
+  color: #555;
+}
+
+/* Адаптація для малих екранів */
+@media (max-width: 768px) {
+  .containerplasticSurgeons {
+    flex-direction: column; /* Розташування блоків один під одним */
+    gap: 20px; /* Зменшення відступу між блоками */
+  }
+
+  .plasticSurgeonsImage,
+  .plasticSurgeonsText {
+    flex: unset; /* Скасовує розподіл простору */
+    width: 100%; /* Блоки займають всю ширину */
+    text-align: center; /* Вирівнювання тексту по центру */
+  }
+
+  .plasticSurgeonsTitle {
+    font-size: 1.8rem; /* Зменшення розміру заголовка */
+    margin: 15px 0;
+  }
+
+  .subTitle {
+    font-size: 0.95rem; /* Менший шрифт для тексту */
+    line-height: 1.4;
+  }
+}
+
+/* Адаптація для дуже малих екранів (наприклад, смартфонів) */
+@media (max-width: 480px) {
+  .plasticSurgeonsTitle {
+    font-size: 1.5rem; /* Ще менший заголовок */
+  }
+
+  .subTitle {
+    font-size: 0.9rem; /* Зменшення тексту */
+  }
+
+  .containerplasticSurgeons {
+    padding: 10px; /* Зменшення загального відступу */
+  }
+}
