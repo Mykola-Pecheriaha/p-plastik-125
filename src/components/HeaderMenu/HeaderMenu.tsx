@@ -38,6 +38,13 @@ const HeaderMenu: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    document.body.style.paddingTop = '80px';
+    return () => {
+      document.body.style.paddingTop = '0';
+    };
+  }, []);
+
   return (
     <header className={styles.headerWrapper}>
       <div className={styles.headerContainer}>
@@ -186,7 +193,9 @@ const HeaderMenu: React.FC = () => {
             </div>
           </nav>
 
-          <ConsultationButton />
+          <div className={styles.consultationButtonWrapper}>
+            <ConsultationButton />
+          </div>
 
           <div className={styles.burger} onClick={toggleMenu}>
             ☰ Menu

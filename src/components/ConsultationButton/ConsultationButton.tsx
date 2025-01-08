@@ -20,12 +20,9 @@ const ConsultationButton: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.consultationBox}>
-        <h3 className={styles.consultationTitle}>Безкоштовна консультація</h3>
-        <button onClick={openModal} className={styles.consultationButton}>
-          Записатися
-        </button>
-      </div>
+      <button onClick={openModal} className={styles.consultationButton}>
+        Безкоштовна консультація
+      </button>
 
       {isModalOpen && (
         <div className={styles.modalOverlay} onClick={closeModal}>
