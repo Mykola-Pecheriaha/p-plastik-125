@@ -27,6 +27,12 @@
   align-items: center;
 }
 
+.fullscreenImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
 .closeButton {
   position: absolute;
   top: 20px;
@@ -54,6 +60,56 @@
 
 .imageContainer {
   position: relative;
+  width: 450px;
+  height: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.commentsSection {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.commentsSection h3 {
+  margin-top: 0;
+}
+
+.commentsSection ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.commentsSection li {
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.commentsSection form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.commentsSection input {
+  flex-grow: 1;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.commentsSection button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .footer {
@@ -110,6 +166,7 @@
   background-color: black;
 }
 
+.commentButton,
 .fullscreenButton {
   margin-left: 16px;
   background: none;

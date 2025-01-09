@@ -4,6 +4,7 @@
   align-items: center;
   width: 100%;
   padding: 20px; /* Відступи навколо всієї сторінки */
+  background-color: bisque;
 }
 
 .plasticSurgeonsTitle {
@@ -46,6 +47,30 @@
   line-height: 1.6; /* Зручне читання тексту */
   color: #555;
 }
+.subTitleTopp {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+/* Кнопка */
+.contactButton {
+  background-color: #948607ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  transition: background-color 0.3s ease;
+}
+
+.contactButton:hover {
+  background-color: #702c04ff;
+}
 
 /* Адаптація для малих екранів */
 @media (max-width: 768px) {
@@ -80,6 +105,7 @@
 
   .subTitle {
     font-size: 0.9rem; /* Зменшення тексту */
+    margin-bottom: 25px;
   }
 
   .containerplasticSurgeons {

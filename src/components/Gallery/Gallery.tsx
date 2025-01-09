@@ -4,6 +4,11 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './Gallery.module.css';
 
+interface Comment {
+  id: number;
+  text: string;
+}
+
 interface GalleryProps {
   images: string[]; // Масив URL зображень
 }
@@ -12,21 +17,25 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [likes, setLikes] = useState(0);
+  const [comments, setComments] = useState<Comment[]>([]);
+  const [newComment, setNewComment] = useState('');
+  const [showComments, setShowComments] = useState(false);
 
-  // Отримуємо лайки з локальної пам'яті при завантаженні компонента
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const savedLikes = localStorage.getItem('likes');
       setLikes(savedLikes ? parseInt(savedLikes, 10) : 0);
+      const savedComments = localStorage.getItem('comments');
+      setComments(savedComments ? JSON.parse(savedComments) : []);
     }
   }, []);
 
-  // Записуємо лайки у локальну пам'ять при зміні стану
   useEffect(() => {
     if (typeof window !== 'undefined') {
       localStorage.setItem('likes', likes.toString());
+      localStorage.setItem('comments', JSON.stringify(comments));
     }
-  }, [likes]);
+  }, [likes, comments]);
 
   const handlePrev = () => {
     setCurrentImageIndex((prevIndex) =>
@@ -48,6 +57,22 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
     setLikes((prevLikes) => prevLikes + 1);
   };
 
+  const toggleComments = () => {
+    setShowComments((prevState) => !prevState);
+  };
+
+  const handleAddComment = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (newComment.trim()) {
+      const newCommentObj = {
+        id: Date.now(),
+        text: newComment.trim(),
+      };
+      setComments((prevComments) => [...prevComments, newCommentObj]);
+      setNewComment('');
+    }
+  };
+
   return (
     <div className={styles.galleryWrapper}>
       <div
@@ -63,13 +88,34 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
             {'<'}
           </button>
           <div className={styles.imageContainer}>
-            <Image
-              src={images[currentImageIndex]}
-              alt={`Gallery Image ${currentImageIndex + 1}`}
-              width={isFullscreen ? 900 : 450}
-              height={isFullscreen ? 860 : 430}
-              priority={true}
-            />
+            {!showComments ? (
+              <Image
+                src={images[currentImageIndex]}
+                alt={`Gallery Image ${currentImageIndex + 1}`}
+                width={isFullscreen ? 1920 : 450}
+                height={isFullscreen ? 1080 : 430}
+                className={isFullscreen ? styles.fullscreenImage : ''}
+                priority={true}
+              />
+            ) : (
+              <div className={styles.commentsSection}>
+                <h3>Коментарі</h3>
+                <ul>
+                  {comments.map((comment) => (
+                    <li key={comment.id}>{comment.text}</li>
+                  ))}
+                </ul>
+                <form onSubmit={handleAddComment}>
+                  <input
+                    type="text"
+                    value={newComment}
+                    onChange={(e) => setNewComment(e.target.value)}
+                    placeholder="Додати коментар"
+                  />
+                  <button type="submit">Додати</button>
+                </form>
+              </div>
+            )}
           </div>
           <button onClick={handleNext} className={styles.navButton}>
             {'>'}
@@ -94,6 +140,9 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
                 ></span>
               ))}
             </div>
+            <button onClick={toggleComments} className={styles.commentButton}>
+              💬
+            </button>
             {!isFullscreen && (
               <button
                 onClick={toggleFullscreen}

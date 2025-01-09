@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import GallerySurgeons from '../GallerySurgeons/GallerySurgeons';
 import styles from './PlasticSurgeons.module.css';
 
@@ -21,12 +23,39 @@ const PlasticSurgeons: React.FC = () => {
         <div className={styles.plasticSurgeonsText}>
           <h1>Печеряга Микола Миколайович</h1>
           <div className={styles.subTitle}>
+            <div className={styles.subTitleTopp}>
+              <div className={styles.subTitleToppText}>
+                <p>Член Європейської асоціації пластичних хірургів</p>
+              </div>
+
+              <div className={styles.subTitleToppImage}>
+                <Image
+                  src="/images/bodi/conturBoda1-removebg-preview.png"
+                  alt="Bodi"
+                  width={250}
+                  height={330}
+                  priority={true}
+                />
+              </div>
+            </div>
+
             <p>
-              Я пластична хірургиня з досвідом 16 років. Навчалась у найкращих
+              Я пластичний хірург з досвідом 25 років. Навчався у найкращих
               пластичних хірургів світу та виконую всі види пластичних операцій
-              для жінок. Уже більше ніж 1600 пацієнток з різних країн довірили
-              мені свою красу.
+              . Уже більше ніж 2600 пацієнтів з різних країн довірили мені свою
+              красу. Ми різні, а значить хтось бажає зменшити обєми, а хтось
+              навпаки збільшити їх — кожна жінка мріє про самобутню красу.
+              Прямий маленький носик, гладенька підтягнута шкіра, привабливі
+              пружні дівочі груди, струнка талія, відкритий погляд, маленька
+              мочка вуха. Від цих деталей залежить самопочуття, гарний настрій,
+              а іноді й щаслива доля! Ми з командою втілюємо бажання жінок та
+              створюємо досконалу красу, зберігаючи індивідуальність. Відгуки
             </p>
+            <Link href="/about-doctor">
+              <button className={styles.contactButton}>
+                Детальніше про клініку та лікаря
+              </button>
+            </Link>
           </div>
         </div>
       </div>
