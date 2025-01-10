@@ -1,9 +1,10 @@
 .galleryWrapper {
   border: 2px solid #ccc;
   border-radius: 10px;
-  padding: 16px;
+  padding: 10px;
   display: inline-block;
   background-color: #f9f9f9;
+  max-width: 650px;
 }
 
 .gallery {
@@ -48,6 +49,8 @@
 .mainContent {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .navButton {
@@ -56,12 +59,14 @@
   font-size: 32px;
   cursor: pointer;
   color: #333;
+  padding: 10px;
+  margin: 0 10px;
 }
 
 .imageContainer {
   position: relative;
-  width: 450px;
-  height: 430px;
+  width: 600px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;

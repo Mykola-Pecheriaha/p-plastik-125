@@ -2,18 +2,18 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import styles from './Gallery.module.css';
+import styles from './GalleryBreast.module.css';
 
 interface Comment {
   id: number;
   text: string;
 }
 
-interface GalleryProps {
-  images: string[]; // Масив URL зображень
+interface GalleryBreastProps {
+  images: string[];
 }
 
-const Gallery: React.FC<GalleryProps> = ({ images }) => {
+const GalleryBreast: React.FC<GalleryBreastProps> = ({ images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [likes, setLikes] = useState(0);
@@ -73,6 +73,10 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
     }
   };
 
+  if (!images || images.length === 0) {
+    return <div>No images available</div>;
+  }
+
   return (
     <div className={styles.galleryWrapper}>
       <div
@@ -94,9 +98,8 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
                   src={images[currentImageIndex]}
                   alt={`Gallery Image ${currentImageIndex + 1}`}
                   layout="fill"
-                  objectFit="contain"
+                  objectFit="cover"
                   className={isFullscreen ? styles.fullscreenImage : ''}
-                  priority={true}
                 />
               </div>
             ) : (
@@ -160,4 +163,4 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
   );
 };
 
-export default Gallery;
+export default GalleryBreast;

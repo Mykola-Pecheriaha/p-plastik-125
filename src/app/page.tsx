@@ -2,6 +2,7 @@ import React from 'react';
 
 import BigBord from '../components/BigBord/BigBord';
 import PlasticSurgeons from '../components/PlasticSurgeons/PlasticSurgeons';
+import CreateBeauty from '../components/CreateBeauty/CreateBeauty';
 
 const Home: React.FC = () => {
   return (
@@ -9,6 +10,8 @@ const Home: React.FC = () => {
       <BigBord />
 
       <PlasticSurgeons />
+
+      <CreateBeauty />
     </div>
   );
 };
