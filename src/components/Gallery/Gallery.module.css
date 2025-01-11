@@ -1,9 +1,7 @@
 .galleryWrapper {
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  padding: 16px;
   display: inline-block;
-  background-color: #f9f9f9;
+  max-width: 650px;
+  overflow: hidden;
 }
 
 .gallery {
@@ -48,29 +46,56 @@
 .mainContent {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
 }
 
 .navButton {
-  background: none;
+  background: rgba(0, 0, 0, 0.212);
   border: none;
-  font-size: 32px;
+  font-size: 24px;
   cursor: pointer;
-  color: #333;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.prevButton {
+  left: 0;
+}
+
+.nextButton {
+  right: 0;
 }
 
 .imageContainer {
   position: relative;
-  width: 450px;
-  height: 430px;
+  width: 650px;
+  height: 570px;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .imageWrapper {
   position: relative;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .commentsSection {
@@ -122,20 +147,22 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 16px;
+  justify-content: space-between;
   width: 100%;
-  justify-content: space-evenly;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-top: none;
 }
 
 .likeSection {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
 }
 
 .likes {
   font-size: 18px;
-  margin-right: 8px;
+  margin-left: 5px;
 }
 
 .likeButton {
@@ -144,40 +171,41 @@
   font-size: 24px;
   cursor: pointer;
   color: red;
+  display: flex;
+  align-items: center;
 }
 
 .footerContent {
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
 }
 
 .dots {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 10px;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background-color: gray;
+  background-color: #ccc;
   margin: 0 4px;
   cursor: pointer;
 }
 
 .dot.active {
-  background-color: black;
+  background-color: #333;
 }
 
 .commentButton,
 .fullscreenButton {
-  margin-left: 16px;
   background: none;
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: black;
+  color: #333;
+  margin-left: 10px;
 }

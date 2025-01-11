@@ -2,18 +2,18 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import styles from './Gallery.module.css';
+import styles from './GalleryAbdomino.module.css';
 
 interface Comment {
   id: number;
   text: string;
 }
 
-interface GalleryProps {
+interface GalleryAbdominoProps {
   images: string[];
 }
 
-const Gallery: React.FC<GalleryProps> = ({ images }) => {
+const GalleryAbdomino: React.FC<GalleryAbdominoProps> = ({ images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [likes, setLikes] = useState(0);
@@ -23,17 +23,17 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const savedLikes = localStorage.getItem('likes');
+      const savedLikes = localStorage.getItem('breastLikes');
       setLikes(savedLikes ? parseInt(savedLikes, 10) : 0);
-      const savedComments = localStorage.getItem('comments');
+      const savedComments = localStorage.getItem('breastComments');
       setComments(savedComments ? JSON.parse(savedComments) : []);
     }
   }, []);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      localStorage.setItem('likes', likes.toString());
-      localStorage.setItem('comments', JSON.stringify(comments));
+      localStorage.setItem('breastLikes', likes.toString());
+      localStorage.setItem('breastComments', JSON.stringify(comments));
     }
   }, [likes, comments]);
 
@@ -73,8 +73,12 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
     }
   };
 
+  if (!images || images.length === 0) {
+    return <div>No images available</div>;
+  }
+
   return (
-    <div className={styles.galleryWrapper}>
+    <div className={styles.galleryAbdominoWrapper}>
       <div
         className={`${styles.gallery} ${isFullscreen ? styles.fullscreen : ''}`}
       >
@@ -83,27 +87,27 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
             ✕
           </button>
         )}
-        <div className={styles.mainContent}>
+
+        <div className={styles.mainAbdominoContent}>
           <button
             onClick={handlePrev}
-            className={`${styles.navButton} ${styles.prevButton}`}
+            className={`${styles.navAbdominoButton} ${styles.prevAbdominoButton}`}
           >
             {'<'}
           </button>
-          <div className={styles.imageContainer}>
+          <div className={styles.imageAbdominoContainer}>
             {!showComments ? (
-              <div className={styles.imageWrapper}>
+              <div className={styles.imageAbdominoWrapper}>
                 <Image
                   src={images[currentImageIndex]}
                   alt={`Gallery Image ${currentImageIndex + 1}`}
                   layout="fill"
                   objectFit="cover"
                   className={`${styles.image} ${isFullscreen ? styles.fullscreenImage : ''}`}
-                  priority={true}
                 />
               </div>
             ) : (
-              <div className={styles.commentsSection}>
+              <div className={styles.commentsAbdominoSection}>
                 <h3>Коментарі</h3>
                 <ul>
                   {comments.map((comment) => (
@@ -122,16 +126,18 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
               </div>
             )}
           </div>
+
           <button
             onClick={handleNext}
-            className={`${styles.navButton} ${styles.nextButton}`}
+            className={`${styles.navAbdominoButton} ${styles.nextAbdominoButton}`}
           >
             {'>'}
           </button>
         </div>
+
         <div className={styles.footer}>
-          <div className={styles.likeSection}>
-            <button onClick={handleLike} className={styles.likeButton}>
+          <div className={styles.likeAbdominoSection}>
+            <button onClick={handleLike} className={styles.likeAbdominoButton}>
               ❤️ <span className={styles.likes}>{likes}</span>
             </button>
           </div>
@@ -147,7 +153,11 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
                 ></span>
               ))}
             </div>
-            <button onClick={toggleComments} className={styles.commentButton}>
+
+            <button
+              onClick={toggleComments}
+              className={styles.commentAbdominoButton}
+            >
               💬
             </button>
             {!isFullscreen && (
@@ -165,4 +175,4 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
   );
 };
 
-export default Gallery;
+export default GalleryAbdomino;

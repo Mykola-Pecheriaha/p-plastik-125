@@ -1,12 +1,15 @@
-.galleryWrapper {
+/* Основна обгортка галереї */
+.galleryAbdominoWrapper {
   border: 1px solid #ccc;
   border-bottom: none;
   border-radius: 10px 10px 0 0;
   display: inline-block;
   max-width: 650px;
   overflow: hidden;
+  background-color: #f9f9f9;
 }
 
+/* Основний контейнер галереї */
 .gallery {
   display: flex;
   flex-direction: column;
@@ -14,7 +17,8 @@
   position: relative;
 }
 
-.fullscreen {
+/* Стилі для режиму повноекранного перегляду */
+/* .fullscreen {
   position: fixed;
   top: 0;
   left: 0;
@@ -26,6 +30,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+} */
+
+/* .fullscreenImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+} */
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  justify-content: center; /* Вирівнювання по горизонталі */
+  align-items: center; /* Вирівнювання по вертикалі */
 }
 
 .fullscreenImage {
@@ -46,7 +69,8 @@
   z-index: 10;
 }
 
-.mainContent {
+/* Основний контент галереї */
+.mainAbdominoContent {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,12 +78,13 @@
   position: relative;
 }
 
-.navButton {
-  background: rgba(0, 0, 0, 0.021);
+/* Кнопки навігації (вліво/вправо) */
+.navAbdominoButton {
+  background: rgba(0, 0, 0, 0.2);
   border: none;
   font-size: 34px;
   cursor: pointer;
-  color: rgb(185, 54, 54);
+  color: #b93636;
   padding: 10px;
   position: absolute;
   top: 50%;
@@ -67,15 +92,16 @@
   z-index: 10;
 }
 
-.prevButton {
+.prevAbdominoButton {
   left: 0;
 }
 
-.nextButton {
+.nextAbdominoButton {
   right: 0;
 }
 
-.imageContainer {
+/* Контейнер для зображення */
+.imageAbdominoContainer {
   position: relative;
   width: 650px;
   height: 570px;
@@ -85,14 +111,13 @@
   overflow: hidden;
 }
 
-.imageWrapper {
+.imageAbdominoWrapper {
   position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .image {
@@ -101,7 +126,8 @@
   object-fit: cover;
 }
 
-.commentsSection {
+/* Блок коментарів */
+.commentsAbdominoSection {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
@@ -110,34 +136,36 @@
   overflow-y: auto;
 }
 
-.commentsSection h3 {
+.commentsAbdominoSection h3 {
   margin-top: 0;
 }
 
-.commentsSection ul {
+.commentsAbdominoSection ul {
   list-style-type: none;
   padding: 0;
 }
 
-.commentsSection li {
+.commentsAbdominoSection li {
   margin-bottom: 10px;
   padding: 5px;
   background-color: #f0f0f0;
   border-radius: 5px;
 }
 
-.commentsSection form {
+.commentsAbdominoSection form {
   display: flex;
   margin-top: 20px;
 }
 
-.commentsSection input {
+.commentsAbdominoSection input {
   flex-grow: 1;
   padding: 5px;
   margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.commentsSection button {
+.commentsAbdominoSection button {
   padding: 5px 10px;
   background-color: #007bff;
   color: white;
@@ -146,6 +174,7 @@
   cursor: pointer;
 }
 
+/* Футер галереї */
 .footer {
   display: flex;
   flex-direction: row;
@@ -158,7 +187,8 @@
   border-top: none;
 }
 
-.likeSection {
+/* Лайки */
+.likeAbdominoSection {
   display: flex;
   align-items: center;
 }
@@ -168,7 +198,7 @@
   margin-left: 5px;
 }
 
-.likeButton {
+.likeAbdominoButton {
   background: none;
   border: none;
   font-size: 24px;
@@ -178,6 +208,7 @@
   align-items: center;
 }
 
+/* Кнопки футера */
 .footerContent {
   display: flex;
   align-items: center;
@@ -203,7 +234,7 @@
   background-color: #333333;
 }
 
-.commentButton,
+.commentAbdominoButton,
 .fullscreenButton {
   background: none;
   border: none;

@@ -28,7 +28,7 @@ const CreateBeauty: React.FC = () => {
               </li>
               <li>Комплект білизни для реабілітації у подарунок</li>
             </ul>
-            <Link href="/about-doctor">
+            <Link href="/services/breast-augmentation">
               <button className={styles.contactButton}>
                 Докладніше про послугу
               </button>

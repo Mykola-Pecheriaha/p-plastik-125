@@ -1,0 +1,107 @@
+.bigAbdomino {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(235, 233, 148);
+}
+
+.bigAbdominoTitle {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.containerBigAbdomino {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.bigAbdominoText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 10px;
+}
+
+.bigAbdominoImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.subTitle {
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.subTitle ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.contactButton {
+  background-color: #948607ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.contactButton:hover {
+  background-color: #702c04ff;
+}
+
+@media (max-width: 768px) {
+  .containerBigAbdomino {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bigAbdominoImage,
+  .bigAbdominoText {
+    width: 100%;
+  }
+
+  .bigAbdominoTitle {
+    font-size: 1.8rem;
+    margin: 15px 0;
+  }
+
+  .subTitle {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .bigAbdominoTitle {
+    font-size: 1.5rem;
+  }
+
+  .subTitle {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+
+  .containerBigAbdomino {
+    padding: 10px;
+  }
+}

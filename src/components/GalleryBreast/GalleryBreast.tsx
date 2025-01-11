@@ -23,17 +23,17 @@ const GalleryBreast: React.FC<GalleryBreastProps> = ({ images }) => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const savedLikes = localStorage.getItem('likes');
+      const savedLikes = localStorage.getItem('breastLikes');
       setLikes(savedLikes ? parseInt(savedLikes, 10) : 0);
-      const savedComments = localStorage.getItem('comments');
+      const savedComments = localStorage.getItem('breastComments');
       setComments(savedComments ? JSON.parse(savedComments) : []);
     }
   }, []);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      localStorage.setItem('likes', likes.toString());
-      localStorage.setItem('comments', JSON.stringify(comments));
+      localStorage.setItem('breastLikes', likes.toString());
+      localStorage.setItem('breastComments', JSON.stringify(comments));
     }
   }, [likes, comments]);
 
@@ -88,7 +88,10 @@ const GalleryBreast: React.FC<GalleryBreastProps> = ({ images }) => {
           </button>
         )}
         <div className={styles.mainContent}>
-          <button onClick={handlePrev} className={styles.navButton}>
+          <button
+            onClick={handlePrev}
+            className={`${styles.navButton} ${styles.prevButton}`}
+          >
             {'<'}
           </button>
           <div className={styles.imageContainer}>
@@ -99,7 +102,7 @@ const GalleryBreast: React.FC<GalleryBreastProps> = ({ images }) => {
                   alt={`Gallery Image ${currentImageIndex + 1}`}
                   layout="fill"
                   objectFit="cover"
-                  className={isFullscreen ? styles.fullscreenImage : ''}
+                  className={`${styles.image} ${isFullscreen ? styles.fullscreenImage : ''}`}
                 />
               </div>
             ) : (
@@ -122,15 +125,17 @@ const GalleryBreast: React.FC<GalleryBreastProps> = ({ images }) => {
               </div>
             )}
           </div>
-          <button onClick={handleNext} className={styles.navButton}>
+          <button
+            onClick={handleNext}
+            className={`${styles.navButton} ${styles.nextButton}`}
+          >
             {'>'}
           </button>
         </div>
         <div className={styles.footer}>
           <div className={styles.likeSection}>
-            <span className={styles.likes}>{likes}</span>
             <button onClick={handleLike} className={styles.likeButton}>
-              ❤️
+              ❤️ <span className={styles.likes}>{likes}</span>
             </button>
           </div>
           <div className={styles.footerContent}>

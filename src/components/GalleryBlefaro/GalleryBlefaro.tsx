@@ -2,18 +2,18 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import styles from './Gallery.module.css';
+import styles from './GalleryBlefaro.module.css';
 
 interface Comment {
   id: number;
   text: string;
 }
 
-interface GalleryProps {
+interface GalleryBlefaroProps {
   images: string[];
 }
 
-const Gallery: React.FC<GalleryProps> = ({ images }) => {
+const GalleryBlefaro: React.FC<GalleryBlefaroProps> = ({ images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [likes, setLikes] = useState(0);
@@ -23,17 +23,17 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const savedLikes = localStorage.getItem('likes');
+      const savedLikes = localStorage.getItem('blefaroLikes');
       setLikes(savedLikes ? parseInt(savedLikes, 10) : 0);
-      const savedComments = localStorage.getItem('comments');
+      const savedComments = localStorage.getItem('blefaroComments');
       setComments(savedComments ? JSON.parse(savedComments) : []);
     }
   }, []);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      localStorage.setItem('likes', likes.toString());
-      localStorage.setItem('comments', JSON.stringify(comments));
+      localStorage.setItem('blefaroLikes', likes.toString());
+      localStorage.setItem('blefaroComments', JSON.stringify(comments));
     }
   }, [likes, comments]);
 
@@ -73,6 +73,10 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
     }
   };
 
+  if (!images || images.length === 0) {
+    return <div>No images available</div>;
+  }
+
   return (
     <div className={styles.galleryWrapper}>
       <div
@@ -99,7 +103,6 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
                   layout="fill"
                   objectFit="cover"
                   className={`${styles.image} ${isFullscreen ? styles.fullscreenImage : ''}`}
-                  priority={true}
                 />
               </div>
             ) : (
@@ -165,4 +168,4 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
   );
 };
 
-export default Gallery;
+export default GalleryBlefaro;
