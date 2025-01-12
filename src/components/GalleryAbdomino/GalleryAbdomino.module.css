@@ -17,6 +17,52 @@
   position: relative;
 }
 
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen .mainAbdominoContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vh;
+}
+
+.fullscreen .imageAbdominoContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen .imageAbdominoWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen .imageAbdominoWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen .image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+}
+
 /* Стилі для режиму повноекранного перегляду */
 /* .fullscreen {
   position: fixed;
@@ -38,7 +84,7 @@
   object-fit: contain;
 } */
 
-.fullscreen {
+/* .fullscreen {
   position: fixed;
   top: 0;
   left: 0;
@@ -47,15 +93,42 @@
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 1000;
   display: flex;
-  justify-content: center; /* Вирівнювання по горизонталі */
-  align-items: center; /* Вирівнювання по вертикалі */
-}
+  justify-content: center; 
+  align-items: center; 
+} */
 
-.fullscreenImage {
+/* .fullscreenImage {
   max-width: 90vw;
   max-height: 90vh;
   object-fit: contain;
+} */
+
+/* .fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .fullscreen .imageAbdominoWrapper {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.fullscreen .image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+} */
 
 .closeButton {
   position: absolute;

@@ -105,3 +105,48 @@
     padding: 10px;
   }
 }
+/* Загальний контейнер */
+.containerBigAbdomino {
+  display: flex;
+  justify-content: space-between; /* Текст ліворуч, кнопки праворуч */
+  align-items: flex-start; /* Вирівнювання по верхньому краю */
+  gap: 20px; /* Відстань між блоками */
+  margin-top: 30px;
+}
+
+/* Стилі для тексту */
+.bigAbdominoText {
+  flex: 1; /* Текст займає доступний простір */
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Контейнер для кнопок */
+.finalSectionButtons {
+  display: flex;
+  flex-direction: column; /* Розташування кнопок у стовпчик */
+  gap: 15px; /* Відстань між кнопками */
+  align-items: flex-start; /* Вирівнювання кнопок ліворуч */
+}
+
+/* Стилізація для кнопки-посилання */
+.linkButton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  background-color: #0070f3;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.linkButton:hover {
+  background-color: #005bb5;
+}
+
+/* ConsultationButton */
+.consultationButtonWrapper {
+  width: fit-content; /* Розмір кнопки за її вмістом */
+}

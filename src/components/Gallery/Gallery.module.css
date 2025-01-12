@@ -11,6 +11,39 @@
   position: relative;
 }
 
+.fullscreen .mainAbdominoContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vh;
+}
+
+.fullscreen .imageAbdominoContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen .imageAbdominoWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen .imageAbdominoWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen .image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+}
+
 .fullscreen {
   position: fixed;
   top: 0;

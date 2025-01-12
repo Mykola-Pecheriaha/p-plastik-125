@@ -4,26 +4,26 @@ import Link from 'next/link';
 import GalleryAbdomino from '../GalleryAbdomino/GalleryAbdomino';
 import styles from './BigAbdomino.module.css';
 import bigAbdominoImages from '../../data/bigAbdomino';
+import ConsultationButton from '../../components/ConsultationButton/ConsultationButton';
 
 const BigAbdomino: React.FC = () => {
   return (
     <div className={styles.bigAbdomino}>
       <h2 className={styles.bigAbdominoTitle}>
-        Блефаропластика – пластика повік
+        Гарне тіло - позитив щоденного настрою.
       </h2>
       <div className={styles.containerBigAbdomino}>
         <div className={styles.bigAbdominoText}>
-          <h4>Пластика грудей</h4>
+          <h4>Абдомінопластика (пластика живота)</h4>
           <div className={styles.subTitle}>
             <ul>
-              <li>
-                Без шрамів (можлива трансконʼюктивальна блефаропластика за
-                показаннями)
-              </li>
-              <li>Мінімальний термін реабілітації до 30 днів</li>
-              <li> Усунення «мішків» під очима </li>
-              <li>Корекція зморшок та вікових змін</li>
-              <li> Корекція жирових надлишків (псевдогриж) </li>
+              <li>Повернення животу плоскої форми</li>
+              <li>Усунення розтяжок</li>
+              <li>Надання привабливості формі тіла</li>
+              <li>Мінімальний термін реабілітації до 40 днів</li>
+              <li>Усунення гриж живота.</li>
+              <li>Корекція рубцевих змін тулуба</li>
+              <li>Видалення доброякісних пухлина різних</li>
             </ul>
             <Link href="/services/blefaro-plastic">
               <button className={styles.contactButton}>
@@ -35,6 +35,21 @@ const BigAbdomino: React.FC = () => {
 
         <div className={styles.bigAbdominoImage}>
           <GalleryAbdomino images={bigAbdominoImages} />
+        </div>
+      </div>
+
+      {/* Додаємо нову секцію */}
+      <div className={styles.containerBigAbdomino}>
+        <h2 className={styles.bigAbdominoText}>
+          Тільки високі стандарти — тільки той результат, який задовольнить Вас.
+        </h2>
+        <div className={styles.finalSectionButtons}>
+          <Link href="/services" className={styles.linkButton}>
+            Всі Послуги
+          </Link>
+          <div className={styles.consultationButtonWrapper}>
+            <ConsultationButton />
+          </div>
         </div>
       </div>
     </div>
