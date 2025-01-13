@@ -5,6 +5,7 @@ import PlasticSurgeons from '../components/PlasticSurgeons/PlasticSurgeons';
 import CreateBeauty from '../components/CreateBeauty/CreateBeauty';
 import BigBlefaro from '../components/BigBlefaro/BigBlefaro';
 import BigAbdomino from '../components/BigAbdomino/BigAbdomino';
+import BigClinic from '../components/BigClinic/BigClinic';
 
 const Home: React.FC = () => {
   return (
@@ -18,6 +19,8 @@ const Home: React.FC = () => {
       <BigBlefaro />
 
       <BigAbdomino />
+
+      <BigClinic />
     </div>
   );
 };

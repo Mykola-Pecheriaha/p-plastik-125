@@ -1,10 +1,11 @@
-.galleryWrapper {
+.galleryClinicWrapper {
   border: 1px solid #ccc;
   border-bottom: none;
   border-radius: 10px 10px 0 0;
   display: inline-block;
   max-width: 650px;
   overflow: hidden;
+  background-color: #f9f9f9;
 }
 
 .gallery {
@@ -23,48 +24,8 @@
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 1000;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.fullscreen .mainContent {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90vw;
-  height: 90vh;
-}
-
-/* .fullscreenImage {
-  max-width: 90vw;
-  max-height: 90vh;
-  object-fit: contain;
-} */
-
-.fullscreen .imageContainer {
-  width: 100%;
-  height: 100%;
-}
-
-.fullscreen .imageWrapper {
-  width: 100%;
-  height: 100%;
-}
-
-.fullscreen .imageWrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.fullscreen .image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain !important;
 }
 
 .closeButton {
@@ -79,7 +40,7 @@
   z-index: 10;
 }
 
-.mainContent {
+.mainClinicContent {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,7 +49,7 @@
 }
 
 .navButton {
-  background: rgba(12, 12, 12, 0.26);
+  background: rgba(0, 0, 0, 0.5);
   border: none;
   font-size: 24px;
   cursor: pointer;
@@ -108,7 +69,7 @@
   right: 0;
 }
 
-.imageContainer {
+.imageClinicContainer {
   position: relative;
   width: 650px;
   height: 570px;
@@ -118,7 +79,7 @@
   overflow: hidden;
 }
 
-.imageWrapper {
+.imageClinicWrapper {
   position: relative;
   width: 100%;
   height: 100%;
@@ -134,7 +95,13 @@
   object-fit: cover;
 }
 
-.commentsSection {
+.fullscreenImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain !important;
+}
+
+.commentsClinicSection {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
@@ -143,34 +110,34 @@
   overflow-y: auto;
 }
 
-.commentsSection h3 {
+.commentsClinicSection h3 {
   margin-top: 0;
 }
 
-.commentsSection ul {
+.commentsClinicSection ul {
   list-style-type: none;
   padding: 0;
 }
 
-.commentsSection li {
+.commentsClinicSection li {
   margin-bottom: 10px;
   padding: 5px;
   background-color: #f0f0f0;
   border-radius: 5px;
 }
 
-.commentsSection form {
+.commentsClinicSection form {
   display: flex;
   margin-top: 20px;
 }
 
-.commentsSection input {
+.commentsClinicSection input {
   flex-grow: 1;
   padding: 5px;
   margin-right: 10px;
 }
 
-.commentsSection button {
+.commentsClinicSection button {
   padding: 5px 10px;
   background-color: #007bff;
   color: white;
@@ -179,15 +146,15 @@
   cursor: pointer;
 }
 
-.footer {
+.footerClinic {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: rgb(155, 141, 141);
+  background-color: white;
   padding: 10px;
-  border: 1px solid #fcf9f9;
+  border: 1px solid #ccc;
   border-top: none;
 }
 
@@ -211,7 +178,7 @@
   align-items: center;
 }
 
-.footerContent {
+.footerClinicContent {
   display: flex;
   align-items: center;
 }
@@ -244,4 +211,30 @@
   cursor: pointer;
   color: #333;
   margin-left: 10px;
+}
+
+/* Стилі для повноекранного режиму */
+.fullscreen .mainClinicContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vh;
+}
+
+.fullscreen .imageClinicContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen .imageClinicWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen .image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
 }
