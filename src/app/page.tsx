@@ -6,6 +6,7 @@ import CreateBeauty from '../components/CreateBeauty/CreateBeauty';
 import BigBlefaro from '../components/BigBlefaro/BigBlefaro';
 import BigAbdomino from '../components/BigAbdomino/BigAbdomino';
 import BigClinic from '../components/BigClinic/BigClinic';
+import BigQuestions from '../components/BigQuestions/BigQuestions';
 
 const Home: React.FC = () => {
   return (
@@ -21,6 +22,8 @@ const Home: React.FC = () => {
       <BigAbdomino />
 
       <BigClinic />
+
+      <BigQuestions />
     </div>
   );
 };

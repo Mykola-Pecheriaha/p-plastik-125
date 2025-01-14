@@ -25,7 +25,7 @@ const BigAbdomino: React.FC = () => {
               <li>Корекція рубцевих змін тулуба</li>
               <li>Видалення доброякісних пухлина різних</li>
             </ul>
-            <Link href="/services/blefaro-plastic">
+            <Link href="/services/abdominoplasty">
               <button className={styles.contactButton}>
                 Докладніше про послугу
               </button>
