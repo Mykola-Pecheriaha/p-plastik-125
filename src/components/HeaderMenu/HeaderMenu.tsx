@@ -98,19 +98,19 @@ const HeaderMenu: React.FC = () => {
                   <div className={styles.subMenuSection}>
                     <p>Пластика обличчя</p>
                     <div className={styles.subMenuColumn}>
-                      <Link href="/services/face-lift">
+                      <Link href="/services/face-surgery/face-lift">
                         Підтяжка обличчя та шиї
                       </Link>
-                      <Link href="/services/blefaro-plastic">
+                      <Link href="/services/face-surgery/blefaro-plastic">
                         Блефаропластика
                       </Link>
-                      <Link href="/services/chino-plasty">
+                      <Link href="/services/face-surgery/chino-plasty">
                         Пластика підборіддя
                       </Link>
-                      <Link href="/services/flap-correction">
+                      <Link href="/services/face-surgery/flap-correction">
                         Корекція клаповухості
                       </Link>
-                      <Link href="/services/lapp-otto">
+                      <Link href="/services/face-surgery/lapp-otto">
                         Пластика дольки вуха
                       </Link>
                     </div>
@@ -118,17 +118,19 @@ const HeaderMenu: React.FC = () => {
                   <div className={styles.subMenuSection}>
                     <p>Пластика грудей</p>
                     <div className={styles.subMenuColumn}>
-                      <Link href="/services/breast-augmentation">
+                      <Link href="/services/breast-surgery/breast-augmentation">
                         Збільшення грудей
                       </Link>
-                      <Link href="/services/breast-reduction">
+                      <Link href="/services/breast-surgery/breast-reduction">
                         Зменшення грудей
                       </Link>
-                      <Link href="/services/breast-lift">Підтяжка грудей</Link>
-                      <Link href="/services/areola-correction">
+                      <Link href="/services/breast-surgery/breast-lift">
+                        Підтяжка грудей
+                      </Link>
+                      <Link href="/services/breast-surgery/areola-correction">
                         Корекція соска та ареоли
                       </Link>
-                      <Link href="/services/breast-asymmetry-correction">
+                      <Link href="/services/breast-surgery/breast-asymmetry-correction">
                         Корекція асиметрії грудей
                       </Link>
                     </div>
@@ -136,15 +138,19 @@ const HeaderMenu: React.FC = () => {
                   <div className={styles.subMenuSection}>
                     <p>Пластика тіла</p>
                     <div className={styles.subMenuColumn}>
-                      <Link href="/services/abdominoplasty">
+                      <Link href="/services/body-surgery/abdominoplasty">
                         Абдомінопластика
                       </Link>
-                      <Link href="/services/liposuction">Ліпосакція</Link>
-                      <Link href="/services/leg-plastic">Пластика ніг</Link>
-                      <Link href="/services/cervical-hump">
+                      <Link href="/services/body-surgery/liposuction">
+                        Ліпосакція
+                      </Link>
+                      <Link href="/services/body-surgery/leg-plastic">
+                        Пластика ніг
+                      </Link>
+                      <Link href="/services/body-surgery/cervical-hump">
                         Видалення шийного горба
                       </Link>
-                      <Link href="/services/buttock-augmentation">
+                      <Link href="/services/body-surgery/buttock-augmentation">
                         Збільшення сідниць
                       </Link>
                     </div>

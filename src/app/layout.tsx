@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import ContactsBar from '../components/ContactsBar/ContactsBar';
 import HeaderMenu from '../components/HeaderMenu/HeaderMenu';
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb';
-import ConsultationButton from '../components/ConsultationButton/ConsultationButton';
+// import ConsultationButton from '../components/ConsultationButton/ConsultationButton';
 import Footer from '../components/Footer/Footer';
 import './globals.css';
 
@@ -35,7 +35,7 @@ export default function RootLayout({
         <HeaderMenu />
         <Breadcrumb />
         <main>{children}</main>
-        <ConsultationButton />
+        {/* <ConsultationButton /> */}
         <Footer />
       </body>
     </html>

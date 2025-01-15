@@ -1,7 +1,12 @@
 import React from 'react';
+import ServiceList from '../../components/ServicesList/ServicesList';
 
 const Service: React.FC = () => {
-  return <div>Service - сторінка в розробці</div>;
+  return (
+    <div>
+      <ServiceList />
+    </div>
+  );
 };
 
 export default Service;
