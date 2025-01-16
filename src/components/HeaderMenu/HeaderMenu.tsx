@@ -79,7 +79,7 @@ const HeaderMenu: React.FC = () => {
                       <Link href="/results/breast-plastic">
                         Пластика грудей
                       </Link>
-                      <Link href="/results/bodi-plastic">Пластика тіла</Link>
+                      <Link href="/results/body-plastic">Пластика тіла</Link>
                       <Link href="/results/tumors-skin">Пухлини шкіри</Link>
                     </div>
                   </div>
@@ -152,6 +152,21 @@ const HeaderMenu: React.FC = () => {
                       </Link>
                       <Link href="/services/body-surgery/buttock-augmentation">
                         Збільшення сідниць
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className={styles.subMenuSection}>
+                    <p>Загальна хірургія</p>
+                    <div className={styles.subMenuColumn}>
+                      <Link href="/services/general-surgery/carpal-tunnel">
+                        Видалення пухлин
+                      </Link>
+                      <Link href="/services/general-surgery/carpal-tunnel">
+                        Карпальний канал
+                      </Link>
+                      <Link href="/services/general-surgery/gerniotomiya">
+                        Видалення гриж
                       </Link>
                     </div>
                   </div>
@@ -260,46 +275,101 @@ const HeaderMenu: React.FC = () => {
                 {activeSubMenu === 'services' && (
                   <div className={styles.burgerSubMenu}>
                     <Link
-                      href="/services/face-lift"
+                      href="/services/face-surgery/face-lift"
                       onClick={handleMenuItemClick}
                     >
                       Підтяжка обличчя та шиї
                     </Link>
                     <Link
-                      href="/services/blefaro-plastic"
+                      href="/services/face-surgery/blefaro-plastic"
                       onClick={handleMenuItemClick}
                     >
                       Блефаропластика
                     </Link>
                     <Link
-                      href="/services/chino-plasty"
+                      href="/services/face-surgery/chino-plasty"
                       onClick={handleMenuItemClick}
                     >
                       Пластика підборіддя
                     </Link>
                     <Link
-                      href="/services/breast-augmentation"
+                      href="/services/breast-surgery/breast-augmentation"
                       onClick={handleMenuItemClick}
                     >
                       Збільшення грудей
                     </Link>
                     <Link
-                      href="/services/breast-reduction"
+                      href="/services/breast-surgery/breast-lift"
+                      onClick={handleMenuItemClick}
+                    >
+                      Підтяжка грудей
+                    </Link>
+                    <Link
+                      href="/services/breast-surgery/areolaCorrec"
+                      onClick={handleMenuItemClick}
+                    >
+                      Корекція соска та ареоли
+                    </Link>
+                    <Link
+                      href="/services/breast-surgery/breast-asymmetry-correction"
+                      onClick={handleMenuItemClick}
+                    >
+                      Корекція асиметрії грудей
+                    </Link>
+
+                    <Link
+                      href="/services/breast-surgery/breast-reduction"
                       onClick={handleMenuItemClick}
                     >
                       Зменшення грудей
                     </Link>
                     <Link
-                      href="/services/abdominoplasty"
+                      href="/services/body-surgery/abdominoplasty"
                       onClick={handleMenuItemClick}
                     >
                       Абдомінопластика
                     </Link>
                     <Link
-                      href="/services/liposuction"
+                      href="/services/body-surgery/liposuction"
                       onClick={handleMenuItemClick}
                     >
                       Ліпосакція
+                    </Link>
+                    <Link
+                      href="/services/body-surgery/cervical-hump"
+                      onClick={handleMenuItemClick}
+                    >
+                      Видалення шийного горба
+                    </Link>
+                    <Link
+                      href="/services/body-surgery/buttock-augmentation"
+                      onClick={handleMenuItemClick}
+                    >
+                      Збільшення сідниць
+                    </Link>
+                    <Link
+                      href="/services/body-surgery/leg-plastic"
+                      onClick={handleMenuItemClick}
+                    >
+                      Пластика ніг
+                    </Link>
+                    <Link
+                      href="/services/general-surgery/carpal-tunnel"
+                      onClick={handleMenuItemClick}
+                    >
+                      Видалення пухлин
+                    </Link>
+                    <Link
+                      href="/services/general-surgery/carpal-tunnel"
+                      onClick={handleMenuItemClick}
+                    >
+                      Карпальний канал
+                    </Link>
+                    <Link
+                      href="/services/general-surgery/gerniotomiya"
+                      onClick={handleMenuItemClick}
+                    >
+                      Видалення гриж
                     </Link>
                   </div>
                 )}

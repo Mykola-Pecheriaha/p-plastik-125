@@ -62,6 +62,7 @@ const serviceCategories: ServiceCategory[] = [
     services: [
       { name: 'Видалення пухлин', slug: 'tumor-removal' },
       { name: 'Карпальний канал', slug: 'carpal-tunnel' },
+      { name: 'Видалення гриж', slug: 'gerniotomiya' },
     ],
   },
 ];
