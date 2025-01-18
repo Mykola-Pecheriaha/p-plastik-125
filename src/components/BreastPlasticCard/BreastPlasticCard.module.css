@@ -1,0 +1,41 @@
+.card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  width: 100%;
+  height: calc(100% - 40px); /* Віднімаємо висоту лічильника лайків */
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.likeBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  height: 40px;
+}
+
+.likeCount {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.heartIcon {
+  color: #ff4081;
+  cursor: pointer;
+}
+
+.heartIcon:hover {
+  color: #ff1493;
+  transform: scale(1.1);
+}
