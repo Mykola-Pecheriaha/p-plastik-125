@@ -1,12 +1,10 @@
-export interface GalleryImage {
-  src: string;
-  alt: string;
-}
-
 export interface Album {
   id: string;
   title: string;
   description: string;
-  images: GalleryImage[];
+  images: {
+    src: string;
+    alt: string;
+  }[];
   initialLikes: number;
 }

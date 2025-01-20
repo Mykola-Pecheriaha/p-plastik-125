@@ -14,7 +14,7 @@ const plasticData: PlasticData = {
   breast: [
     {
       id: 'breast-augmentation',
-      imageUrl: '/images/breast-augmento/augmento1.jpg',
+      imageUrl: '/images/breast-augmento/augmentatio2.jpg',
       title: 'Збільшення грудей: результати до та після',
       likes: 180,
       albumLink: '/albums/breast-augmentation',

@@ -23,7 +23,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 500px; /* Збільшуємо максимальну ширину карточки */
+  max-width: 900px; /* Збільшуємо максимальну ширину карточки */
   margin: 0 auto;
 }
 

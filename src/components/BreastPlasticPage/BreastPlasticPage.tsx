@@ -12,6 +12,7 @@ const breastPlasticData = [
     title: 'Збільшення грудей: результати до та після',
     likes: 180,
     albumLink: '/albums/breast-augmentation',
+    size: 'medium' as const,
   },
 
   {
@@ -20,6 +21,7 @@ const breastPlasticData = [
     title: 'Підтяжка грудей: результати до та після',
     likes: 120,
     albumLink: '/albums/breast-lift',
+    size: 'small' as const,
   },
   {
     id: 'breast-reduction',
@@ -27,6 +29,15 @@ const breastPlasticData = [
     title: 'Зменшення грудей: результати до та після',
     likes: 95,
     albumLink: '/albums/breast-reduction',
+    size: 'medium' as const,
+  },
+  {
+    id: 'breast-plastic',
+    imageUrl: '/images/breast-plastic/plastic.jpg',
+    title: 'Пластика грудей: результати до та після',
+    likes: 150,
+    albumLink: '/albums/breast-plastic',
+    size: 'medium' as const,
   },
 ];
 
@@ -41,6 +52,7 @@ const BreastPlasticPage: React.FC = () => {
               imageUrl={item.imageUrl}
               initialLikes={item.likes}
               id={item.id}
+              size={item.size}
             />
             <h3 className={styles.cardTitle}>{item.title}</h3>
             <Link href={item.albumLink} className={styles.albumButton}>

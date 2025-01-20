@@ -1,0 +1,83 @@
+/* Загальний стиль карточки */
+.card {
+  background-color: #f8f9fa; /* Світлий фон */
+  border: 1px solid #ddd; /* Тонка рамка */
+  border-radius: 10px; /* Заокруглені кути */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Тінь */
+  overflow: hidden; /* Зрізає зайвий контент */
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s; /* Анімація при наведенні */
+  display: flex;
+  flex-direction: column; /* Розташування елементів зверху вниз за замовчуванням */
+  align-items: center;
+  text-align: center; /* Центрування тексту */
+  padding: 20px; /* Внутрішні відступи */
+  width: 200px; /* Ширина за замовчуванням */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Збільшення при наведенні */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Більш насичена тінь */
+}
+
+/* Додатковий стиль для горизонтальної картки */
+.cardHorizontal {
+  flex-direction: row; /* Елементи розташовуються горизонтально */
+  align-items: flex-start; /* Вирівнювання по верхньому краю */
+  text-align: left; /* Текст вирівнюється зліва */
+  width: 100%; /* Ширина розтягується */
+  padding: 10px; /* Менші відступи */
+  height: 150px; /* Фіксована висота для горизонтальної картки */
+}
+
+.cardImage {
+  border-radius: 10px; /* Заокруглення */
+  object-fit: cover; /* Збереження пропорцій зображення */
+}
+
+/* Стиль зображення для горизонтальної картки */
+.cardHorizontal .cardImage {
+  width: 90%; /* Фіксована ширина для зображення */
+  height: 90%; /* Висота займає всю висоту картки */
+  margin-right: 15px; /* Відступ від текстової частини */
+}
+
+/* Заголовок */
+.cardTitle {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Заголовок у горизонтальній картці */
+.cardHorizontal .cardTitle {
+  margin: 0 0 5px; /* Зменшені відступи */
+  font-size: 1rem;
+}
+
+/* Опис */
+.cardDescription {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Кнопка */
+.cardButton {
+  background-color: #007bff; /* Синій фон */
+  color: #fff; /* Білий текст */
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+
+.cardButton:hover {
+  background-color: #0056b3; /* Темніший синій при наведенні */
+  transform: translateY(-2px); /* Легке підняття кнопки */
+}

@@ -11,44 +11,45 @@ interface Album {
 
 const albums: Album[] = [
   {
-    id: 'face-lift',
+    id: 'faceplastic-albums',
     title: 'Пластика обличчя',
-    imageUrl: '/images/albums/face-lift.jpg',
+    imageUrl: '/images/albums/facelift1.jpg',
   },
   {
     id: 'otto-plastic',
     title: 'Пластика вушних раковин',
-    imageUrl: '/images/albums/otto-plastic.jpg',
+    imageUrl: '/images/albums/otto-plastic1.jpg',
   },
   {
     id: 'breast-augmentation',
     title: 'Збільшення грудей',
-    imageUrl: '/images/albums/breast-plastic.jpg',
+    imageUrl: '/images/albums/augmentatio.jpg',
   },
   {
     id: 'breast-lift',
     title: 'Підтяжка грудей',
-    imageUrl: '/images/albums/breast-plastic.jpg',
+    imageUrl: '/images/albums/breast-augment.jpg',
   },
   {
     id: 'breast-reduction',
-    title: 'Зменшення  грудей',
-    imageUrl: '/images/albums/breast-plastic.jpg',
+    title: 'Заміна імплантів',
+    imageUrl: '/images/albums/dreast-rebrend.jpg',
   },
-  {
-    id: 'breast-augmentation',
-    title: 'Збільшення грудей',
-    imageUrl: '/images/albums/breast-plastic.jpg',
-  },
+
   {
     id: 'body-plastic',
     title: 'Пластика тіла',
-    imageUrl: '/images/albums/body-plastic.jpg',
+    imageUrl: '/images/albums/abdominoplasty.jpg',
   },
   {
     id: 'tumors-skin',
     title: 'Пухлини шкіри',
     imageUrl: '/images/albums/tumors-skin.jpg',
+  },
+  {
+    id: 'breast-augmentation',
+    title: 'Збільшення грудей',
+    imageUrl: '/images/albums/breast-plastic.jpg',
   },
 ];
 

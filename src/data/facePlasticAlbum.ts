@@ -6,15 +6,15 @@ const facePlasticAlbum: Album = {
   description: 'Галерея результатів операцій припідтяжці обличчя.',
   images: [
     {
-      src: '/images/breast-albums/augmentation-1.jpg',
+      src: '/images/faceplastic-album/face-lifting.jpg',
       alt: 'Результат підтяжки обдичча 1',
     },
     {
-      src: '/images/breast-albums/augmentation-2.jpg',
+      src: '/images/faceplastic-album/face-lifting1.jpg',
       alt: 'Результат Результат підтяжки обдичча 2',
     },
     {
-      src: '/images/breast-albums/augmento1.jpg',
+      src: '/images/faceplastic-album/face-lifting2.jpg',
       alt: 'Результат Результат підтяжки обдичча 3',
     },
   ],
