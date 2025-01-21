@@ -1,4 +1,4 @@
-import { Album } from '../types/album';
+import type { Album } from '../types/album';
 
 const faceLiftAugmentationAlbums: Album[] = [
   {

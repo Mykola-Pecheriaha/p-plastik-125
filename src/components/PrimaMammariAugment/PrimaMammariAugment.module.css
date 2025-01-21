@@ -47,6 +47,35 @@
   color: #0070f3;
 }
 
+.mammoplastySection {
+  max-width: 1200px; /* Максимальна ширина секції */
+  margin: 0 auto; /* Вирівнювання по центру */
+  padding: 20px; /* Внутрішні відступи */
+  background-color: #f9f9f9; /* Світлий фон */
+  border-radius: 10px; /* Закруглені кути */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.sectorText {
+  text-align: center; /* Вирівнювання заголовка по центру */
+  margin-bottom: 20px; /* Відступ знизу */
+}
+
+.sectorText h2 {
+  font-size: 2rem; /* Розмір заголовка */
+  color: #333; /* Темний текст */
+  font-weight: bold; /* Жирний шрифт */
+  margin: 0;
+}
+
+.mammoplastySection p {
+  font-size: 1rem; /* Розмір тексту */
+  line-height: 1.6; /* Міжрядковий інтервал */
+  color: #555; /* Колір тексту */
+  margin: 10px 0; /* Відступи зверху і знизу */
+  text-align: justify; /* Вирівнювання тексту по ширині */
+}
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
