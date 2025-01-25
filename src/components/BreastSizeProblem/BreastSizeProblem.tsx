@@ -103,28 +103,28 @@ const BreastSizeProblem: React.FC = () => {
           </div>
           <div className={styles.problemsImages}>
             <Image
-              src="/images/breast-problem-1.jpg"
+              src="/images/breastSizeProblem/sizeProblem1.jpg"
               alt="Breast problem 1"
-              width={300}
-              height={200}
+              width={400}
+              height={250}
             />
             <Image
-              src="/images/breast-problem-2.jpg"
+              src="/images/breastSizeProblem/sizeProblem2.jpg"
               alt="Breast problem 2"
-              width={300}
-              height={200}
+              width={400}
+              height={250}
             />
             <Image
-              src="/images/breast-problem-3.jpg"
+              src="/images/breastSizeProblem/sizeProblem3.jpg"
               alt="Breast problem 3"
-              width={300}
-              height={200}
+              width={400}
+              height={250}
             />
             <Image
-              src="/images/breast-problem-4.jpg"
+              src="/images/breastSizeProblem/implant6.jpg"
               alt="Breast problem 4"
-              width={300}
-              height={200}
+              width={400}
+              height={250}
             />
           </div>
         </div>
@@ -153,10 +153,16 @@ const BreastSizeProblem: React.FC = () => {
           </div>
           <div className={styles.knowledgeImage}>
             <Image
-              src="/images/breast-knowledge.jpg"
+              src="/images/implantBreast/augmentation14.jpg"
               alt="Breast augmentation knowledge"
-              width={300}
-              height={400}
+              width={350}
+              height={200}
+            />
+            <Image
+              src="/images/implantBreast/grudni-implanti.jpg"
+              alt="Breast augmentation knowledge"
+              width={350}
+              height={200}
             />
           </div>
         </div>

@@ -10,7 +10,7 @@ import PlasticSurgeons from '../../components/PlasticSurgeons/PlasticSurgeons';
 import ConsultationBreastAugmentation from '../../components/ConsultationBreastAugmentation/ConsultationBreastAugmentation';
 import BlockAugmentBreastProcess from '../../components/BlockAugmentBreastProcess/BlockAugmentBreastProcess';
 import ClinicSurgical from '../../components/ClinicSurgical/ClinicSurgical';
-// import BreastSizeProblem from '../../components/BreastSizeProblem/BreastSizeProblem';
+import BreastSizeProblem from '../../components/BreastSizeProblem/BreastSizeProblem';
 // import BreastQuestion from '../../components/BreastQuestion/BreastQuestion';
 
 const PrimmaMammariExamples: React.FC = () => {
@@ -66,7 +66,7 @@ const PrimmaMammariExamples: React.FC = () => {
       <ConsultationBreastAugmentation />
       <BlockAugmentBreastProcess />
       <ClinicSurgical />
-      {/* <BreastSizeProblem /> */}
+      <BreastSizeProblem />
       {/* <BreastQuestion /> */}
     </div>
   );
