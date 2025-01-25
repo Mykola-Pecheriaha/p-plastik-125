@@ -1,14 +1,26 @@
-.PrimmaMammariExamples {
+.fullWidthBackground {
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.primmaMammariExamples {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 40px 0;
 }
 
 .containerExamples {
   display: flex;
   flex-direction: row;
   gap: 50px;
+  width: 100%;
 }
 
 .examplesText {
@@ -17,53 +29,52 @@
 
 .examplesText h1 {
   margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
 }
 
 .examplesTitle {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: center;
-  padding-bottom: 20px;
 }
 
 .subTitle ul {
   list-style-type: disc;
   margin-left: 20px;
-  font-size: 20px;
-  line-height: 2;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-.bigImage {
+.galleryContainer {
   flex: 1;
-  position: relative;
-  text-align: center;
-  padding-bottom: 30px;
+  max-width: 600px;
+  width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .containerExamples {
     flex-direction: column;
     align-items: center;
   }
 
+  .examplesText,
+  .galleryContainer {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
   .examplesText {
     text-align: center;
-    padding: 0 15px;
+  }
+
+  .subTitle ul {
+    text-align: left;
   }
 
   .examplesTitle {
     font-size: 20px;
-  }
-
-  .subTitle ul {
-    font-size: 18px;
-    margin-left: 0;
-    padding: 0;
-  }
-
-  .bigImage {
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
   }
 }

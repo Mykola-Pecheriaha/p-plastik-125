@@ -1,0 +1,112 @@
+.mykolaSurgeon {
+  width: 100%;
+}
+
+.topSection {
+  background-image: url('/images/bacround/abstractiz21.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 0;
+  position: relative;
+}
+
+.topSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 1;
+}
+
+.topContent {
+  position: relative;
+  z-index: 2;
+}
+
+.bottomSection {
+  background-color: #0151caf3;
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.topContent,
+.bottomContent {
+  display: flex;
+  gap: 40px;
+}
+
+.topText {
+  flex: 2;
+  background-color: rgba(66, 110, 231, 0);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.bottomText {
+  flex: 2;
+}
+
+.topImage,
+.bottomImage {
+  flex: 1;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #f7f2f2;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .topContent,
+  .bottomContent {
+    flex-direction: column;
+  }
+
+  .topText,
+  .bottomText,
+  .topImage,
+  .bottomImage {
+    flex: 1;
+    width: 100%;
+  }
+
+  .topSection,
+  .bottomSection {
+    padding: 40px 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.75rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+}

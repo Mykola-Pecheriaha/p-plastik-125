@@ -1,0 +1,89 @@
+.backgroundWrapper {
+  width: 100%;
+  background-color: #a3f5e7; /* Змініть на бажаний колір фону */
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.problemsSection,
+.knowledgeSection {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.problemsText,
+.knowledgeText {
+  flex: 2;
+}
+
+.problemsImages,
+.knowledgeImage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.problem,
+.knowledgeItem {
+  margin-bottom: 30px;
+}
+
+.problem h3,
+.knowledgeItem h3 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.problem p,
+.knowledgeItem p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.problem button,
+.knowledgeItem button {
+  background: none;
+  border: none;
+  color: #0070f3;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .problemsSection,
+  .knowledgeSection {
+    flex-direction: column;
+  }
+
+  .problemsImages,
+  .knowledgeImage {
+    order: -1;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .problem h3,
+  .knowledgeItem h3 {
+    font-size: 1.3rem;
+  }
+}

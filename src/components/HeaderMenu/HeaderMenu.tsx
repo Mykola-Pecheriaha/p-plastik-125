@@ -50,7 +50,7 @@ const HeaderMenu: React.FC = () => {
       <div className={styles.headerContainer}>
         <div className={styles.logo}>
           <Image
-            src="/images/logo/logo4.png"
+            src="/images/logo/logo.png"
             alt="Logo"
             width={50}
             height={50}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 import {
   FaTelegram,
@@ -15,12 +15,12 @@ const Footer: React.FC = () => {
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
         <div className={styles.footerColumn}>
-          <Image
+          {/* <Image
             src="/images/logo/logo.png"
             alt="Логотип"
             width={100}
             height={100}
-          />
+          /> */}
           <h3>Печеряга Микола Миколайович</h3>
           <p>Член Європейської асоціації пластичних хірургів</p>
           <p>

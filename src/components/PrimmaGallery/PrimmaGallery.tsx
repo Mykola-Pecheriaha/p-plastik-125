@@ -23,19 +23,26 @@ const PrimmaGallery: React.FC<PrimmaGalleryProps> = ({ images, galleryId }) => {
   const [newComment, setNewComment] = useState('');
   const [showComments, setShowComments] = useState(false);
   const [isClient, setIsClient] = useState(false);
-  const [activeImage, setActiveImage] = useState(currentImageIndex);
 
   useEffect(() => {
+    console.log('PrimmaGallery: Отримані зображення:', images);
     setIsClient(true);
-    const savedLikes = localStorage.getItem(`likes_${galleryId}`);
-    const savedComments = localStorage.getItem(`comments_${galleryId}`);
-    setLikes(
-      savedLikes ? JSON.parse(savedLikes) : Array(images.length).fill(0)
-    );
-    setComments(
-      savedComments ? JSON.parse(savedComments) : Array(images.length).fill([])
-    );
-  }, [galleryId, images.length]);
+  }, [images]);
+
+  useEffect(() => {
+    if (isClient) {
+      const savedLikes = localStorage.getItem(`likes_${galleryId}`);
+      const savedComments = localStorage.getItem(`comments_${galleryId}`);
+      setLikes(
+        savedLikes ? JSON.parse(savedLikes) : Array(images.length).fill(0)
+      );
+      setComments(
+        savedComments
+          ? JSON.parse(savedComments)
+          : Array(images.length).fill([])
+      );
+    }
+  }, [galleryId, images.length, isClient]);
 
   useEffect(() => {
     if (isClient) {
@@ -44,17 +51,17 @@ const PrimmaGallery: React.FC<PrimmaGalleryProps> = ({ images, galleryId }) => {
     }
   }, [likes, comments, galleryId, isClient]);
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
-  };
+  }, [images.length]);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  }, [images.length]);
 
   const toggleFullscreen = () => {
     setIsFullscreen((prevState) => !prevState);
@@ -87,38 +94,8 @@ const PrimmaGallery: React.FC<PrimmaGalleryProps> = ({ images, galleryId }) => {
     setShowComments((prevState) => !prevState);
   };
 
-  const updateActiveImage = useCallback(() => {
-    setActiveImage(currentImageIndex);
-  }, [currentImageIndex]);
-
-  useEffect(() => {
-    const timer = setTimeout(updateActiveImage, 50);
-    return () => clearTimeout(timer);
-  }, [currentImageIndex, updateActiveImage]);
-
-  useEffect(() => {
-    const preloadImages = async () => {
-      const imagePromises = images.map((src) => {
-        return new Promise((resolve, reject) => {
-          const img = new window.Image();
-          img.src = src;
-          img.onload = resolve;
-          img.onerror = reject;
-        });
-      });
-
-      try {
-        await Promise.all(imagePromises);
-        console.log('All images preloaded successfully');
-      } catch (error) {
-        console.error('Error preloading images:', error);
-      }
-    };
-
-    preloadImages();
-  }, [images]);
-
   if (!isClient || images.length === 0) {
+    console.log('PrimmaGallery: Завантаження або відсутні зображення');
     return <div>Завантаження...</div>;
   }
 
@@ -139,21 +116,23 @@ const PrimmaGallery: React.FC<PrimmaGalleryProps> = ({ images, galleryId }) => {
           <div className={styles.imageContainer}>
             {!showComments ? (
               <div className={styles.imageWrapper}>
-                {images.map((image, index) => (
-                  <div
-                    key={index}
-                    className={`${styles.imageItem} ${index === activeImage ? styles.active : ''}`}
-                  >
-                    <Image
-                      src={image || '/placeholder.svg'}
-                      alt={`Зображення галереї ${index + 1}`}
-                      layout="fill"
-                      objectFit="cover"
-                      quality={75}
-                      priority={index === currentImageIndex}
-                    />
-                  </div>
-                ))}
+                {images[currentImageIndex] ? (
+                  <Image
+                    src={images[currentImageIndex] || '/placeholder.svg'}
+                    alt={`Зображення галереї ${currentImageIndex + 1}`}
+                    layout="fill"
+                    objectFit="cover"
+                    quality={75}
+                    priority={true}
+                    onError={() =>
+                      console.error(
+                        `PrimmaGallery: Помилка завантаження зображення: ${images[currentImageIndex]}`
+                      )
+                    }
+                  />
+                ) : (
+                  <div>Зображення не знайдено</div>
+                )}
               </div>
             ) : (
               <div className={styles.commentsSection}>

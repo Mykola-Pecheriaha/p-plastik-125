@@ -1,114 +1,117 @@
-.plasticSurgeons {
-  display: flex;
-  flex-direction: column; /* Заголовок вгорі, контент внизу */
-  align-items: center;
+.wrapper {
   width: 100%;
-  padding: 20px; /* Відступи навколо всієї сторінки */
   background-color: bisque;
+  padding: 40px 0;
+}
+
+.plasticSurgeons {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container {
+  margin-bottom: 30px;
 }
 
 .plasticSurgeonsTitle {
+  font-size: 2.5em;
+  color: #333;
   text-align: center;
-  margin: 20px 0;
-  font-size: 2rem;
-  font-weight: bold;
 }
 
 .containerplasticSurgeons {
   display: flex;
-  flex-direction: row; /* Контент розділений на дві частини */
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px; /* Обмеження ширини сторінки */
-  margin: 0 auto;
-  gap: 30px; /* Відступ між галереєю та текстовим блоком */
+  gap: 80px;
+  align-items: flex-start;
 }
 
 .plasticSurgeonsImage {
-  flex: 1; /* Займає 50% простору */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px; /* Відступи навколо галереї */
+  flex: 1;
+  min-width: 300px;
 }
 
 .plasticSurgeonsText {
-  flex: 1; /* Займає 50% простору */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  padding: 10px; /* Відступи навколо текстового блоку */
+  flex: 1;
 }
 
-.subTitle {
-  margin-top: 10px;
-  font-size: 1rem;
-  line-height: 1.6; /* Зручне читання тексту */
-  color: #555;
-}
-.subTitleTopp {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
+.plasticSurgeonsText h1 {
+  font-size: 2em;
+  color: #333;
   margin-bottom: 20px;
 }
 
-/* Кнопка */
+.subTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subTitleTopp {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.subTitleToppText {
+  flex: 1;
+}
+
+.subTitleToppText p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.subTitleToppImage {
+  flex-shrink: 0;
+}
+
 .contactButton {
-  background-color: #948607ff;
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #948607;
   color: white;
   border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 5px;
+  border-radius: 4px;
+  font-size: 1.1em;
   cursor: pointer;
-  margin-top: 80px;
-  margin-bottom: 80px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
+  margin-top: 20px;
 }
 
 .contactButton:hover {
-  background-color: #702c04ff;
+  background-color: #702c04;
 }
 
-/* Адаптація для малих екранів */
 @media (max-width: 768px) {
   .containerplasticSurgeons {
-    flex-direction: column; /* Розташування блоків один під одним */
-    gap: 20px; /* Зменшення відступу між блоками */
+    flex-direction: column;
   }
 
   .plasticSurgeonsImage,
   .plasticSurgeonsText {
-    flex: unset; /* Скасовує розподіл простору */
-    width: 100%; /* Блоки займають всю ширину */
-    text-align: center; /* Вирівнювання тексту по центру */
+    width: 100%;
+  }
+
+  .subTitleTopp {
+    flex-direction: column;
+    text-align: center;
   }
 
   .plasticSurgeonsTitle {
-    font-size: 1.8rem; /* Зменшення розміру заголовка */
-    margin: 15px 0;
+    font-size: 2em;
   }
 
-  .subTitle {
-    font-size: 0.95rem; /* Менший шрифт для тексту */
-    line-height: 1.4;
-  }
-}
-
-/* Адаптація для дуже малих екранів (наприклад, смартфонів) */
-@media (max-width: 480px) {
-  .plasticSurgeonsTitle {
-    font-size: 1.5rem; /* Ще менший заголовок */
+  .plasticSurgeonsText h1 {
+    font-size: 1.8em;
   }
 
-  .subTitle {
-    font-size: 0.9rem; /* Зменшення тексту */
-    margin-bottom: 25px;
+  .subTitleToppText p {
+    font-size: 1.1em;
   }
 
-  .containerplasticSurgeons {
-    padding: 10px; /* Зменшення загального відступу */
+  .contactButton {
+    width: 100%;
+    text-align: center;
   }
 }

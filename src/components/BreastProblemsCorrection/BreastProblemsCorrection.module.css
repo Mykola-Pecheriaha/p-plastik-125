@@ -1,0 +1,102 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.problemContainer {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.problemTitle {
+  background-color: #f8f8f8;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.problemTitle:hover {
+  background-color: #e8e8e8;
+}
+
+.problemTitle.open {
+  background-color: #e0e0e0;
+}
+
+.problemContent {
+  display: flex;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.textContent {
+  flex: 2;
+  padding-right: 30px;
+}
+
+.textContent h3 {
+  font-size: 20px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.textContent p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.imageContent {
+  flex: 1;
+}
+
+.fullWidthBackground {
+  width: 100%;
+  padding: 40px 0;
+}
+
+@media (max-width: 768px) {
+  .problemContent {
+    flex-direction: column;
+  }
+
+  .textContent {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+
+  .mainTitle {
+    font-size: 24px;
+  }
+
+  .problemTitle {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .textContent h3 {
+    font-size: 18px;
+  }
+
+  .textContent p {
+    font-size: 14px;
+  }
+}
