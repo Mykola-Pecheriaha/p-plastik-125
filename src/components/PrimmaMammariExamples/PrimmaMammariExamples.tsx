@@ -9,7 +9,7 @@ import styles from './PrimmaMammariExamples.module.css';
 import PlasticSurgeons from '../../components/PlasticSurgeons/PlasticSurgeons';
 import ConsultationBreastAugmentation from '../../components/ConsultationBreastAugmentation/ConsultationBreastAugmentation';
 import BlockAugmentBreastProcess from '../../components/BlockAugmentBreastProcess/BlockAugmentBreastProcess';
-// import ClinicSurgical from '../../components/ClinicSurgical/ClinicSurgical';
+import ClinicSurgical from '../../components/ClinicSurgical/ClinicSurgical';
 // import BreastSizeProblem from '../../components/BreastSizeProblem/BreastSizeProblem';
 // import BreastQuestion from '../../components/BreastQuestion/BreastQuestion';
 
@@ -65,7 +65,7 @@ const PrimmaMammariExamples: React.FC = () => {
       <PlasticSurgeons />
       <ConsultationBreastAugmentation />
       <BlockAugmentBreastProcess />
-      {/* <ClinicSurgical /> */}
+      <ClinicSurgical />
       {/* <BreastSizeProblem /> */}
       {/* <BreastQuestion /> */}
     </div>
