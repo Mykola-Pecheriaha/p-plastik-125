@@ -8,7 +8,7 @@ import { primmaGalleryData } from '../../data/primaGalleryData';
 import styles from './PrimmaMammariExamples.module.css';
 import PlasticSurgeons from '../../components/PlasticSurgeons/PlasticSurgeons';
 import ConsultationBreastAugmentation from '../../components/ConsultationBreastAugmentation/ConsultationBreastAugmentation';
-// import BlockAugmentBreastProcess from '../../components/BlockAugmentBreastProcess/BlockAugmentBreastProcess';
+import BlockAugmentBreastProcess from '../../components/BlockAugmentBreastProcess/BlockAugmentBreastProcess';
 // import ClinicSurgical from '../../components/ClinicSurgical/ClinicSurgical';
 // import BreastSizeProblem from '../../components/BreastSizeProblem/BreastSizeProblem';
 // import BreastQuestion from '../../components/BreastQuestion/BreastQuestion';
@@ -64,7 +64,7 @@ const PrimmaMammariExamples: React.FC = () => {
       <BreastProblemsCorrection backgroundColor="#DCEBB3FF" />
       <PlasticSurgeons />
       <ConsultationBreastAugmentation />
-      {/* <BlockAugmentBreastProcess /> */}
+      <BlockAugmentBreastProcess />
       {/* <ClinicSurgical /> */}
       {/* <BreastSizeProblem /> */}
       {/* <BreastQuestion /> */}
