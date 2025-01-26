@@ -162,7 +162,7 @@ const BreastSizeProblem: React.FC = () => {
               src="/images/implantBreast/grudni-implanti.jpg"
               alt="Breast augmentation knowledge"
               width={350}
-              height={200}
+              height={300}
             />
           </div>
         </div>

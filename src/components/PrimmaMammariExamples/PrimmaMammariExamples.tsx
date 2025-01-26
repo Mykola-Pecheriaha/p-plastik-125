@@ -11,7 +11,7 @@ import ConsultationBreastAugmentation from '../../components/ConsultationBreastA
 import BlockAugmentBreastProcess from '../../components/BlockAugmentBreastProcess/BlockAugmentBreastProcess';
 import ClinicSurgical from '../../components/ClinicSurgical/ClinicSurgical';
 import BreastSizeProblem from '../../components/BreastSizeProblem/BreastSizeProblem';
-// import BreastQuestion from '../../components/BreastQuestion/BreastQuestion';
+import BreastQuestion from '../../components/BreastQuestion/BreastQuestion';
 
 const PrimmaMammariExamples: React.FC = () => {
   const breastAugmentationData = primmaGalleryData.find(
@@ -67,7 +67,7 @@ const PrimmaMammariExamples: React.FC = () => {
       <BlockAugmentBreastProcess />
       <ClinicSurgical />
       <BreastSizeProblem />
-      {/* <BreastQuestion /> */}
+      <BreastQuestion />
     </div>
   );
 };

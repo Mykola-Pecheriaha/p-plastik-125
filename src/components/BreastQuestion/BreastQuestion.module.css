@@ -1,6 +1,6 @@
 .fullWidthBackground {
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: #e6e49e;
   padding: 40px 0;
 }
 
@@ -19,13 +19,13 @@
 
 .questionContainer {
   margin-bottom: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #8edaec;
   border-radius: 8px;
   overflow: hidden;
 }
 
 .questionTitle {
-  background-color: #fff;
+  background-color: #9eeeea;
   padding: 20px;
   cursor: pointer;
   display: flex;
@@ -37,17 +37,17 @@
 }
 
 .questionTitle:hover {
-  background-color: #f0f0f0;
+  background-color: #29c1e7;
 }
 
 .questionTitle.open {
-  background-color: #e0e0e0;
+  background-color: #15cce4;
 }
 
 .questionContent {
   display: flex;
   padding: 20px;
-  background-color: #fff;
+  background-color: #8eeeee;
 }
 
 .textContent {
@@ -86,4 +86,24 @@
   .questionTitle {
     font-size: 16px;
   }
+}
+
+.contraindicationsList {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.contraindicationsList li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.contraindicationsList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #0070f3;
+  font-size: 1.2em;
 }
