@@ -1,7 +1,13 @@
-import React from 'react';
+import type React from 'react';
+import Abdominoplastic from '../../../../components/Abdominoplastic/Abdominoplastic';
+import styles from './page.module.css';
 
-const Abdominoplasty: React.FC = () => {
-  return <div>Abdominoplasty- сторінка в розробці</div>;
+const AbdominoplastyPage: React.FC = () => {
+  return (
+    <div className={styles.abdominoplastyPage}>
+      <Abdominoplastic backgroundColor="#F0EBF3FF" />
+    </div>
+  );
 };
 
-export default Abdominoplasty;
+export default AbdominoplastyPage;
