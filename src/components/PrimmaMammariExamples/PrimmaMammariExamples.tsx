@@ -61,7 +61,7 @@ const PrimmaMammariExamples: React.FC = () => {
           </div>
         </div>
       </div>
-      <BreastProblemsCorrection backgroundColor="#DCEBB3FF" />
+      <BreastProblemsCorrection backgroundColor="#E2F1F1FF" />
       <PlasticSurgeons />
       <ConsultationBreastAugmentation />
       <BlockAugmentBreastProcess />

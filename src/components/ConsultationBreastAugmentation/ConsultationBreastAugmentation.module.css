@@ -9,6 +9,7 @@
 
 .textSection {
   flex: 2;
+  gap: 40px;
 }
 
 .imageSection {
@@ -26,11 +27,11 @@
 }
 
 .section {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #eaf2f5;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.377);
 }
 
 .sectionTitle {
@@ -40,7 +41,7 @@
 }
 
 .sectionContent {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #666;
   line-height: 1.6;
 }
@@ -65,7 +66,7 @@
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.267);
 }
 
 @media (max-width: 768px) {

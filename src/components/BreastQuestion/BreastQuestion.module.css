@@ -1,6 +1,6 @@
 .fullWidthBackground {
   width: 100%;
-  background-color: #e6e49e;
+  background-color: #b4d8f0;
   padding: 40px 0;
 }
 
@@ -19,13 +19,13 @@
 
 .questionContainer {
   margin-bottom: 20px;
-  border: 1px solid #8edaec;
+  border: 1px solid #044a5a;
   border-radius: 8px;
   overflow: hidden;
 }
 
 .questionTitle {
-  background-color: #9eeeea;
+  background-color: #28b7f0;
   padding: 20px;
   cursor: pointer;
   display: flex;
@@ -37,17 +37,17 @@
 }
 
 .questionTitle:hover {
-  background-color: #29c1e7;
+  background-color: #e3edf0;
 }
 
 .questionTitle.open {
-  background-color: #15cce4;
+  background-color: #85cdee;
 }
 
 .questionContent {
   display: flex;
   padding: 20px;
-  background-color: #8eeeee;
+  background-color: #f1f7f7;
 }
 
 .textContent {

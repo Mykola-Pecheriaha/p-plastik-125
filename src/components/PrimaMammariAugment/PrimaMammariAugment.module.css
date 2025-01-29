@@ -33,7 +33,7 @@
 }
 
 .rightSection li {
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: #666;
   margin-bottom: 10px;
   padding-left: 30px;
@@ -69,7 +69,7 @@
 }
 
 .mammoplastySection p {
-  font-size: 1rem; /* Розмір тексту */
+  font-size: 1.2rem; /* Розмір тексту */
   line-height: 1.6; /* Міжрядковий інтервал */
   color: #555; /* Колір тексту */
   margin: 10px 0; /* Відступи зверху і знизу */

@@ -7,7 +7,16 @@ import styles from './PlasticSurgeons.module.css';
 const surgeonImages = [
   '/images/gallerysurgeons/chirurg10.jpg',
   '/images/gallerysurgeons/chirurg50.JPG',
-  // '/images/gallerysurgeons/surgeon3.jpg',
+  '/images/gallerysurgeons/chirurg51.jpg',
+  '/images/sertificats/Sertificat4.jpg',
+  '/images/sertificats/Sertificat10.jpg',
+  '/images/sertificats/Sertificat6.jpg',
+  '/images/sertificats/Sertificat5.jpg',
+  '/images/sertificats/Sertificat8.jpg',
+  '/images/sertificats/Sertificat9.jpg',
+  '/images/sertificats/Sertificat3.jpg',
+  '/images/sertificats/Sertificat2.jpg',
+  '/images/sertificats/Sertificat12.jpg',
   // Add more images as needed
 ];
 

@@ -18,8 +18,8 @@
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  color: #666;
+  font-size: 1.4rem;
+  color: #3f3f3f;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -34,21 +34,21 @@
 }
 
 .method {
-  background-color: #fff;
+  background-color: #aad5f8;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.438);
 }
 
 .methodTitle {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #333;
   margin-bottom: 10px;
 }
 
 .methodDescription {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #666;
   line-height: 1.6;
   margin-bottom: 10px;
