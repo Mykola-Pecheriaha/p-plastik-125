@@ -1,6 +1,6 @@
 .background {
   width: 100%;
-  background-color: #c1e1f3;
+  background-color: #e6f3ff;
   padding: 60px 0;
 }
 
@@ -26,8 +26,8 @@
   flex: 1;
 }
 
-.paragraph p {
-  font-size: 1.6rem;
+.paragraph {
+  font-size: 1.2rem;
   color: #1f1d1d;
   line-height: 1.6;
   margin-bottom: 20px;

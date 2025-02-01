@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import styles from './Abdominoplastic.module.css';
 import CardsPrimma from '../../components/CardsPrima/CardsPrima';
 import PrimmaGallery from '../../components/PrimmaGallery/PrimmaGallery';
+import PlasticSurgeons from '../../components/PlasticSurgeons/PlasticSurgeons';
 
 interface AbdominoplasticProps {
   backgroundColor?: string;
@@ -63,8 +64,9 @@ const Abdominoplastic: React.FC<AbdominoplasticProps> = ({
             яка дозволяє отримати ідеально рівний животик і гарну талію після
             пологів та різкого схуднення. Це стає можливим за рахунок
             позбавлення від надлишків шкіри та підшкірного жиру (так званий
-            «фартух»). Абдомінопластика повертає фігурі стрункість і
-            пропорційність, гармонійні контури.
+            «фартух»). а також повертиє упругий мязевий корсет для вашої талії.
+            Абдомінопластика повертає фігурі стрункість і пропорційність,
+            гармонійні контури.
           </p>
         </div>
 
@@ -89,6 +91,7 @@ const Abdominoplastic: React.FC<AbdominoplasticProps> = ({
           </div>
         </div>
       </div>
+      <PlasticSurgeons />
     </div>
   );
 };
