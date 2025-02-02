@@ -1,0 +1,116 @@
+.wrapper {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.plasticSurgeons {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container {
+  margin-bottom: 30px;
+}
+
+.plasticSurgeonsTitle {
+  font-size: 2.5em;
+  color: #333;
+  text-align: center;
+}
+
+.containerplasticSurgeons {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.plasticSurgeonsImage {
+  flex: 1;
+  min-width: 300px;
+}
+
+.plasticSurgeonsText {
+  flex: 1;
+}
+
+.plasticSurgeonsText h1 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.subTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subTitleTopp {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.subTitleToppText {
+  flex: 1;
+}
+
+.subTitleToppText p {
+  font-size: 1.6em;
+  color: #666;
+}
+
+.subTitleToppImage {
+  flex-shrink: 0;
+}
+
+.contactButton {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #948607;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.contactButton:hover {
+  background-color: #702c04;
+}
+
+@media (max-width: 768px) {
+  .containerplasticSurgeons {
+    flex-direction: column;
+  }
+
+  .plasticSurgeonsImage,
+  .plasticSurgeonsText {
+    width: 100%;
+  }
+
+  .subTitleTopp {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .plasticSurgeonsTitle {
+    font-size: 2em;
+  }
+
+  .plasticSurgeonsText h1 {
+    font-size: 1.8em;
+  }
+
+  .subTitleToppText p {
+    font-size: 1.6em;
+  }
+
+  .contactButton {
+    width: 100%;
+    text-align: center;
+  }
+}

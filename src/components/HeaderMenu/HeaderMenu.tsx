@@ -81,6 +81,7 @@ const HeaderMenu: React.FC = () => {
                       </Link>
                       <Link href="/results/body-plastic">Пластика тіла</Link>
                       <Link href="/results/tumors-skin">Пухлини шкіри</Link>
+                      <Link href="/albums/">Альбоми</Link>
                     </div>
                   </div>
                 </div>

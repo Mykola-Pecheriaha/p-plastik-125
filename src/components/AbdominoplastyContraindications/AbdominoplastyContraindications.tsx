@@ -4,6 +4,7 @@ import type React from 'react';
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import PrimmaGallery from '../PrimmaGallery/PrimmaGallery';
+import ConsultationButton from '../../components/ConsultationButton/ConsultationButton';
 import styles from './AbdominoplastyContraindications.module.css';
 
 interface Contraindication {
@@ -120,6 +121,7 @@ const AbdominoplastyContraindications: React.FC<
             )}
           </div>
         ))}
+        <ConsultationButton />
       </div>
     </div>
   );

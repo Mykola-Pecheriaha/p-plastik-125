@@ -2,19 +2,27 @@
 
 import type React from 'react';
 import PrimmaGallery from '../PrimmaGallery/PrimmaGallery';
-import styles from './ClinicInfo.module.css';
+import styles from './ModifiableClinicInfo.module.css';
 
-const galleryImages = [
+interface ModifiableClinicInfoProps {
+  backgroundColor?: string;
+  images?: string[];
+}
+
+const defaultImages = [
   '/images/clinic/clinic1.jpg',
   '/images/clinic/clinic_info2.jpg',
   '/images/clinic/clinic_info3.jpg',
   '/images/clinic/clinic_info4.jpg',
 ];
 
-const ClinicInfo: React.FC = () => {
+const ModifiableClinicInfo: React.FC<ModifiableClinicInfoProps> = ({
+  backgroundColor = '#e6f3ff',
+  images = defaultImages,
+}) => {
   return (
     <div className={styles.backgroundWrapper}>
-      <div className={styles.background}>
+      <div className={styles.background} style={{ backgroundColor }}>
         <div className={styles.container}>
           <h2 className={styles.mainTitle}>Інформація про нашу клініку</h2>
           <div className={styles.content}>
@@ -40,7 +48,7 @@ const ClinicInfo: React.FC = () => {
               </p>
             </div>
             <div className={styles.gallerySection}>
-              <PrimmaGallery images={galleryImages} galleryId="clinic-info" />
+              <PrimmaGallery images={images} galleryId="clinic-info" />
             </div>
           </div>
         </div>
@@ -49,4 +57,4 @@ const ClinicInfo: React.FC = () => {
   );
 };
 
-export default ClinicInfo;
+export default ModifiableClinicInfo;

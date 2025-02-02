@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import PrimmaGallery from '../../components/PrimmaGallery/PrimmaGallery';
+import ConsultationButton from '../../components/ConsultationButton/ConsultationButton';
 import styles from './AbdominoplastyPreparation.module.css';
 
 interface Section {
@@ -26,9 +27,9 @@ const sections: Section[] = [
 
 Абдомінопластика сполучена з ліпосакцією. Для отримання більш вираженого ефекту в деяких випадках пластика живота поєднується з ліпосакцією. Перевага полягає в тому, що разом із надлишком шкірно-жирового «фартуха» та зміцненням м'язів забирається надлишок жиру. Ліпосакцію проводять на фланках (боках) через невеликі проколи.`,
     images: [
-      '/images/abdominoplasty/types1.jpg',
-      '/images/abdominoplasty/types2.jpg',
-      '/images/abdominoplasty/types3.jpg',
+      '/images/AbdominoplastyPreparation/preparation4.jpg',
+      '/images/AbdominoplastyPreparation/preparation4.jpg',
+      '/images/AbdominoplastyPreparation/preparation4.jpg',
     ],
   },
   {
@@ -47,9 +48,9 @@ const sections: Section[] = [
 прискорюється процес загоєння;
 отримуємо відмінні косметичні результати – шов через 2 тижні виглядає як через 6-8 місяців!`,
     images: [
-      '/images/abdominoplasty/stages1.jpg',
-      '/images/abdominoplasty/stages2.jpg',
-      '/images/abdominoplasty/stages3.jpg',
+      '/images/AbdominoplastyPreparation/preparation5.jpg',
+      '/images/AbdominoplastyPreparation/preparation5.jpg',
+      '/images/AbdominoplastyPreparation/preparation5.jpg',
     ],
   },
 ];
@@ -113,7 +114,7 @@ const AbdominoplastyPreparation: React.FC<AbdominoplastyPreparationProps> = ({
           </div>
           <div className={styles.introImage}>
             <PrimmaGallery
-              images={['/images/abdominoplasty/consultation.jpg']}
+              images={['/images/AbdominoplastyPreparation/preparation6.jpg']}
               galleryId="consultation"
             />
           </div>
@@ -155,6 +156,7 @@ const AbdominoplastyPreparation: React.FC<AbdominoplastyPreparationProps> = ({
             </div>
           </div>
         ))}
+        <ConsultationButton />
       </div>
     </div>
   );

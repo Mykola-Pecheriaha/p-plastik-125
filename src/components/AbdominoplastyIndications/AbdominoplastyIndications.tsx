@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import PrimmaGallery from '../PrimmaGallery/PrimmaGallery';
 import styles from './AbdominoplastyIndications.module.css';
+import ConsultationButton from '../../components/ConsultationButton/ConsultationButton';
 
 interface Indication {
   title: string;
@@ -121,6 +122,7 @@ const AbdominoplastyIndications: React.FC<AbdominoplastyIndicationsProps> = ({
             )}
           </div>
         ))}
+        <ConsultationButton />
       </div>
     </div>
   );

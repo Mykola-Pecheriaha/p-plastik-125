@@ -4,6 +4,7 @@ import type React from 'react';
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import PrimmaGallery from '../../components/PrimmaGallery/PrimmaGallery';
+import ConsultationButton from '../../components/ConsultationButton/ConsultationButton';
 import styles from './AbdominoplastyQuestions.module.css';
 
 interface Question {
@@ -25,18 +26,18 @@ const questions: Question[] = [
 
 Через 2 місяці пацієнт оцінює кінцевий результат абдомінопластики.`,
     images: [
-      '/images/abdominoplasty/rehabilitation1.jpg',
-      '/images/abdominoplasty/rehabilitation2.jpg',
-      '/images/abdominoplasty/rehabilitation3.jpg',
+      '/images/AbdominoplastyQuestions/Questions1.jpg',
+      '/images/AbdominoplastyQuestions/Questions1.jpg',
+      '/images/AbdominoplastyQuestions/Questions1.jpg',
     ],
   },
   {
     title: 'Час проведення операції',
     content: `Пластика живота проводиться під загальною анестезією. У клініці застосовується інгаляційний наркоз на газі Севофлуран, який забезпечує легке входження та вихід. Тривалість операції – 1.5-2.5 години. Час визначається обсягом втручання.`,
     images: [
-      '/images/abdominoplasty/operation1.jpg',
-      '/images/abdominoplasty/operation2.jpg',
-      '/images/abdominoplasty/operation3.jpg',
+      '/images/AbdominoplastyQuestions/bodiContur3.jpg',
+      '/images/AbdominoplastyQuestions/bodiContur3.jpg',
+      '/images/AbdominoplastyQuestions/bodiContur3.jpg',
     ],
   },
 ];
@@ -69,11 +70,13 @@ const AbdominoplastyQuestions: React.FC<AbdominoplastyQuestionsProps> = ({
               {question.title}
               {openIndex === index ? <ChevronUp /> : <ChevronDown />}
             </div>
+
             {openIndex === index && (
               <div className={styles.questionContent}>
                 <div className={styles.textContent}>
                   <p>{question.content}</p>
                 </div>
+
                 <div className={styles.galleryContent}>
                   <PrimmaGallery
                     images={question.images}
@@ -84,6 +87,7 @@ const AbdominoplastyQuestions: React.FC<AbdominoplastyQuestionsProps> = ({
             )}
           </div>
         ))}
+        <ConsultationButton />
       </div>
     </div>
   );
