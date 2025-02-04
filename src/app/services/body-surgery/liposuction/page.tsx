@@ -1,7 +1,12 @@
 import React from 'react';
+import Liposuction from '../../../../components/Liposuctio/Liposuctio';
 
-const Liposuction: React.FC = () => {
-  return <div>Liposuction - сторінка в розробці</div>;
+const LiposuctionPage: React.FC = () => {
+  return (
+    <div>
+      <Liposuction backgroundColor="#f0f0f0" />
+    </div>
+  );
 };
 
-export default Liposuction;
+export default LiposuctionPage;
