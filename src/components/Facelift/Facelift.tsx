@@ -6,6 +6,7 @@ import { ArrowRight } from 'lucide-react';
 import styles from './Facelift.module.css';
 import CardsPrimma from '../../components/CardsPrima/CardsPrima';
 import PrimmaGallery from '../PrimmaGallery/PrimmaGallery';
+import ConsultationButton from '../../components/ConsultationButton/ConsultationButton';
 
 interface FaceliftProps {
   backgroundColor?: string;
@@ -86,6 +87,7 @@ const Facelift: React.FC<FaceliftProps> = ({ backgroundColor = '#f0f0f0' }) => {
           </div>
         </div>
       </div>
+      <ConsultationButton />
     </div>
   );
 };

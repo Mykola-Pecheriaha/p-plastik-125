@@ -4,16 +4,12 @@ import ModifiablePlasticSurgeons from '../../../../components/ModifiablePlasticS
 import FaceliftIndications from '../../../../components/FaceliftIndications/FaceliftIndications';
 import FaceliftContraindications from '../../../../components/FaceliftContraindications/FaceliftContraindications';
 import ModifiableClinicInfo from '../../../../components/ModifiableClinicInfo/ModifiableClinicInfo';
+import { faceliftClinicImages } from '../../../../data/faceliftData';
+import FaceliftPreparation from '../../../../components/FaceliftPreparation/FaceliftPreparation';
+import FaceliftFAQ from '../../../../components/FaceliftFAQ/FaceliftFAQ';
 import styles from './page.module.css';
 
 const FaceliftPage: React.FC = () => {
-  const faceliftClinicImages = [
-    '/images/faceliftClinic/surgical50.jpg',
-    '/images/faceliftClinic/clinic2.jpg',
-    '/images/faceliftClinic/clinic3.jpg',
-    '/images/faceliftClinic/clinic4.jpg',
-  ];
-
   return (
     <div className={styles.faceliftPage}>
       <Facelift backgroundColor="#f5f5f5" />
@@ -27,6 +23,8 @@ const FaceliftPage: React.FC = () => {
         backgroundColor="#e0e0e0"
         images={faceliftClinicImages}
       />
+      <FaceliftPreparation backgroundColor="#f0f0f0" />
+      <FaceliftFAQ backgroundColor="#f0f0f0" />
     </div>
   );
 };

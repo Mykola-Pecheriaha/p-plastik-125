@@ -3,6 +3,7 @@
 import type React from 'react';
 import PrimmaGallery from '../PrimmaGallery/PrimmaGallery';
 import styles from './FaceliftContraindications.module.css';
+import ConsultationButton from '../../components/ConsultationButton/ConsultationButton';
 
 interface FaceliftContraindicationsProps {
   backgroundColor?: string;
@@ -53,6 +54,7 @@ const FaceliftContraindications: React.FC<FaceliftContraindicationsProps> = ({
           здоровя пацієнта згідно з даними клінічних досліджень.
         </p>
       </div>
+      <ConsultationButton />
     </div>
   );
 };
