@@ -1,0 +1,110 @@
+.wrapper {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.text {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.textContent {
+  flex: 2;
+}
+
+.imageContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.expandableText {
+  margin-bottom: 30px;
+}
+
+.expandableText h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.expandableText p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.expandableText button {
+  background: none;
+  border: none;
+  color: #0070f3;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 40px 0;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .contentWrapper {
+    flex-direction: column;
+  }
+
+  .textContent,
+  .imageContent {
+    width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .expandableText h3 {
+    font-size: 1.25rem;
+  }
+
+  .expandableText p {
+    font-size: 1rem;
+  }
+}
