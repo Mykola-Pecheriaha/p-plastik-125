@@ -131,8 +131,11 @@ const HeaderMenu: React.FC = () => {
                       <Link href="/services/breast-surgery/areola-correction">
                         Корекція соска та ареоли
                       </Link>
-                      <Link href="/services/breast-surgery/breast-asymmetry-correction">
-                        Корекція асиметрії грудей
+                      <Link href="/services/breast-surgery/breast-implant-replacement-Page">
+                        заміна імплантів груді з корекцією форми
+                      </Link>
+                      <Link href="/services/breast-surgery/ginecomastiya">
+                        Гінекомастія
                       </Link>
                     </div>
                   </div>
@@ -148,7 +151,7 @@ const HeaderMenu: React.FC = () => {
                       <Link href="/services/body-surgery/leg-plastic">
                         Пластика ніг
                       </Link>
-                      <Link href="/services/body-surgery/cervical-hump">
+                      <Link href="/services/body-surgery/liposuction">
                         Видалення шийного горба
                       </Link>
                       <Link href="/services/body-surgery/buttock-augmentation">
@@ -312,10 +315,10 @@ const HeaderMenu: React.FC = () => {
                       Корекція соска та ареоли
                     </Link>
                     <Link
-                      href="/services/breast-surgery/breast-asymmetry-correction"
+                      href="/services/breast-surgery/breast-implant-replacement-Page"
                       onClick={handleMenuItemClick}
                     >
-                      Корекція асиметрії грудей
+                      заміна імплантів груді з корекцією форми
                     </Link>
 
                     <Link
@@ -337,7 +340,7 @@ const HeaderMenu: React.FC = () => {
                       Ліпосакція
                     </Link>
                     <Link
-                      href="/services/body-surgery/cervical-hump"
+                      href="/services/body-surgery/liposuction"
                       onClick={handleMenuItemClick}
                     >
                       Видалення шийного горба
