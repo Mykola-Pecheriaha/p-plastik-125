@@ -21,9 +21,9 @@ const Ginecomastiya: React.FC<GinecomastiyaProps> = ({
   ];
 
   const galleryImages = [
-    '/images/ginecomastiya/before-after-1.jpg',
-    '/images/ginecomastiya/before-after-2.jpg',
-    '/images/ginecomastiya/before-after-3.jpg',
+    '/images/ginecomastiya/ginecomas3.jpg',
+    '/images/ginecomastiya/ginecomas4.jpg',
+    '/images/ginecomastiya/ginecomas5.jpg',
   ];
 
   return (
@@ -43,7 +43,7 @@ const Ginecomastiya: React.FC<GinecomastiyaProps> = ({
           </div>
           <div className={styles.heroImage}>
             <Image
-              src="/images/ginecomastiya/hero.jpg"
+              src="/images/ginecomastiya/ginecomas2-removebg-preview.png"
               alt="Гінекомастія"
               width={500}
               height={300}

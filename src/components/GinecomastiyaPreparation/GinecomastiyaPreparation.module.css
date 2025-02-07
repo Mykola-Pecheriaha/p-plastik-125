@@ -1,0 +1,125 @@
+.wrapper {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.consultationContent {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.steps {
+  flex: 1;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  margin-right: 15px;
+  min-width: 20px;
+  color: #0070f3;
+}
+
+.gallery {
+  flex: 1;
+}
+
+.additionalInfo {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.infoBlocks {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.infoBlock {
+  display: flex;
+  gap: 40px;
+}
+
+.blockGallery {
+  flex: 1;
+}
+
+.blockContent {
+  flex: 2;
+}
+
+.blockContent h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.blockContent p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.blockContent button {
+  background: none;
+  border: none;
+  color: #0070f3;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 40px 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description,
+  .additionalInfo {
+    font-size: 1rem;
+  }
+
+  .consultationContent,
+  .infoBlock {
+    flex-direction: column;
+  }
+
+  .blockContent h3 {
+    font-size: 1.3rem;
+  }
+
+  .blockContent p {
+    font-size: 1rem;
+  }
+}
