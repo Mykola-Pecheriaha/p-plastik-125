@@ -2,7 +2,7 @@
 
 import type React from 'react';
 import { useState, useEffect, useCallback } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from './PrimmaGallery.module.css';
 
 interface Comment {

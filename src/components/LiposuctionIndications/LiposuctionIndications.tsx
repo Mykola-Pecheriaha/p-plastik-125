@@ -1,5 +1,5 @@
 import type React from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { ArrowRight } from 'lucide-react';
 import styles from './LiposuctionIndications.module.css';
 

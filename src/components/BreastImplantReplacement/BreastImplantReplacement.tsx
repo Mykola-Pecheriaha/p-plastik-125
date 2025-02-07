@@ -1,7 +1,7 @@
 'use client';
 
 import type React from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { ArrowRight } from 'lucide-react';
 import CardsPrimma from '../../components/CardsPrima/CardsPrima';
 import PrimmaGallery from '../PrimmaGallery/PrimmaGallery';

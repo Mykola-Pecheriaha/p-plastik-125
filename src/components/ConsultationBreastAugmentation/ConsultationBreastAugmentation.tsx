@@ -2,7 +2,7 @@
 
 import type React from 'react';
 import { useState } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import styles from './ConsultationBreastAugmentation.module.css';
 import ConsultationButton from '../../components/ConsultationButton/ConsultationButton';

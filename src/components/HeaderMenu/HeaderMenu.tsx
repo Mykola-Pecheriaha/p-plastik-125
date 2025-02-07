@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from './HeaderMenu.module.css';
 import ConsultationButton from '../ConsultationButton/ConsultationButton';
 

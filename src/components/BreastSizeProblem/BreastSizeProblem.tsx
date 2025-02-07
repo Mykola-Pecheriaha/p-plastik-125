@@ -2,7 +2,7 @@
 
 import type React from 'react';
 import { useState } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from './BreastSizeProblem.module.css';
 import ConsultationButton from '../../components/ConsultationButton/ConsultationButton';
 

@@ -1,5 +1,5 @@
 import type React from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from './MykolaSurgeon.module.css';
 
 const MykolaSurgeon: React.FC = () => {

@@ -2,7 +2,7 @@
 
 import type React from 'react';
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { Heart, MessageSquare, Plus, X } from 'lucide-react';
 import styles from './UnifiedGallery.module.css';
 
