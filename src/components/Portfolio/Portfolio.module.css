@@ -1,0 +1,167 @@
+.portfolioBackground {
+  min-height: 100vh;
+  background-color: #a7caee; /* Світло-сірий фон, ви можете змінити колір за бажанням */
+  padding: 20px 0;
+}
+
+.portfolioContainer {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #e5f0a8bd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolioTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.portfolioText {
+  max-width: 70%;
+  background-color: #f7eaa1bd;
+  border-bottom: 2px solid #9ca519;
+}
+
+.portfolioName {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #450ae6;
+  margin-bottom: 5px;
+}
+
+.portfolioBirth,
+.portfolioAddress,
+.portfolioMobile,
+.portfolioEmail,
+.citizenship,
+.desiredPosition {
+  font-size: 1.2em;
+  color: #131212;
+  margin-bottom: 5px;
+}
+
+.portfolioImage img {
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #1d1c1c;
+}
+
+.portfolioContainer h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.portfolioSection h3 {
+  font-size: 1.4em;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #b2d3f1;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  border-bottom: 2px solid #0b52d4;
+}
+
+.portfolioSection h3:hover {
+  background-color: #0faae7;
+}
+
+.portfolioSection ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+  color: #555;
+  line-height: 1.6;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+}
+
+.portfolioSection ul li {
+  padding: 5px 0;
+}
+
+.children h4 {
+  font-size: 1em;
+  color: #666;
+  margin: 5px 0;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skillsContainer h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #a9f3ef8f;
+  border: 1px solid #4cbfecfb;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.skillsContainer h3:hover {
+  background-color: #23c8e6de;
+}
+
+.skillsContainer ul {
+  padding-left: 20px;
+  margin: 10px 0;
+  display: none;
+}
+
+.skillsContainer ul.open {
+  display: block;
+}
+
+.skillsContainer h4 {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: #c0f052;
+  border: 1px solid #4cbfecfb;
+  border-radius: 4px;
+}
+
+.skillsContainer h4:hover {
+  background-color: #76e61a;
+}
+
+.skillsContainer li {
+  margin-left: 15px;
+  padding: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .portfolioTitle {
+    flex-direction: column;
+  }
+
+  .portfolioText {
+    max-width: 100%;
+  }
+
+  .portfolioImage {
+    margin-top: 20px;
+  }
+}

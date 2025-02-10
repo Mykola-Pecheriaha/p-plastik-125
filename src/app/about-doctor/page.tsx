@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutDoctorSection from '../../components/AboutDoctorSection/AboutDoctorSection';
 
-const AskDoctor: React.FC = () => {
+const AboutDoctorPage: React.FC = () => {
   return (
     <div>
       <AboutDoctorSection />
@@ -9,4 +9,4 @@ const AskDoctor: React.FC = () => {
   );
 };
 
-export default AskDoctor;
+export default AboutDoctorPage;

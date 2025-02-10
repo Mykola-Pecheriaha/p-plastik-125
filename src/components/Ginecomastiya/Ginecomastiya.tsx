@@ -1,7 +1,7 @@
 'use client';
 
 import type React from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { ArrowRight } from 'lucide-react';
 import CardsPrimma from '../../components/CardsPrima/CardsPrima';
 import PrimmaGallery from '../PrimmaGallery/PrimmaGallery';
@@ -46,7 +46,7 @@ const Ginecomastiya: React.FC<GinecomastiyaProps> = ({
               src="/images/ginecomastiya/ginecomas2-removebg-preview.png"
               alt="Гінекомастія"
               width={500}
-              height={300}
+              height={400}
               layout="responsive"
             />
           </div>

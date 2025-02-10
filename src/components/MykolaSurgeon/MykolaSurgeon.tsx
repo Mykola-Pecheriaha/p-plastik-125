@@ -1,5 +1,5 @@
 import type React from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import styles from './MykolaSurgeon.module.css';
 
 const MykolaSurgeon: React.FC = () => {
@@ -37,7 +37,7 @@ const MykolaSurgeon: React.FC = () => {
           <div className={styles.bottomContent}>
             <div className={styles.bottomImage}>
               <Image
-                src="/images/logo/logo5-removebg-preview2.png"
+                src="/images/portfolio/portfolio2.jpg"
                 alt="Доктор Микола в операційній"
                 width={400}
                 height={500}
@@ -47,14 +47,14 @@ const MykolaSurgeon: React.FC = () => {
             </div>
             <div className={styles.bottomText}>
               <h3 className={styles.subtitle}>Мій досвід</h3>
-              <p className={styles.description}>
+              <p className={styles.subSkillsdescription}>
                 За роки практики я провів тисячі успішних операцій, постійно
                 вдосконалюючи свої навички та впроваджуючи найновіші технології
                 в області пластичної хірургії. Моя мета - не просто змінити
                 зовнішність, а допомогти кожному пацієнту відчути себе
                 впевненіше та комфортніше у власному тілі.
               </p>
-              <p className={styles.description}>
+              <p className={styles.subSkillsdescription}>
                 Я вірю, що кожна людина унікальна, і тому підхід до кожного
                 пацієнта повинен бути індивідуальним. У своїй роботі я завжди
                 прагну досягти найкращого результату, враховуючи побажання та

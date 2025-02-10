@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import styles from './HeaderMenu.module.css';
 import ConsultationButton from '../ConsultationButton/ConsultationButton';
 
@@ -187,6 +187,10 @@ const HeaderMenu: React.FC = () => {
               {activeSubMenu === 'about-doctor' && (
                 <div className={`${styles.subMenu} ${styles.columnSubMenu}`}>
                   <Link href="/about-doctor/team">Команда</Link>
+                  <Link href="/about-doctor/portfolio-pecheriaha">
+                    Портфоліо-Печеряга
+                  </Link>
+
                   <Link href="/about-doctor/reviews">Відгуки</Link>
                   <Link href="/about-doctor/ask-doctor">Запитати лікаря</Link>
                   <Link href="/about-doctor/useful-information">
@@ -390,6 +394,13 @@ const HeaderMenu: React.FC = () => {
                     >
                       Команда
                     </Link>
+                    <Link
+                      href="/about-doctor/portfolio-pecheriaha"
+                      onClick={handleMenuItemClick}
+                    >
+                      Портфоліо Печеряга
+                    </Link>
+
                     <Link
                       href="/about-doctor/reviews"
                       onClick={handleMenuItemClick}

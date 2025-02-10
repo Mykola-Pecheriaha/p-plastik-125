@@ -28,7 +28,7 @@
 }
 
 .bottomSection {
-  background-color: #0151caf3;
+  background-color: #7babf1f3;
   padding: 60px 0;
 }
 
@@ -73,9 +73,16 @@
 }
 
 .description {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #fafafc;
+  margin-bottom: 20px;
+}
+
+.subSkillsdescription {
   font-size: 1.4rem;
   line-height: 1.6;
-  color: #f7f2f2;
+  color: #070e69;
   margin-bottom: 20px;
 }
 

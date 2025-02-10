@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import styles from './AboutDoctorSection.module.css';
 
@@ -16,10 +16,16 @@ const aboutDoctorCategories: AboutDoctorCategory[] = [
     slug: 'about-us',
   },
   {
+    title: 'Портфоліо Печеряги М.М',
+    image: '/images/portfolio/portfolio3.jpg',
+    slug: 'portfolio-pecheriaha',
+  },
+  {
     title: 'Запитати лікаря',
     image: '/images/about-doctor/ask-doctor.jpg',
     slug: 'ask-doctor',
   },
+
   {
     title: 'Контакти',
     image: '/images/about-doctor/contacts.jpg',
@@ -62,7 +68,7 @@ const AboutDoctorSection: React.FC = () => {
               <Image
                 src={category.image || '/placeholder.svg'}
                 alt={category.title}
-                width={200}
+                width={150}
                 height={200}
                 className={styles.cardImage}
               />
@@ -72,14 +78,7 @@ const AboutDoctorSection: React.FC = () => {
         ))}
       </div>
       <p className={styles.description}>
-        Наш лікар - висококваліфікований спеціаліст з багаторічним досвідом у
-        галузі пластичної хірургії. Він постійно вдосконалює свої навички,
-        відвідуючи міжнародні конференції та семінари. Наша команда складається
-        з професіоналів, які забезпечують найвищий рівень догляду за пацієнтами.
-        Ми пишаємося нашими результатами та відгуками задоволених клієнтів. Якщо
-        у вас є питання або ви хочете дізнатися більше про наші послуги, не
-        соромтеся звертатися до нас або переглянути корисну інформацію на нашому
-        сайті.
+        Наш лікар - висококваліфікований спеціаліст з багаторічним
       </p>
     </div>
   );

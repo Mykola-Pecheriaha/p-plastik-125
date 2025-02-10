@@ -1,7 +1,7 @@
 import React from 'react';
 
-const AboutDoctor: React.FC = () => {
-  return <div>AboutDoctor - сторінка в розробці</div>;
+const AskDoctorPage: React.FC = () => {
+  return <div>AskDoctorPage - сторінка в розробці</div>;
 };
 
-export default AboutDoctor;
+export default AskDoctorPage;

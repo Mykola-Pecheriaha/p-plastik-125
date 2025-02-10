@@ -1,0 +1,98 @@
+.carpalSyndrome {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.textContent {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.imageContent {
+  flex: 1;
+}
+
+.textContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.textContent ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.textContent li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.textContent li svg {
+  margin-right: 0.5rem;
+  color: #0070f3;
+}
+
+.cardsSection {
+  margin-bottom: 2rem;
+}
+
+.textSection {
+  margin-bottom: 2rem;
+}
+
+.textSection p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.examplesContent {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.galleryContent {
+  flex: 1;
+}
+
+.galleryContent h4 {
+  background-color: #f0f0f0;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .topSection,
+  .bottomSection {
+    flex-direction: column;
+  }
+
+  .textContent,
+  .imageContent,
+  .examplesContent,
+  .galleryContent {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,7 +1,7 @@
 'use client';
 
 import type React from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import PrimmaGallery from '../PrimmaGallery/PrimmaGallery';
 import styles from './GinecomastiyaIndications.module.css';
@@ -59,16 +59,16 @@ const GinecomastiyaIndications: React.FC<GinecomastiyaIndicationsProps> = ({
             <Image
               src="/images/GinecomastiyaIndications/ginecomas6.jpg"
               alt="Види гінекомастії"
-              width={400}
+              width={300}
               height={300}
-              layout="responsive"
+              // layout="responsive"
             />
             <Image
               src="/images/GinecomastiyaIndications/ginecomas8.jpg"
               alt="Види гінекомастії"
-              width={400}
+              width={300}
               height={300}
-              layout="responsive"
+              // layout="responsive"
             />
           </div>
         </div>
