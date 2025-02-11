@@ -1,0 +1,91 @@
+.tumorContraIndications {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.mainTitle {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #f12c2c;
+  font-weight: 600;
+}
+
+.splitSection {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.textContent {
+  flex: 2;
+}
+
+.galleryContent {
+  flex: 1;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.textContent ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.textContent li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.textContent li svg {
+  margin-right: 0.75rem;
+  color: #0070f3;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+  }
+
+  .splitSection {
+    flex-direction: column;
+  }
+
+  .textContent,
+  .galleryContent {
+    width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+
+  .textContent li {
+    font-size: 1rem;
+  }
+}

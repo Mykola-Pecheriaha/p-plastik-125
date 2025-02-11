@@ -1,0 +1,119 @@
+.legPlasticIndications {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.mainTitle {
+  font-size: 2.25rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.introText {
+  margin-bottom: 2rem;
+}
+
+.introText p {
+  color: #444;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.contentSection {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.textContent {
+  flex: 2;
+}
+
+.galleryContent {
+  flex: 1;
+}
+
+.textContent ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.textContent li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.textContent li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: #0070f3;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.consultationSection {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.consultationSection h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.consultationSection p {
+  color: #444;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+
+  .contentSection {
+    flex-direction: column;
+  }
+
+  .textContent,
+  .galleryContent {
+    width: 100%;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .consultationSection h2 {
+    font-size: 1.5rem;
+  }
+
+  .introText p,
+  .textContent li,
+  .consultationSection p {
+    font-size: 1rem;
+  }
+}

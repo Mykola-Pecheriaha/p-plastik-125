@@ -1,0 +1,104 @@
+.flapOperation {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.sectionContent {
+  display: flex;
+  gap: 2rem;
+}
+
+.textContent {
+  flex: 2;
+}
+
+.galleryContent {
+  flex: 1;
+}
+
+.text {
+  color: #444;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.text p {
+  margin-bottom: 1rem;
+}
+
+.text p:last-child {
+  margin-bottom: 0;
+}
+
+.toggleButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: #0070f3;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.toggleButton:hover {
+  text-decoration: underline;
+}
+
+.arrow {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .sectionContent {
+    flex-direction: column;
+  }
+
+  .textContent,
+  .galleryContent {
+    width: 100%;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+}

@@ -111,7 +111,7 @@ const HeaderMenu: React.FC = () => {
                       <Link href="/services/face-surgery/flap-correction">
                         Корекція клаповухості
                       </Link>
-                      <Link href="/services/face-surgery/lapp-otto">
+                      <Link href="/services/face-surgery/flap-correction">
                         Пластика дольки вуха
                       </Link>
                     </div>
@@ -163,7 +163,7 @@ const HeaderMenu: React.FC = () => {
                   <div className={styles.subMenuSection}>
                     <p>Загальна хірургія</p>
                     <div className={styles.subMenuColumn}>
-                      <Link href="/services/general-surgery/carpal-tunnel">
+                      <Link href="/services/general-surgery/tumor-removal">
                         Видалення пухлин
                       </Link>
                       <Link href="/services/general-surgery/carpal-tunnel">

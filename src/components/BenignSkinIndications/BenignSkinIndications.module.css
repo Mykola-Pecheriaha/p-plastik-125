@@ -1,0 +1,107 @@
+.benignSkinIndications {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.formationsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formationItem {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.formationItem.expanded {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgb(199, 218, 240);
+}
+
+.formationButton {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.formationButton:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+  background-color: rgb(188, 217, 248);
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+  color: #666;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.formationContent {
+  display: flex;
+  gap: 2rem;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.textContent {
+  flex: 2;
+}
+
+.galleryContent {
+  flex: 1;
+}
+
+.textContent p {
+  margin: 0;
+  line-height: 1.6;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .formationContent {
+    flex-direction: column;
+  }
+
+  .textContent,
+  .galleryContent {
+    width: 100%;
+  }
+
+  .formationButton {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}

@@ -1,7 +1,7 @@
 'use client';
 
 import type React from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { ArrowRight } from 'lucide-react';
 import styles from './Facelift.module.css';
 import CardsPrimma from '../../components/CardsPrima/CardsPrima';
@@ -42,7 +42,7 @@ const Facelift: React.FC<FaceliftProps> = ({ backgroundColor = '#f0f0f0' }) => {
             <Image
               src="/images/FaceLift/face-lift1-removebg-preview.png"
               alt="Фейсліфтинг"
-              width={500}
+              width={350}
               height={300}
               layout="responsive"
             />
