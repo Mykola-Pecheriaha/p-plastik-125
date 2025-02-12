@@ -1,0 +1,70 @@
+.breastSurgeryPreparation {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  display: block;
+  font-size: 1.75rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.textContent,
+.galleryContent {
+  flex: 1;
+  width: 50%;
+}
+
+.textContent p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.textContent p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .textContent,
+  .galleryContent {
+    width: 100%;
+  }
+
+  .textContent p {
+    font-size: 1rem;
+  }
+}

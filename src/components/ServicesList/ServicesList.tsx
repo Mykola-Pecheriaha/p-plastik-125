@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import styles from './ServicesList.module.css';
 
@@ -18,7 +18,7 @@ interface ServiceCategory {
 const serviceCategories: ServiceCategory[] = [
   {
     title: 'Пластика грудей',
-    image: '/images/services/breast.jpg',
+    image: '/images/services/breast-augment/board-augmentation.jpg',
     slug: 'breast-surgery',
     services: [
       { name: 'Збільшення грудей', slug: 'breast-augmentation' },
@@ -33,7 +33,7 @@ const serviceCategories: ServiceCategory[] = [
   },
   {
     title: 'Пластика тіла',
-    image: '/images/services/body.jpg',
+    image: '/images/services/body-surgery/conturBoda1-removebg-preview.png',
     slug: 'body-surgery',
     services: [
       { name: 'Абдомінопластика', slug: 'abdominoplasty' },
@@ -45,7 +45,7 @@ const serviceCategories: ServiceCategory[] = [
   },
   {
     title: 'Пластика обличчя',
-    image: '/images/services/face.jpg',
+    image: '/images/services/face-surgery/face-lift1-removebg-preview.png',
     slug: 'face-surgery',
     services: [
       { name: 'Підтяжка обличчя та шиї', slug: 'face-lift' },
@@ -57,7 +57,7 @@ const serviceCategories: ServiceCategory[] = [
   },
   {
     title: 'Загальна хірургія',
-    image: '/images/services/general.jpg',
+    image: '/images/services/general-surgery/bodiContur4.jpg',
     slug: 'general-surgery',
     services: [
       { name: 'Видалення пухлин', slug: 'tumor-removal' },

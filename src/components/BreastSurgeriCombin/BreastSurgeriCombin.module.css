@@ -1,0 +1,127 @@
+.breastSurgeriCombin {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.topSection {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.leftContent,
+.rightContent {
+  flex: 1;
+}
+
+.leftContent h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.leftContent h4 {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+
+.leftContent ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.leftContent li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.leftContent li svg {
+  margin-right: 0.75rem;
+  color: #0070f3;
+  flex-shrink: 0;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.bottomSection {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.videoContent,
+.textContent {
+  flex: 1;
+}
+
+.video {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+}
+
+.textContent p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.textContent p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .topSection,
+  .bottomSection {
+    flex-direction: column;
+  }
+
+  .leftContent h1 {
+    font-size: 2.25rem;
+  }
+
+  .leftContent h4 {
+    font-size: 1.25rem;
+  }
+
+  .leftContent li {
+    font-size: 1rem;
+  }
+
+  .imageWrapper {
+    margin-top: 2rem;
+  }
+
+  .textContent {
+    margin-top: 2rem;
+  }
+
+  .textContent p {
+    font-size: 1rem;
+  }
+}

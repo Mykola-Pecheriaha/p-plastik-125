@@ -1,0 +1,68 @@
+.breastBeforeAfte {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.leftContent,
+.rightContent {
+  flex: 1;
+  width: 50%;
+}
+
+.title {
+  font-size: 2.25rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.featuresList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.featuresList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.featuresList li svg {
+  margin-right: 0.75rem;
+  color: #0070f3;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .leftContent,
+  .rightContent {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .featuresList li {
+    font-size: 1rem;
+  }
+}
