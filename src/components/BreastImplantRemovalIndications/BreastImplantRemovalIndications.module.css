@@ -1,0 +1,102 @@
+.breastImplantRemovalIndications {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.mainTitle {
+  font-size: 2.25rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #444;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contentSection {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.textContent {
+  flex: 2;
+}
+
+.galleryContent {
+  flex: 1;
+}
+
+.textContent ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.textContent li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.textContent li svg {
+  margin-right: 0.75rem;
+  color: #0070f3;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.bottomText {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bottomText p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.bottomText p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .contentSection {
+    flex-direction: column;
+  }
+
+  .textContent,
+  .galleryContent {
+    width: 100%;
+  }
+
+  .textContent li {
+    font-size: 1rem;
+  }
+
+  .bottomText p {
+    font-size: 1rem;
+  }
+}

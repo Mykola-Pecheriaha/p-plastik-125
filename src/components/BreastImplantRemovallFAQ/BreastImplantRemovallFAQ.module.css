@@ -1,0 +1,116 @@
+.breastImplantRemovallFAQ {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faqItem {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.faqItem.expanded {
+  background-color: #f8f9fa;
+}
+
+.faqButton {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.question {
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+  color: #666;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.faqContent {
+  display: flex;
+  gap: 2rem;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.textContent {
+  flex: 2;
+}
+
+.galleryContent {
+  flex: 1;
+}
+
+.textContent p {
+  margin: 0;
+  line-height: 1.6;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .question {
+    font-size: 1.1rem;
+  }
+
+  .faqContent {
+    flex-direction: column;
+  }
+
+  .textContent,
+  .galleryContent {
+    width: 100%;
+  }
+
+  .faqButton {
+    padding: 1rem;
+  }
+
+  .textContent p {
+    font-size: 1rem;
+  }
+}

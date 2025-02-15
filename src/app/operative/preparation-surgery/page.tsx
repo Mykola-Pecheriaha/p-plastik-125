@@ -1,7 +1,12 @@
 import React from 'react';
+import PreOpGuidelinest from '../../../components/PreOpGuidelinest/PreOpGuidelinest';
 
-const PreparationSurgery: React.FC = () => {
-  return <div>PreparationSurgery - сторінка в розробці</div>;
+const PreparationSurgeryPage: React.FC = () => {
+  return (
+    <div>
+      <PreOpGuidelinest backgroundColor="#e5f0f8" />
+    </div>
+  );
 };
 
-export default PreparationSurgery;
+export default PreparationSurgeryPage;

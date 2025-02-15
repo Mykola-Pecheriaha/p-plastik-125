@@ -122,8 +122,8 @@ const HeaderMenu: React.FC = () => {
                       <Link href="/services/breast-surgery/breast-augmentation">
                         Збільшення грудей
                       </Link>
-                      <Link href="/services/breast-surgery/breast-reduction">
-                        Зменшення грудей
+                      <Link href="/services/breast-surgery/breast-implant-removal">
+                        Видалення імплантів
                       </Link>
                       <Link href="/services/breast-surgery/breast-lift">
                         Підтяжка грудей
@@ -210,7 +210,7 @@ const HeaderMenu: React.FC = () => {
               <Link href="/operative">Відділення ↓</Link>
               {activeSubMenu === 'operative' && (
                 <div className={`${styles.subMenu} ${styles.columnSubMenu}`}>
-                  <Link href="/operative/operative-moments">Операційна</Link>
+                  <Link href="/operative/operative-room">Операційна</Link>
                   <Link href="/operative/preparation-surgery">
                     Підготовка до операції
                   </Link>
@@ -326,10 +326,10 @@ const HeaderMenu: React.FC = () => {
                     </Link>
 
                     <Link
-                      href="/services/breast-surgery/breast-reduction"
+                      href="/services/breast-surgery/breast-implant-removal"
                       onClick={handleMenuItemClick}
                     >
-                      Зменшення грудей
+                      Видалення імплантів
                     </Link>
                     <Link
                       href="/services/body-surgery/abdominoplasty"
@@ -441,10 +441,10 @@ const HeaderMenu: React.FC = () => {
                 {activeSubMenu === 'operative' && (
                   <div className={styles.burgerSubMenu}>
                     <Link
-                      href="/operative/operative-moments"
+                      href="/operative/operative-room"
                       onClick={handleMenuItemClick}
                     >
-                      Операційн
+                      Операційнa
                     </Link>
                     <Link
                       href="/operative/preparation-surgery"

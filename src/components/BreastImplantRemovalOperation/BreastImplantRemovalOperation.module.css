@@ -1,0 +1,129 @@
+.breastImplantRemovalOperation {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.mainTitle {
+  font-size: 2.25rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.topText {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.topText p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.contentSection {
+  display: flex;
+  gap: 2rem;
+}
+
+.textContent {
+  flex: 2;
+}
+
+.galleryContent {
+  flex: 1;
+}
+
+.expandButton {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.expandButton:hover {
+  background-color: #f3f4f6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.expandButton.expanded {
+  background-color: #f8f9fa;
+}
+
+.expandTitle {
+  font-size: 1.25rem;
+  color: #333;
+  margin: 0;
+  text-align: left;
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+  color: #666;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.expandedContent {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 0 0 8px 8px;
+  margin-top: -8px;
+}
+
+.expandedContent p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.expandedContent p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+
+  .contentSection {
+    flex-direction: column;
+  }
+
+  .textContent,
+  .galleryContent {
+    width: 100%;
+  }
+
+  .expandTitle {
+    font-size: 1.1rem;
+  }
+
+  .topText p,
+  .expandedContent p {
+    font-size: 1rem;
+  }
+
+  .expandButton {
+    padding: 1rem;
+  }
+}
