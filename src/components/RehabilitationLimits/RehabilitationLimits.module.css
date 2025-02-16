@@ -1,0 +1,85 @@
+.rehabilitationLimits {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  text-align: start;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.restrictionsList {
+  flex: 2;
+}
+
+.gallery {
+  flex: 1;
+}
+
+.restrictionsList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.restrictionsList li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: #0070f3;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .restrictionsList,
+  .gallery {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .description,
+  .restrictionsList li {
+    font-size: 1rem;
+  }
+}
