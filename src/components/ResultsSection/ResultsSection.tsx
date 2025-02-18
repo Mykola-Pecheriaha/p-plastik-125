@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import styles from './ResultsSection.module.css';
 
@@ -12,27 +12,27 @@ interface ResultCategory {
 const resultCategories: ResultCategory[] = [
   {
     title: 'Пластика тіла',
-    image: '/images/results/body-plastic.jpg',
+    image: '/images/results/result.jpg',
     slug: 'body-plastic',
   },
   {
     title: 'Пластика грудей',
-    image: '/images/results/breast-plastic.jpg',
+    image: '/images/results/resultbreast.jpg',
     slug: 'breast-plastic',
   },
   {
     title: 'Пластика обличчя',
-    image: '/images/results/face-plastic.jpg',
+    image: '/images/results/resultbreast2.jpg',
     slug: 'face-plastic',
   },
   {
     title: 'Пластика вух',
-    image: '/images/results/otto-plastic.jpg',
+    image: '/images/results/resultbreast3.jpg',
     slug: 'otto-plastic',
   },
   {
     title: 'Видалення пухлин шкіри',
-    image: '/images/results/tumors-skin.jpg',
+    image: '/images/results/resultbreast5.jpg',
     slug: 'tumors-skin',
   },
 ];

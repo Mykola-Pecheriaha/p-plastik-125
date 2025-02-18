@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import styles from './AlbumList.module.css';
 
 interface Album {
@@ -16,7 +16,7 @@ const albums: Album[] = [
     imageUrl: '/images/albums/facelift1.jpg',
   },
   {
-    id: 'otto-plastic',
+    id: 'ottoplastic-albums',
     title: 'Пластика вушних раковин',
     imageUrl: '/images/albums/otto-plastic1.jpg',
   },
@@ -25,15 +25,17 @@ const albums: Album[] = [
     title: 'Збільшення грудей',
     imageUrl: '/images/albums/augmentatio.jpg',
   },
+
   {
-    id: 'breast-lift',
-    title: 'Підтяжка грудей',
-    imageUrl: '/images/albums/breast-augment.jpg',
+    id: 'breast-corection',
+    title: 'Заміна імплантів груді з корекцією форми',
+    imageUrl: '/images/albums/implant19.jpg',
   },
+
   {
-    id: 'breast-reduction',
-    title: 'Заміна імплантів',
-    imageUrl: '/images/albums/dreast-rebrend.jpg',
+    id: 'ginecomastiya',
+    title: 'Гінекомастія',
+    imageUrl: '/images/albums/ginecomastiya.jpg',
   },
 
   {
@@ -47,9 +49,9 @@ const albums: Album[] = [
     imageUrl: '/images/albums/tumors-skin.jpg',
   },
   {
-    id: 'breast-augmentation',
-    title: 'Збільшення грудей',
-    imageUrl: '/images/albums/breast-plastic.jpg',
+    id: 'general-surgery',
+    title: 'Загальна хірургія',
+    imageUrl: '/images/albums/general-surgery1-removebg-preview.png',
   },
 ];
 

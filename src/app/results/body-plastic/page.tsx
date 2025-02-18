@@ -1,7 +1,12 @@
 import React from 'react';
+import BoditPlastic from '../../../components/BoditPlastic/BoditPlastic';
 
-const BodyPlastic: React.FC = () => {
-  return <div>BodyPlastic - сторінка в розробці</div>;
+const BodyPlasticPage: React.FC = () => {
+  return (
+    <div>
+      <BoditPlastic backgroundColor="#e5f0f8" />
+    </div>
+  );
 };
 
-export default BodyPlastic;
+export default BodyPlasticPage;

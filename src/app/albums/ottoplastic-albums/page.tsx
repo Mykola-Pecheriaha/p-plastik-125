@@ -1,7 +1,7 @@
 import React from 'react';
 import OttoplasticAlbumPage from '../../../components/OttoplasticAlbumPage/OttoplasticAlbumPage';
 
-const OttoPlastic: React.FC = () => {
+const OttoAlbums: React.FC = () => {
   return (
     <div>
       <OttoplasticAlbumPage />
@@ -9,4 +9,4 @@ const OttoPlastic: React.FC = () => {
   );
 };
 
-export default OttoPlastic;
+export default OttoAlbums;

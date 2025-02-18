@@ -8,7 +8,7 @@ import styles from './BreastPlasticPage.module.css';
 const breastPlasticData = [
   {
     id: 'breast-augmentation',
-    imageUrl: '/images/breast-augmento/augmento1.jpg',
+    imageUrl: '/images/breast-plastic/augmentatio.jpg',
     title: 'Збільшення грудей: результати до та після',
     likes: 180,
     albumLink: '/albums/breast-augmentation',
@@ -17,7 +17,7 @@ const breastPlasticData = [
 
   {
     id: 'breast-lift',
-    imageUrl: '/images/breast-plastic/lift.jpg',
+    imageUrl: '/images/breast-plastic/augmentatio1-removebg-preview.png',
     title: 'Підтяжка грудей: результати до та після',
     likes: 120,
     albumLink: '/albums/breast-lift',
@@ -25,16 +25,16 @@ const breastPlasticData = [
   },
   {
     id: 'breast-reduction',
-    imageUrl: '/images/breast-plastic/reduction.jpg',
-    title: 'Зменшення грудей: результати до та після',
+    imageUrl: '/images/breast-plastic/implant21.jpg',
+    title: 'Заміна іплантів з корекцією форми: результати до та після',
     likes: 95,
     albumLink: '/albums/breast-reduction',
     size: 'medium' as const,
   },
   {
-    id: 'breast-plastic',
-    imageUrl: '/images/breast-plastic/plastic.jpg',
-    title: 'Пластика грудей: результати до та після',
+    id: 'ginecomastiya',
+    imageUrl: '/images/ginecomastiya/ginecomastiya.jpg',
+    title: 'Гінекомастія: результати до та після',
     likes: 150,
     albumLink: '/albums/breast-plastic',
     size: 'medium' as const,

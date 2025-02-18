@@ -51,7 +51,7 @@ const plasticData: PlasticData = {
     },
     {
       id: 'blepharoplasty',
-      imageUrl: '/images/face-plastic/blepharoplasty.jpg',
+      imageUrl: '/images/blepharoplasty/blefaro5.jpg',
       title: 'Блефаропластика: результати до та після',
       likes: 110,
       albumLink: '/albums/blepharoplasty',

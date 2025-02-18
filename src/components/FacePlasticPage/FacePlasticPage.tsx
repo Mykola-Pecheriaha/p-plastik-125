@@ -2,9 +2,9 @@
 
 import React from 'react';
 import Link from 'next/link';
-// import PlasticCard from '../../../components/PlasticCard/PlasticCard';
+
 import PlasticCard from '../../components/PlasticCard/PlasticCard';
-// import plasticData from '../../../data/plasticData';
+
 import plasticData from '../../data/plasticData';
 import styles from './FacePlasticPage.module.css';
 

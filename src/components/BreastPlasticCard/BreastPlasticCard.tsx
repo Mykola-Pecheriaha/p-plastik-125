@@ -1,5 +1,6 @@
+'use client';
 import React, { useState, useEffect } from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { Heart } from 'lucide-react';
 import styles from './BreastPlasticCard.module.css';
 
