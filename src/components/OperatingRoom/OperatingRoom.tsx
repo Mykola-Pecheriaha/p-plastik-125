@@ -21,9 +21,9 @@ const OperatingRoom: React.FC<OperatingRoomProps> = ({
 
   const galleryImages = [
     '/images/OperatingRoom/oheratingRoom.jpg',
+    '/images/OperatingRoom/operromm10.jpg',
     '/images/OperatingRoom/oheratingRoom1.jpg',
-    '/images/OperatingRoom/oheratingRoom1.jpg',
-    '/images/OperatingRoom/placeholder.svg?height=300&width=300',
+    '/images/OperatingRoom/operromm13.jpg',
   ];
 
   return (
@@ -58,7 +58,7 @@ const OperatingRoom: React.FC<OperatingRoomProps> = ({
           <div className={styles.textContent}>
             <p>
               Головна перевага клініки та доповнення рук пластичного хірурга –
-              сучасний якісний операційний блок.
+              <b>сучасний якісний операційний блок.</b>
             </p>
             <p>
               Я оперую в операційні ЦМКЛ, яка відповідає всім медичним

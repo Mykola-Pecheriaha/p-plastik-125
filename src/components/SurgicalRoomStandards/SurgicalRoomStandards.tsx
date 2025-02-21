@@ -9,28 +9,35 @@ interface SurgicalRoomStandardsProps {
 }
 
 const SurgicalRoomStandards: React.FC<SurgicalRoomStandardsProps> = ({
-  backgroundColor = '#f0f4f8',
+  backgroundColor = '#708090',
 }) => {
   const standards = [
     {
       id: 'sterility',
       title: 'Стерильність – вимога №1',
       content:
-        'Операційна Vidnova Clinic використовується виключно для пластичних естетичних операцій. Це важливо, оскільки наші пацієнти не перетинаються з пацієнтами, які мають різні типи захворювань та підлягають ургентним операціям (позапланові термінові операції). Різні типи зараження виключені.',
+        'Операційна де проводяться пластичні операції знаходиться в операційному блоку  ЦМКЛ  використовується виключно для планових асептичних  операцій. Вона також відділенна від остальних операційних.  Щоденне планування операцій в операційному болі проводить до того що, щляхи  пацієнтів  практично не пересікаються між собо. В операцфйну мають право заходити тільки медичний персонал, який причепний до забезпечення її роботи , а також операційні і анестезіологічні бригадю і то в спеціальному одязі.  Для виконання ургентних та септичних операцій планові операційні не використовуються, так як для цього є окремі операційні.',
     },
     {
       id: 'equipment',
       title: 'Сучасне обладнання – вимога №2',
       content:
-        'Операційна Vidnova Clinic оснащена обладнанням відповідно до європейських протоколів. У розпорядженні пластичного хірурга найновіший інструментарій від провідних виробників Німеччини, Франції, Туреччини.',
+        'Операційні ЦМКЛ оснащені обладнанням відповідно до європейських протоколів. У розпорядженні пластичного хірурга найновіший інструментарій від провідних виробників Німеччини, Франції, Туреччини.',
     },
   ];
 
-  const galleryImages = [
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
+  const sterilityImages = [
+    '/images/Operative/steroper6.jpg',
+    '/images/Operative/steroper7.jpg',
+    '/images/Operative/oprerster2.jpg',
+    '/images/Operative/steroper1.jpg',
+  ];
+
+  const equipmentImages = [
+    '/images/Operative/oprerster3.jpg',
+    '/images/Operative/surgical16.jpg',
+    '/images/Operative/operromm10.jpg',
+    '/images/Operative/operromm5.jpg',
   ];
 
   return (
@@ -44,7 +51,11 @@ const SurgicalRoomStandards: React.FC<SurgicalRoomStandardsProps> = ({
             </div>
             <div className={styles.galleryContent}>
               <PrimmaGallery
-                images={galleryImages}
+                images={
+                  standard.id === 'sterility'
+                    ? sterilityImages
+                    : equipmentImages
+                }
                 galleryId={`standards-gallery-${standard.id}`}
               />
             </div>

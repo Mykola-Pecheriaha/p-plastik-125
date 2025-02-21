@@ -41,13 +41,13 @@
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   color: #444;
 }
 
 .leftContent li svg {
   margin-right: 0.75rem;
-  color: #0070f3;
+  color: #f39223;
   flex-shrink: 0;
 }
 
@@ -70,7 +70,7 @@
   margin-bottom: 1.5rem;
   line-height: 1.6;
   color: #444;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .textContent p:last-child {

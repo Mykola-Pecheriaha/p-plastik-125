@@ -6,9 +6,9 @@ import OperatingRoomEquipment from '../../../components/OperatingRoomEquipment/O
 const OperativeRoomPage: React.FC = () => {
   return (
     <div>
-      <OperatingRoom backgroundColor="#98C9ECFF" />
-      <SurgicalRoomStandards backgroundColor="#e5f0f8" />
-      <OperatingRoomEquipment backgroundColor="#e5f0f8" />
+      <OperatingRoom backgroundColor="#F7EFCDFF" />
+      <SurgicalRoomStandards backgroundColor="#F4F5EEFF" />
+      <OperatingRoomEquipment backgroundColor="#F7F5C2FF" />
     </div>
   );
 };

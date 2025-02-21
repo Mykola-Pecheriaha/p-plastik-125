@@ -22,9 +22,12 @@ const serviceCategories: ServiceCategory[] = [
     slug: 'breast-surgery',
     services: [
       { name: 'Збільшення грудей', slug: 'breast-augmentation' },
-      { name: 'Зменшення грудей', slug: 'breast-reduction' },
-      { name: 'Підтяжка грудей', slug: 'breast-lift' },
-      { name: 'Корекція соска та ареоли', slug: 'nipple-areola-correction' },
+      { name: 'Видалення грудних імплантів', slug: 'breast-implant-removal' },
+      {
+        name: 'Заміна грудних імплантів',
+        slug: 'breast-implant-replacement-Page',
+      },
+      { name: 'Гінекомастія', slug: 'ginecomastiya' },
       {
         name: 'Корекція асиметрії грудей',
         slug: 'breast-asymmetry-correction',
@@ -38,8 +41,8 @@ const serviceCategories: ServiceCategory[] = [
     services: [
       { name: 'Абдомінопластика', slug: 'abdominoplasty' },
       { name: 'Ліпосакція', slug: 'liposuction' },
-      { name: 'Пластика ніг', slug: 'leg-surgery' },
-      { name: 'Видалення шийного горба', slug: 'cervical-hump' },
+      { name: 'Пластика ніг', slug: 'leg-plastic' },
+      { name: 'Видалення шийного горба', slug: 'liposuction' },
       { name: 'Збільшення сідниць', slug: 'buttock-augmentation' },
     ],
   },
@@ -49,10 +52,10 @@ const serviceCategories: ServiceCategory[] = [
     slug: 'face-surgery',
     services: [
       { name: 'Підтяжка обличчя та шиї', slug: 'face-lift' },
-      { name: 'Блефаропластика', slug: 'blepharoplasty' },
+      { name: 'Блефаропластика', slug: 'blefaro-plastic' },
       { name: 'Пластика підборіддя', slug: 'chino-surgery' },
       { name: 'Корекція клаповухості', slug: 'flap-correction' },
-      { name: 'Пластика дольки вуха', slug: 'lapp-otto' },
+      { name: 'Пластика дольки вуха', slug: 'flap-correction' },
     ],
   },
   {
