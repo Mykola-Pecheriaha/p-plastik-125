@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import styles from './GalleryClinic.module.css';
 
 interface Comment {

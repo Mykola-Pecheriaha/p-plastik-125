@@ -2,6 +2,7 @@
 
 import type React from 'react';
 import PrimmaGallery from '../PrimmaGallery/PrimmaGallery';
+
 import styles from './ModifiableClinicInfo.module.css';
 
 interface ModifiableClinicInfoProps {
@@ -10,11 +11,12 @@ interface ModifiableClinicInfoProps {
 }
 
 const defaultImages = [
-  '/images/clinic/clinic1.jpg',
-  '/images/clinic/clinic_info2.jpg',
+  '/images/faceliftClinic/surgical50.jpg',
+  '/images/faceliftClinic/clinicface1.jpg',
   '/images/clinic/clinic_info3.jpg',
-  '/images/clinic/clinic_info4.jpg',
 ];
+
+console.log('ModifiableClinicInfo: defaultImages', defaultImages);
 
 const ModifiableClinicInfo: React.FC<ModifiableClinicInfoProps> = ({
   backgroundColor = '#e6f3ff',

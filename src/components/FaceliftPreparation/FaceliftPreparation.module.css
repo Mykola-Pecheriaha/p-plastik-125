@@ -17,7 +17,7 @@
 }
 
 .fullWidthText {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   line-height: 1.6;
   color: #444;
   margin-bottom: 30px;
@@ -30,7 +30,7 @@
 }
 
 .textContent {
-  flex: 2;
+  flex: 3;
 }
 
 .imageContent {
@@ -47,7 +47,7 @@
 }
 
 .sectionText {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   line-height: 1.6;
   color: #444;
   margin-bottom: 20px;

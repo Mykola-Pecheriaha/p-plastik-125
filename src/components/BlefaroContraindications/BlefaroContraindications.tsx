@@ -32,6 +32,11 @@ const BlefaroContraindications: React.FC<BlefaroContraindicationsProps> = ({
           <div className={styles.listSection}>
             <ul className={styles.contraindicationsList}>
               <li>
+                офтальмологічні недуги - катаракта, глаукома, запалення слізних
+                проток, конюнктиви, синдром сухого ока, блефароспазм,
+                блефарохалязис (набряклість навколоочної ділянки та ін.);
+              </li>
+              <li>
                 за наявності хронічних захворювань серцево-судинної системи та
                 інших захворювань внутрішніх органів;
               </li>
@@ -52,8 +57,8 @@ const BlefaroContraindications: React.FC<BlefaroContraindicationsProps> = ({
             />
           </div>
         </div>
+        <ConsultationButton />
       </div>
-      <ConsultationButton />
     </div>
   );
 };

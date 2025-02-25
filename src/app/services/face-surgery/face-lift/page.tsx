@@ -12,18 +12,18 @@ import styles from './page.module.css';
 const FaceliftPage: React.FC = () => {
   return (
     <div className={styles.faceliftPage}>
-      <Facelift backgroundColor="#f5f5f5" />
-      <ModifiablePlasticSurgeons backgroundColor="#e0e0e0" />
+      <Facelift backgroundColor="#EBEEF7FF" />
+      <ModifiablePlasticSurgeons backgroundColor="#C6C8DFFF" />
       <FaceliftIndications
-        backgroundColor="#C7EFF7FF"
-        cardsBackgroundColor="#f5f5f5"
+        backgroundColor="#EBEEF7FF"
+        cardsBackgroundColor="#D8D9E6FF"
       />
-      <FaceliftContraindications backgroundColor="#f5f5f5" />
+      <FaceliftContraindications backgroundColor="#C6C8DFFF" />
       <ModifiableClinicInfo
-        backgroundColor="#e0e0e0"
+        backgroundColor="#EBEEF7FF"
         images={faceliftClinicImages}
       />
-      <FaceliftPreparation backgroundColor="#f0f0f0" />
+      <FaceliftPreparation backgroundColor="#C6C8DFFF" />
       <FaceliftFAQ backgroundColor="#f0f0f0" />
     </div>
   );

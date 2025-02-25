@@ -1,13 +1,16 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from "next/legacy/image";
+'use client';
+
+import type React from 'react';
+import Image from 'next/legacy/image';
+import { useRouter } from 'next/navigation';
 import styles from './Cards.module.css';
+import Link from 'next/link';
 
 interface CardProps {
   title: string;
   description: string;
   imageUrl: string;
-  linkUrl?: string; // linkUrl може бути необов'язковим
+  linkUrl?: string;
   layout?: 'vertical' | 'horizontal';
   customStyles?: {
     card?: string;
@@ -25,31 +28,29 @@ const Card: React.FC<CardProps> = ({
   layout = 'vertical',
   customStyles = {},
 }) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    if (linkUrl) {
+      router.push(linkUrl);
+    }
+  };
+
   const CardContent = (
     <div
-      className={`${styles.card} ${customStyles.card || ''} ${
-        layout === 'horizontal' ? styles.cardHorizontal : ''
-      }`}
+      className={`${styles.card} ${customStyles.card || ''} ${layout === 'horizontal' ? styles.cardHorizontal : ''}`}
+      onClick={handleClick}
+      style={{ cursor: linkUrl ? 'pointer' : 'default' }}
     >
       <Image
-        src={imageUrl}
+        src={imageUrl || '/placeholder.svg'}
         alt={title}
         width={100}
         height={100}
-        className={`${styles.cardImage} ${customStyles.cardImage || ''}`}
+        className={styles.cardImage}
       />
-      <div className={styles.cardContent}>
-        <h3 className={`${styles.cardTitle} ${customStyles.cardTitle || ''}`}>
-          {title}
-        </h3>
-        <p
-          className={`${styles.cardDescription} ${
-            customStyles.cardDescription || ''
-          }`}
-        >
-          {description}
-        </p>
-      </div>
+      <h3 className={styles.cardTitle}>{title}</h3>
+      <p className={styles.cardDescription}>{description}</p>
     </div>
   );
 

@@ -79,5 +79,19 @@
 
 .cardButton:hover {
   background-color: #0056b3; /* Темніший синій при наведенні */
-  transform: translateY(-2px); /* Легке підняття кнопки */
+  /* transform: translateY(-2px); */
+  /* Легке підняття кнопки */
+}
+
+.card {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card[style*='cursor: pointer']:hover {
+  cursor: pointer;
 }

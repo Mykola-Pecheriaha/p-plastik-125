@@ -1,5 +1,5 @@
 import type React from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { ArrowRight } from 'lucide-react';
 import styles from './BlefaroIndications.module.css';
 
@@ -38,36 +38,29 @@ const BlefaroIndications: React.FC<BlefaroIndicationsProps> = ({
 }) => {
   const indications = [
     {
-      image: '/images/blefaro/indication1.jpg',
+      image: '/images/blepharoplasty/facelifting14.jpg',
       description:
         'надлишок шкіри на верхніх (птоз) і нижніх («похмурий погляд») повіках',
     },
     {
-      image: '/images/blefaro/indication2.jpg',
+      image: '/images/blepharoplasty/facelifting15.jpg',
       description: 'жирові випинання (псевдогрижі) з надлишком шкіри',
     },
+
     {
-      image: '/images/blefaro/indication3.jpg',
-      description: '«мішки» під очима (жирові грижі)',
-    },
-    {
-      image: '/images/blefaro/indication4.jpg',
+      image: '/images/blepharoplasty/facelifting16.jpg',
       description: 'дрібні або глибокі зморшки навколо очей',
     },
     {
-      image: '/images/blefaro/indication5.jpg',
-      description: 'надлишок шкіри навколо очей',
-    },
-    {
-      image: '/images/blefaro/indication6.jpg',
-      description: 'опущені нижні куточки очей',
+      image: '/images/blepharoplasty/facelifting17.jpg',
+      description: 'Опущені куточки та надлишок шкіри навколо очей.',
     },
   ];
 
   return (
     <div className={styles.wrapper} style={{ backgroundColor }}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Показання до пластики повік</h2>
+        <h2 className={styles.title}>Покази до пластики повік</h2>
 
         <p className={styles.description}>
           Блефаропластика часто рекомендована пацієнтам середнього віку. Коли

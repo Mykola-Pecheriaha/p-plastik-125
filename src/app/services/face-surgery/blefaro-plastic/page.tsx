@@ -11,16 +11,16 @@ import BlefaroFAQ from '../../../../components/BlefaroFAQ/BlefaroFAQ';
 const BlefaroPlasticPage: React.FC = () => {
   return (
     <div>
-      <Blepharoplasty backgroundColor="#f0f0f0" />
-      <ModifiablePlasticSurgeons backgroundColor="#B9F8EAFF" />
-      <BlefaroIndications backgroundColor="#E5F7A3FF" />
-      <BlefaroContraindications backgroundColor="#f0f0f0" />
+      <Blepharoplasty backgroundColor="#DCF8BDFF" />
+      <ModifiablePlasticSurgeons backgroundColor="#C3F789FF" />
+      <BlefaroIndications backgroundColor="#DCF8BDFF" />
+      <BlefaroContraindications backgroundColor="#C3F789FF" />
       <ModifiableClinicInfo
-        backgroundColor="#e0e0e0"
+        backgroundColor="#DCF8BDFF"
         images={blefaroClinicImages}
       />
-      <BlefaroPreparation backgroundColor="#f0f0f0" />
-      <BlefaroFAQ backgroundColor="#f0f0f0" />
+      <BlefaroPreparation backgroundColor="#C3F789FF" />
+      <BlefaroFAQ backgroundColor="#DCF8BDFF" />
     </div>
   );
 };

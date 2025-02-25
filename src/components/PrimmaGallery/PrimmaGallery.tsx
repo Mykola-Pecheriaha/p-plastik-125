@@ -2,7 +2,7 @@
 
 import type React from 'react';
 import { useState, useEffect, useCallback } from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import styles from './PrimmaGallery.module.css';
 
 interface Comment {
@@ -93,6 +93,8 @@ const PrimmaGallery: React.FC<PrimmaGalleryProps> = ({ images, galleryId }) => {
   const toggleComments = () => {
     setShowComments((prevState) => !prevState);
   };
+  console.log('PrimmaGallery: isClient:', isClient, 'images:', images);
+  // добавив
 
   if (!isClient || images.length === 0) {
     console.log('PrimmaGallery: Завантаження або відсутні зображення');

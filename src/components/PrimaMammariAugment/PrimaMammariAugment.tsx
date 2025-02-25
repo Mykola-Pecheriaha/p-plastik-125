@@ -1,5 +1,5 @@
 import type React from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import styles from './PrimaMammariAugment.module.css';
 import CardsPrimma from '../../components/CardsPrima/CardsPrima';
 import PrimmaMammariExamples from '../../components/PrimmaMammariExamples/PrimmaMammariExamples';
@@ -9,7 +9,7 @@ interface PrimaMammariAugmentProps {
 }
 
 const PrimaMammariAugment: React.FC<PrimaMammariAugmentProps> = ({
-  backgroundColor = '#F8F8F8FF',
+  backgroundColor = '#F8F2F4FF',
 }) => {
   return (
     <div className={styles.wrapper}>
@@ -19,8 +19,8 @@ const PrimaMammariAugment: React.FC<PrimaMammariAugmentProps> = ({
             <Image
               src="/images/breast-augmento/cartca5-removebg-preview.png"
               alt="Збільшення грудей"
-              width={600}
-              height={400}
+              width={700}
+              height={500}
               layout="responsive"
               objectFit="cover"
             />

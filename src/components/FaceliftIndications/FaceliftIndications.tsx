@@ -1,5 +1,5 @@
 import type React from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { ArrowRight } from 'lucide-react';
 import styles from './FaceliftIndications.module.css';
 
@@ -17,8 +17,8 @@ const IndicationCard: React.FC<IndicationCardProps> = ({
       src={image || '/placeholder.svg'}
       alt={description}
       className={styles.cardImage}
-      width={500}
-      height={300}
+      width={100}
+      height={100}
       layout="responsive"
     />
     <div className={styles.cardDescription}>
@@ -39,11 +39,11 @@ const FaceliftIndications: React.FC<FaceliftIndicationsProps> = ({
 }) => {
   const indications = [
     {
-      image: '/images/FaceLift/face-lift3.jpg',
+      image: '/images/FaceLift/blefaro9.jpg',
       description: 'Помітне опущення зовнішніх куточків очей',
     },
     {
-      image: '/images/FaceLift/indication2.jpg',
+      image: '/images/FaceLift/facelifting13.jpg',
       description: "Провисання м'яких тканин шкіри в районі лоба та брів",
     },
     {

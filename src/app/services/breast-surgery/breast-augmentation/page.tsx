@@ -8,7 +8,7 @@ const BreastAugmentationPage: React.FC = () => {
     <div>
       <div className={styles.breastAugmentationPage}>
         {/* <h1>Збільшення грудей</h1> */}
-        <PrimaMammariAugment backgroundColor="#B6DFF1FF" />
+        <PrimaMammariAugment backgroundColor="#DDCAE2FF" />
         {/* Додайте інші секції або контент тут */}
       </div>
     </div>

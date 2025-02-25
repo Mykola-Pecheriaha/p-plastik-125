@@ -14,7 +14,7 @@ const FaceliftContraindications: React.FC<FaceliftContraindicationsProps> = ({
 }) => {
   const galleryImages = [
     '/images/FaceliftContraindications/facfliftContraindicatio1.jpg',
-    '/images/FaceliftContraindications/contraindication2.jpg',
+    '/images/FaceliftContraindications/surgical5.jpg',
     '/images/FaceliftContraindications/contraindication3.jpg',
   ];
 
@@ -53,8 +53,8 @@ const FaceliftContraindications: React.FC<FaceliftContraindicationsProps> = ({
           Рішення про хірургічне втручання приймає спеціаліст, виходячи із стану
           здоровя пацієнта згідно з даними клінічних досліджень.
         </p>
+        <ConsultationButton />
       </div>
-      <ConsultationButton />
     </div>
   );
 };

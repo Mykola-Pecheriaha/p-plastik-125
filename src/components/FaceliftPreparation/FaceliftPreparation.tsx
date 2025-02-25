@@ -2,7 +2,7 @@
 
 import type React from 'react';
 import { useState } from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import styles from './FaceliftPreparation.module.css';
 
@@ -18,15 +18,15 @@ const FaceliftPreparation: React.FC<FaceliftPreparationProps> = ({
   const [isMethodsExpanded, setIsMethodsExpanded] = useState(false);
 
   const rehabilitationImages = [
-    '/images/face-plastic/face-lift4.jpg',
+    '/images/face-plastic/face-lift7.jpg',
     '/images/face-plastic/face-lift4.jpg',
     '/images/face-plastic/face-lift4.jpg',
   ];
 
   const methodsImages = [
-    '/images/face-plastic/face-lift5.jpg',
-    '/images/face-plastic/face-lift5.jpg',
-    '/images/face-plastic/face-lift5.jpg',
+    '/images/face-plastic/face-lift6.jpg',
+    '/images/face-plastic/face-lift6.jpg',
+    '/images/face-plastic/face-lift6.jpg',
   ];
 
   const toggleRehabilitation = () =>
@@ -87,8 +87,8 @@ const FaceliftPreparation: React.FC<FaceliftPreparationProps> = ({
                 key={index}
                 src={src || '/placeholder.svg'}
                 alt={`Реабілітація ${index + 1}`}
-                width={250}
-                height={230}
+                width={150}
+                height={300}
               />
             ))}
           </div>
@@ -123,7 +123,7 @@ const FaceliftPreparation: React.FC<FaceliftPreparationProps> = ({
                 src={src || '/placeholder.svg'}
                 alt={`Метод ${index + 1}`}
                 width={200}
-                height={250}
+                height={300}
               />
             ))}
           </div>

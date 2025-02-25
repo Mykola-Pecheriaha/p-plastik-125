@@ -86,8 +86,8 @@ const Facelift: React.FC<FaceliftProps> = ({ backgroundColor = '#f0f0f0' }) => {
             />
           </div>
         </div>
+        <ConsultationButton />
       </div>
-      <ConsultationButton />
     </div>
   );
 };

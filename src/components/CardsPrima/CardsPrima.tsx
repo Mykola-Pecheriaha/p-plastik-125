@@ -1,6 +1,6 @@
 import type React from 'react';
 import Card from '../Cards/Cards';
-import { cardsData } from '../../data/cardsData';
+import { cardsData } from '../../data/cardsDataWithLinks';
 import styles from './CardsPrimma.module.css';
 
 const CardsPrimma: React.FC = () => {
@@ -12,6 +12,7 @@ const CardsPrimma: React.FC = () => {
           title={card.title}
           description={card.description}
           imageUrl={card.imageUrl}
+          linkUrl={card.linkUrl}
         />
       ))}
     </div>

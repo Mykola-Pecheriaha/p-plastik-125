@@ -1,10 +1,11 @@
 'use client';
 
 import type React from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { ArrowRight } from 'lucide-react';
 import PrimmaGallery from '../PrimmaGallery/PrimmaGallery';
 import CardsPrimma from '../../components/CardsPrima/CardsPrima';
+import ConsultationButton from '../../components/ConsultationButton/ConsultationButton';
 import styles from './Blepharoplasty.module.css';
 
 interface BlepharoplastyProps {
@@ -12,7 +13,7 @@ interface BlepharoplastyProps {
 }
 
 const Blepharoplasty: React.FC<BlepharoplastyProps> = ({
-  backgroundColor = '#f5f5f5',
+  backgroundColor = '#d796e0',
 }) => {
   const galleryImages = [
     '/images/blepharoplasty/blefaro4.jpg',
@@ -43,8 +44,8 @@ const Blepharoplasty: React.FC<BlepharoplastyProps> = ({
             <Image
               src="/images/blepharoplasty/blefaro3-removebg-preview.png"
               alt="Блефаропластика"
-              width={500}
-              height={300}
+              width={250}
+              height={200}
               layout="responsive"
             />
           </div>
@@ -76,7 +77,9 @@ const Blepharoplasty: React.FC<BlepharoplastyProps> = ({
               <li>Корекція зморшок та вікових змін</li>
               <li>Корекція жирових надлишків (псевдогриж)</li>
             </ul>
+            <ConsultationButton />
           </div>
+
           <div className={styles.examplesGallery}>
             <h4 className={styles.galleryTitle}>Блефаропластика</h4>
             <PrimmaGallery
