@@ -2,8 +2,10 @@
 
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import PrimmaGallery from '../PrimmaGallery/PrimmaGallery';
+import GalleryFlapOperation from '../GalleryFlapOperation/GalleryFlapOperation';
 import styles from './FlapOperation.module.css';
+import type React from 'react';
+import type { ImageType } from '../GalleryFlapOperation/GalleryFlapOperation';
 
 interface FlapOperationProps {
   backgroundColor?: string;
@@ -13,6 +15,7 @@ interface SectionType {
   id: string;
   title: string;
   content: string;
+  images: ImageType[];
 }
 
 const FlapOperation: React.FC<FlapOperationProps> = ({
@@ -26,26 +29,95 @@ const FlapOperation: React.FC<FlapOperationProps> = ({
       title: 'Пластика вух: консультація',
       content:
         'Перший крок на шляху вирішення проблеми – консультація у пластичного хірурга Світлани Работенко у Львові. Фахівець приймає пацієнтів із Дніпра, Запоріжжя, Харкова, Києва, а також з інших міст України. У клініці Vidnova на індивідуальній зустрічі пацієнт та пластичний хірург обговорюють побажання щодо корекції вушної раковини',
+      images: [
+        {
+          src: '/images/flapConsultation/ottoplastic10.jpg',
+          width: 400,
+          height: 280,
+        },
+        {
+          src: '/images/flapConsultation/ottoplastic11.jpg',
+          width: 400,
+          height: 340,
+        },
+        {
+          src: '/images/flapConsultation/ottoplastic12.jpg',
+          width: 400,
+          height: 450,
+        },
+        {
+          src: '/images/flapConsultation/ottoplastic13.jpg',
+          width: 400,
+          height: 325,
+        },
+      ],
     },
     {
       id: 'preparation',
       title: 'Отопластика (пластика вух): підготовка до операції',
-      content:
-        'Для зручності пацієнтів та економії їх часу у клініці Vidnova у Львові передбачена «��ірургія одного дня» – консультація, обстеження та операція проводяться за 1 день! За таким форматом також проходять: блефаропластика (пластика повік), ліпосакція, інтимна пластика.\n\nОтопластика не потребує ретельної підготовки. Перед оперативним втручанням рекомендується припинити прийом гормональних та аспірин-вмісних препаратів, а також повідомити спеціаліста про прийом усіх препаратів. Варто відмовитись від тютюнопаління або зменшити кількість сигарет. Виключити алкоголь.',
+      content: `Для зручності пацієнтів та економії їх часу у yfisq клініці передбачена «хірургія одного дня» – консультація, обстеження та операція проводяться за 1 день! За таким форматом також проходять: блефаропластика (пластика повік), ліпосакція, інтимна пластика.
+
+      Отопластика не потребує ретельної підготовки. Перед оперативним втручанням рекомендується припинити прийом гормональних та аспірин-вмісних препаратів, а також повідомити спеціаліста про прийом усіх препаратів. Варто відмовитись від тютюнопаління або зменшити кількість сигарет. Виключити алкоголь.`,
+      images: [
+        {
+          src: '/images/flapConsultation/ottoplastic15.jpg',
+          width: 400,
+          height: 258,
+        },
+
+        {
+          src: '/images/flapConsultation/ottoplastic17.jpg',
+          width: 450,
+          height: 550,
+        },
+
+        {
+          src: '/images/flapConsultation/ottoplastic18.jpg',
+          width: 450,
+          height: 585,
+        },
+
+        {
+          src: '/images/flapConsultation/ottoplastic19.jpg',
+          width: 400,
+          height: 550,
+        },
+      ],
     },
+
     {
       id: 'rehabilitation',
       title: 'Реабілітація після отопластики',
-      content:
-        "Перші три дні можуть супроводжуватися дискомфортними відчуттями – набряклістю, онімінням, появою синців. Все це легко усувається знеболюючими і з часом сходить нанівець. У післяопераційний період для стабілізації результату та захисту оперованого вуха необхідно носити спеціальну фіксуючу пов'язку протягом 14 днів постійно. А в наступні 14 днів пов'язка накладається лише на ніч. Її можна замінити на цупку бандану.\n\nШви після корекції не знімаються. Працюємо з ниткою, що саморозсмоктується.\n\nЛюдині не треба відмовлятися від соціального життя. Одне з найчастіших питань про реабілітаційний період – чи можна мити голову? Так, це не протипоказано. Пацієнт активний і веде звичний спосіб життя. Контрольний огляд за 1 місяць.\n\nОтопластика не становить будь-якої небезпеки для здоров'я та життя пацієнта, а також не впливає на функцію слуху.",
-    },
-  ];
+      content: `Перші три дні можуть супроводжуватися дискомфортними відчуттями – набряклістю, онімінням, появою синців. Все це легко усувається знеболюючими і з часом сходить нанівець. У післяопераційний період для стабілізації результату та захисту оперованого вуха необхідно носити спеціальну фіксуючу пов'язку протягом 14 днів постійно. А в наступні 14 днів пов'язка накладається лише на ніч. Її можна замінити на цупку бандану.
 
-  const galleryImages = [
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
+      Шви після корекції не знімаються. Працюємо з ниткою, що саморозсмоктується.
+
+      Людині не треба відмовлятися від соціального життя. Одне з найчастіших питань про реабілітаційний період – чи можна мити голову? Так, це не протипоказано. Пацієнт активний і веде звичний спосіб життя. Контрольний огляд за 1 місяць.
+
+      Отопластика не становить будь-якої небезпеки для здоров'я та життя пацієнта, а також не впливає на функцію слуху.`,
+      images: [
+        {
+          src: '/images/flapConsultation/ottoplastic20.jpg',
+          width: 400,
+          height: 585,
+        },
+        {
+          src: '/images/flapConsultation/ottoplastic21.jpg',
+          width: 400,
+          height: 655,
+        },
+        {
+          src: '/images/flapConsultation/ottoplastic22.jpg',
+          width: 400,
+          height: 530,
+        },
+        {
+          src: '/images/flapConsultation/ottoplastic23.jpg',
+          width: 400,
+          height: 470,
+        },
+      ],
+    },
   ];
 
   const toggleSection = (sectionId: string) => {
@@ -94,9 +166,9 @@ const FlapOperation: React.FC<FlapOperationProps> = ({
                   </button>
                 </div>
                 <div className={styles.galleryContent}>
-                  <PrimmaGallery
-                    images={galleryImages}
-                    galleryId={`operation-gallery-${section.id}`}
+                  <GalleryFlapOperation
+                    images={section.images}
+                    galleryId={`flap-operation-${section.id}`}
                   />
                 </div>
               </div>

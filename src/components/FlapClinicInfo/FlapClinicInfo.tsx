@@ -6,7 +6,7 @@ import { flapClinicInfo } from '../../data/flapClinicInfo';
 
 const FlapClinicInfo: React.FC = () => {
   return (
-    <ModifiableClinicInfo backgroundColor="#F5F4C3FF" images={flapClinicInfo} />
+    <ModifiableClinicInfo backgroundColor="#FAE2BBAB" images={flapClinicInfo} />
   );
 };
 

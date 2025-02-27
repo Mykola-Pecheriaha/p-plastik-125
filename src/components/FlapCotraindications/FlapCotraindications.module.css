@@ -61,7 +61,7 @@
   display: flex;
   align-items: flex-start;
   margin-bottom: 0.75rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #444;
   line-height: 1.4;
 }
@@ -81,7 +81,7 @@
   margin-bottom: 1rem;
   line-height: 1.6;
   color: #444;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .bottomText p:last-child {

@@ -21,7 +21,7 @@
 }
 
 .sectionTitle {
-  font-size: 1.75rem;
+  font-size: 1.8rem;
   margin-bottom: 1.5rem;
   color: #333;
 }
@@ -42,7 +42,7 @@
 .text {
   color: #444;
   line-height: 1.6;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .text p {
@@ -62,7 +62,7 @@
   color: #0070f3;
   cursor: pointer;
   padding: 0.5rem 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-top: 1rem;
 }
 
@@ -99,6 +99,6 @@
   }
 
   .text {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }

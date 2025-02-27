@@ -1,0 +1,54 @@
+.flapGalleryWrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(180, 172, 172, 0);
+  color: rgb(51, 49, 49);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.prevButton {
+  left: 10px;
+}
+
+.nextButton {
+  right: 10px;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.indicator {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgba(61, 57, 57, 0.712);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: rgb(61, 57, 57);
+}

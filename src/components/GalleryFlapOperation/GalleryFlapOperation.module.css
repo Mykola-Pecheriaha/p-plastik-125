@@ -1,0 +1,142 @@
+.galleryWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.galleryContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition:
+    width 0.3s ease,
+    height 0.3s ease;
+  background-color: #f0f0f0;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.082);
+  color: rgb(228, 14, 14);
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.navButton:hover {
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
+.prevButton {
+  left: 10px;
+}
+
+.nextButton {
+  right: 10px;
+}
+
+.controlsContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(66, 63, 63, 0.158);
+}
+
+.indicators {
+  display: flex;
+  gap: 8px;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(238, 12, 12, 0.397);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.indicator.active {
+  background-color: rgb(238, 7, 7);
+}
+
+.zoomControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.zoomButton {
+  background: none;
+  border: none;
+  color: rgb(223, 8, 8);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.zoomButton:hover {
+  opacity: 0.8;
+}
+
+.zoomLevel {
+  color: rgb(192, 8, 8);
+  font-size: 14px;
+  min-width: 48px;
+  text-align: center;
+}
+
+.noImages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: #f0f0f0;
+  color: #666;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .controlsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .zoomControls {
+    width: 100%;
+    justify-content: center;
+  }
+}

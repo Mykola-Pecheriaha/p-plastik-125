@@ -1,9 +1,10 @@
 'use client';
 
 import { ChevronRight } from 'lucide-react';
-import PrimmaGallery from '../PrimmaGallery/PrimmaGallery';
+import GalleryIndication from '../GalleryIndication/GalleryIndication';
 import styles from './FlapIndications.module.css';
 import type React from 'react';
+import type { ImageType } from '../GalleryIndication/GalleryIndication';
 
 interface FlapIndicationsProps {
   backgroundColor?: string;
@@ -21,11 +22,27 @@ const FlapIndications: React.FC<FlapIndicationsProps> = ({
     'коригування мочки вуха – відновлення при розривах',
   ];
 
-  const galleryImages = [
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
+  const galleryImages: ImageType[] = [
+    {
+      src: '/images/FlapIndications/ottoplastic8.jpg',
+      width: 400,
+      height: 500,
+    },
+    {
+      src: '/images/FlapIndications/ottoplastic6.jpg',
+      width: 400,
+      height: 500,
+    },
+    {
+      src: '/images/FlapIndications/ottoplastic22.jpg',
+      width: 300,
+      height: 400,
+    },
+    {
+      src: '/images/FlapIndications/ottoplastic20.jpg',
+      width: 300,
+      height: 400,
+    },
   ];
 
   return (
@@ -49,9 +66,9 @@ const FlapIndications: React.FC<FlapIndicationsProps> = ({
             </ul>
           </div>
           <div className={styles.galleryContent}>
-            <PrimmaGallery
+            <GalleryIndication
               images={galleryImages}
-              galleryId="indications-gallery"
+              galleryId="flap-indications-gallery"
             />
           </div>
         </div>

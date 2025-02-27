@@ -28,10 +28,8 @@ const FlapCotraindications: React.FC<FlapCotraindicationsProps> = ({
   ];
 
   const galleryImages = [
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
+    '/images/FlapCotraindications/ginecomas12.jpg',
+    '/images/FlapCotraindications/preparation5-removebg-preview.png',
   ];
 
   return (

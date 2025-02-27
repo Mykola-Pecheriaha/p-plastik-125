@@ -17,7 +17,7 @@
 }
 
 .introText {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 2rem;
   color: #444;
   line-height: 1.6;
@@ -46,7 +46,7 @@
   display: flex;
   align-items: flex-start;
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #444;
   line-height: 1.4;
 }
@@ -54,7 +54,7 @@
 .textContent li svg {
   margin-right: 0.75rem;
   margin-top: 0.25rem;
-  color: #0070f3;
+  color: #0cd8d8;
   flex-shrink: 0;
 }
 
@@ -66,7 +66,7 @@
   margin-bottom: 1.5rem;
   line-height: 1.6;
   color: #444;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .bottomText p:last-child {
@@ -96,6 +96,6 @@
   }
 
   .bottomText p {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }

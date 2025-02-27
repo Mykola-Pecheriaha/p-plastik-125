@@ -10,12 +10,12 @@ import FlapFAQ from '../../../../components/FlapFAQ/FlapFAQ';
 const FlapCorrectionPage: React.FC = () => {
   return (
     <div>
-      <FlapCorrection backgroundColor="#e5f0f8" />
-      <ModifiablePlasticSurgeons backgroundColor="#e0e0e0" />
-      <FlapIndications backgroundColor="#e5f0f8" />
-      <FlapCotraindications backgroundColor="#e5f0f8" />
+      <FlapCorrection backgroundColor="#FAE2BBAB" />
+      <ModifiablePlasticSurgeons backgroundColor="#FCAD2F50" />
+      <FlapIndications backgroundColor="#FAE2BBAB" />
+      <FlapCotraindications backgroundColor="#FCBC56AB" />
       <FlapClinicInfo />
-      <FlapOperation backgroundColor="#e5f0f8" />
+      <FlapOperation backgroundColor="#FCBC56AB" />
       <FlapFAQ backgroundColor="#e5f0f8" />
     </div>
   );

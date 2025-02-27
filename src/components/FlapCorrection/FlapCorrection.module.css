@@ -45,7 +45,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #444;
 }
 
@@ -54,12 +54,6 @@
   color: #0070f3;
   flex-shrink: 0;
 }
-
-/* .splitImage,
-.beforeImage,
-.afterImage {
-  // Remove these styles
-} */
 
 .singleImage {
   display: flex;
@@ -92,7 +86,7 @@
   margin-bottom: 1rem;
   line-height: 1.6;
   color: #444;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .textSection p:last-child {
