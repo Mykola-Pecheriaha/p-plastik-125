@@ -1,0 +1,8 @@
+/* Глобальні стилі для Leaflet */
+.leaflet-control-zoom {
+  margin: 15px !important;
+}
+
+.leaflet-control-layers {
+  margin: 15px !important;
+}

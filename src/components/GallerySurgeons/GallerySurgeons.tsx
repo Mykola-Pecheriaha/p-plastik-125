@@ -1,20 +1,16 @@
 'use client';
-
 import type React from 'react';
 import { useState, useEffect, useCallback } from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import styles from './GallerySurgeons.module.css';
-
 interface Comment {
   id: number;
   text: string;
 }
-
 interface GallerySurgeonsProps {
   images: string[];
   galleryId: string;
 }
-
 const GallerySurgeons: React.FC<GallerySurgeonsProps> = ({
   images,
   galleryId,
@@ -27,7 +23,6 @@ const GallerySurgeons: React.FC<GallerySurgeonsProps> = ({
   const [showComments, setShowComments] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const [activeImage, setActiveImage] = useState(currentImageIndex);
-
   useEffect(() => {
     setIsClient(true);
     const savedLikes = localStorage.getItem(`likes_${galleryId}`);
@@ -39,30 +34,25 @@ const GallerySurgeons: React.FC<GallerySurgeonsProps> = ({
       savedComments ? JSON.parse(savedComments) : Array(images.length).fill([])
     );
   }, [galleryId, images.length]);
-
   useEffect(() => {
     if (isClient) {
       localStorage.setItem(`likes_${galleryId}`, JSON.stringify(likes));
       localStorage.setItem(`comments_${galleryId}`, JSON.stringify(comments));
     }
   }, [likes, comments, galleryId, isClient]);
-
   const handlePrev = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
-
   const handleNext = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
-
   const toggleFullscreen = () => {
     setIsFullscreen((prevState) => !prevState);
   };
-
   const handleLike = () => {
     setLikes((prevLikes) => {
       const newLikes = [...prevLikes];
@@ -70,7 +60,6 @@ const GallerySurgeons: React.FC<GallerySurgeonsProps> = ({
       return newLikes;
     });
   };
-
   const handleAddComment = (e: React.FormEvent) => {
     e.preventDefault();
     if (newComment.trim()) {
@@ -85,20 +74,16 @@ const GallerySurgeons: React.FC<GallerySurgeonsProps> = ({
       setNewComment('');
     }
   };
-
   const toggleComments = () => {
     setShowComments((prevState) => !prevState);
   };
-
   const updateActiveImage = useCallback(() => {
     setActiveImage(currentImageIndex);
   }, [currentImageIndex]);
-
   useEffect(() => {
     const timer = setTimeout(updateActiveImage, 50);
     return () => clearTimeout(timer);
   }, [currentImageIndex, updateActiveImage]);
-
   useEffect(() => {
     const preloadImages = async () => {
       const imagePromises = images.map((src) => {
@@ -109,7 +94,6 @@ const GallerySurgeons: React.FC<GallerySurgeonsProps> = ({
           img.onerror = reject;
         });
       });
-
       try {
         await Promise.all(imagePromises);
         console.log('All images preloaded successfully');
@@ -117,14 +101,11 @@ const GallerySurgeons: React.FC<GallerySurgeonsProps> = ({
         console.error('Error preloading images:', error);
       }
     };
-
     preloadImages();
   }, [images]);
-
   if (!isClient || images.length === 0) {
     return <div>Завантаження...</div>;
   }
-
   return (
     <div className={styles.galleryWrapper}>
       <div
@@ -218,5 +199,4 @@ const GallerySurgeons: React.FC<GallerySurgeonsProps> = ({
     </div>
   );
 };
-
 export default GallerySurgeons;

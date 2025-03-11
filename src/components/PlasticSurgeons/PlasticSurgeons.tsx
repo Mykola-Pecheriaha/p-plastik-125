@@ -20,9 +20,15 @@ const surgeonImages = [
   // Add more images as needed
 ];
 
-const PlasticSurgeons: React.FC = () => {
+interface PlasticSurgeonsProps {
+  backgroundColor?: string;
+}
+
+const PlasticSurgeons: React.FC<PlasticSurgeonsProps> = ({
+  backgroundColor = '#88A5F3FF',
+}) => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} style={{ backgroundColor }}>
       <div className={styles.plasticSurgeons}>
         {/* Заголовок */}
         <div className={styles.container}>

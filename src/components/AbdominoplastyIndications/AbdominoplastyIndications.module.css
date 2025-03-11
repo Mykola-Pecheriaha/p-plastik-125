@@ -18,35 +18,37 @@
 
 .indicationContainer {
   margin-bottom: 20px;
-  border: 2px solid #3d7ffacc;
+  border: 2px solid #94c714;
   border-radius: 8px;
   overflow: hidden;
 }
 
 .indicationTitle {
-  background-color: #7ebcf7;
+  background-color: #acc864;
   padding: 20px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  font-size: 25px;
   align-items: center;
   font-weight: bold;
-  font-size: 20px;
+
   transition: background-color 0.3s ease;
 }
 
 .indicationTitle:hover {
-  background-color: #c0d6f8;
+  background-color: #d7eba5;
 }
 
 .indicationTitle.open {
-  background-color: #a9cff7;
+  background-color: #ceee7d;
 }
 
 .indicationContent {
   display: flex;
   padding: 20px;
-  background-color: #c1daf7;
+  background-color: #e3f1bf;
+  font-size: 1.5rem;
 }
 
 .textContent {
@@ -61,9 +63,9 @@
 }
 
 .textContent li {
-  font-size: 18px;
+  font-size: 1.3rem;
   line-height: 1.6;
-  color: #666;
+  color: #302f2f;
   margin-bottom: 8px;
 }
 

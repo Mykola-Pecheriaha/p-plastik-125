@@ -18,38 +18,38 @@
 
 .contraindicationContainer {
   margin-bottom: 20px;
-  border: 1px solid #afebf0;
+  border: 2px solid #729c08;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contraindicationTitle {
-  background-color: #4fe8f3;
+  background-color: #d2f37e;
   padding: 20px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
   transition: background-color 0.3s ease;
 }
 
 .contraindicationTitle:hover {
-  background-color: #abfafa;
+  background-color: #d5f882;
 }
 
 .contraindicationTitle.open {
-  background-color: #56f1f7;
-  border-bottom: 1px solid #6fe1f5ef;
+  background-color: #d6fa7d;
+  border-bottom: 1px solid #acc864;
 }
 
 .contraindicationContent {
   display: flex;
   padding: 20px;
   font-size: 18px;
-  background-color: #b2f7f7;
+  background-color: #d9eea4;
   gap: 20px;
 }
 
@@ -64,9 +64,9 @@
 }
 
 .textContent li {
-  font-size: 18px;
+  font-size: 1.3rem;
   line-height: 1.6;
-  color: #666;
+  color: #272626;
   margin-bottom: 8px;
 }
 

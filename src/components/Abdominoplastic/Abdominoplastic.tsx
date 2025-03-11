@@ -1,18 +1,18 @@
 'use client';
-import type React from 'react';
-import Image from "next/legacy/image";
+import React from 'react';
+
+import Image from 'next/legacy/image';
 import { ArrowRight } from 'lucide-react';
 import styles from './Abdominoplastic.module.css';
 import CardsPrimma from '../../components/CardsPrima/CardsPrima';
 import PrimmaGallery from '../../components/PrimmaGallery/PrimmaGallery';
-import PlasticSurgeons from '../../components/PlasticSurgeons/PlasticSurgeons';
 
 interface AbdominoplasticProps {
   backgroundColor?: string;
 }
 
 const Abdominoplastic: React.FC<AbdominoplasticProps> = ({
-  backgroundColor = '#FDFAFDFF',
+  backgroundColor = '#d3e29d',
 }) => {
   const galleryImages = [
     '/images/abdominoplasty/abdominoplastic1.jpg',
@@ -20,16 +20,21 @@ const Abdominoplastic: React.FC<AbdominoplasticProps> = ({
     '/images/abdominoplasty/abdominoplastic3.jpg',
   ];
 
+  React.useEffect(() => {
+    const backgroundElement = document.querySelector(`.${styles.background}`);
+    if (backgroundElement) {
+      (backgroundElement as HTMLElement).style.backgroundColor =
+        backgroundColor;
+    }
+  }, [backgroundColor]);
+
   return (
-    <div
-      className={styles.background}
-      style={{ backgroundColor: `${backgroundColor} !important` }}
-    >
+    <div className={styles.background}>
       <div className={styles.container}>
         <div className={styles.topSection}>
           <div className={styles.textContent}>
             <h2>Абдомінопластика</h2>
-            <h1>пластика живота</h1>
+            <h1>Пластика живота</h1>
             <ul className={styles.arrowList}>
               <li>
                 <ArrowRight size={16} /> Видалення зайвої шкіри
@@ -49,7 +54,7 @@ const Abdominoplastic: React.FC<AbdominoplasticProps> = ({
             <Image
               src="/images/abdominoplasty/abdominoplastic-removebg-preview.png"
               alt="Абдомінопластика"
-              width={500}
+              width={400}
               height={300}
               layout="responsive"
             />
@@ -91,7 +96,6 @@ const Abdominoplastic: React.FC<AbdominoplasticProps> = ({
           </div>
         </div>
       </div>
-      <PlasticSurgeons />
     </div>
   );
 };

@@ -5,17 +5,19 @@ import AbdominoplastyContraindications from '../../../../components/Abdominoplas
 import ClinicInfo from '../../../../components/ClinicInfo/ClinicInfo';
 import AbdominoplastyPreparation from '../../../../components/AbdominoplastyPreparation/AbdominoplastyPreparation';
 import AbdominoplastyQuestions from '../../../../components/AbdominoplastyQuestions/AbdominoplastyQuestions';
+import PlasticSurgeons from '../../../../components/PlasticSurgeons/PlasticSurgeons';
 import styles from './page.module.css';
 
 const AbdominoplastyPage: React.FC = () => {
   return (
     <div className={styles.abdominoplastyPage}>
-      <Abdominoplastic backgroundColor="#f5f5f5" />
-      <AbdominoplastyIndications backgroundColor="#E7F1FAFF" />
-      <AbdominoplastyContraindications backgroundColor="#C8F5F5FF" />
+      <Abdominoplastic backgroundColor="#d3e29d" />
+      <PlasticSurgeons />
+      <AbdominoplastyIndications backgroundColor="#d3e29d" />
+      <AbdominoplastyContraindications backgroundColor="#acc864" />
       <ClinicInfo />
-      <AbdominoplastyPreparation backgroundColor="#94D4F8FF" />
-      <AbdominoplastyQuestions backgroundColor="#E3EBF0FF" />
+      <AbdominoplastyPreparation backgroundColor="#acc864" />
+      <AbdominoplastyQuestions backgroundColor="#d3e29d" />
     </div>
   );
 };

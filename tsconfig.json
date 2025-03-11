@@ -8,9 +8,9 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node", // Оновлено
+    "moduleResolution": "node",
     "resolveJsonModule": true,
-    "jsx": "preserve", // Оновлено
+    "jsx": "preserve",
     "incremental": true,
     "paths": {
       "@/*": ["./src/*"]
@@ -20,7 +20,8 @@
         "name": "next"
       }
     ],
-    "isolatedModules": true
+    "isolatedModules": true,
+    "types": ["leaflet"] // Додано цей рядок
   },
   "include": [
     "next-env.d.ts",

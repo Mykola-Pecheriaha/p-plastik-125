@@ -60,7 +60,7 @@ interface AbdominoplastyPreparationProps {
 }
 
 const AbdominoplastyPreparation: React.FC<AbdominoplastyPreparationProps> = ({
-  backgroundColor = '#f0f0f0',
+  backgroundColor = '#acc864',
 }) => {
   const [expandedSections, setExpandedSections] = useState<number[]>([]);
 

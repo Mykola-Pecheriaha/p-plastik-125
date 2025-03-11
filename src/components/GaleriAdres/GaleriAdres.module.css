@@ -1,0 +1,216 @@
+.galleryWrapper {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  flex-grow: 1;
+  position: relative;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.errorMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+  font-weight: bold;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prevButton {
+  left: 20px; /* Змінено з 10px на 20px */
+}
+
+.nextButton {
+  right: 20px; /* Змінено з 10px на 20px */
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Додано горизонтальний відступ */
+  background-color: #f8f8f8;
+}
+
+.likeSection {
+  display: flex;
+  align-items: center;
+}
+
+.likes {
+  margin-right: 10px; /* Збільшено відступ */
+}
+
+.footerContent {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Центрування вмісту */
+  flex-grow: 1; /* Дозволяє контенту розтягуватися */
+}
+
+.dots {
+  display: flex;
+  margin: 0 20px; /* Додано відступи з обох боків */
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+.commentButton,
+.fullscreenButton,
+.likeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px; /* Додано однаковий відступ для всіх кнопок */
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.commentsSection {
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.commentsSection h3 {
+  margin-top: 0;
+}
+
+.commentsSection ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.commentsSection li {
+  margin-bottom: 10px;
+}
+
+.commentsSection form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.commentsSection input {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.commentsSection button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(88, 82, 82, 0.9);
+  z-index: 1000;
+}
+
+.fullscreen .imageContainer {
+  height: calc(100% - 60px);
+}
+
+.fullscreen .footer {
+  background-color: transparent;
+  color: rgb(219, 209, 209);
+}
+
+.fullscreen .dot {
+  background-color: #646161;
+}
+
+.fullscreen .dot.active {
+  background-color: rgb(52, 149, 240);
+}
+
+/* Додано стилі для іконок */
+.likeButton svg,
+.commentButton svg,
+.fullscreenButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Медіа-запит для мобільних пристроїв */
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px;
+  }
+
+  .likes {
+    margin-right: 5px;
+  }
+
+  .dots {
+    margin: 0 10px;
+  }
+
+  .commentButton,
+  .fullscreenButton,
+  .likeButton {
+    margin: 0 5px;
+  }
+
+  .likeButton svg,
+  .commentButton svg,
+  .fullscreenButton svg {
+    width: 16px;
+    height: 16px;
+  }
+}
