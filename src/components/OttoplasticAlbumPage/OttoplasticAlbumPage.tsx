@@ -1,11 +1,24 @@
-import React from 'react';
-import UnifiedGallery from '../UnifiedGallery/UnifiedGallery';
+import type React from 'react';
+import OttoplasticGallery from '../OttoplasticGallery/OttoplasticGallery';
 import ottoplasticAlbum from '../../data/ottoplasticAlbum';
 import styles from './OttoplasticAlbumPage.module.css';
 
-const OttoplasticAlbumPage: React.FC = () => {
+interface OttoplasticAlbumPageProps {
+  backgroundColor?: string;
+  // Додаємо нові пропси для галереї
+  galleryAspectRatio?: string;
+  galleryObjectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
+  galleryImageHeight?: string | number;
+}
+
+const OttoplasticAlbumPage: React.FC<OttoplasticAlbumPageProps> = ({
+  backgroundColor = '#ffffff',
+  galleryAspectRatio,
+  galleryObjectFit,
+  galleryImageHeight,
+}) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ backgroundColor }}>
       <h1 className={styles.mainTitle}>
         Корекція вушних раковин: результати до та після
       </h1>
@@ -23,10 +36,14 @@ const OttoplasticAlbumPage: React.FC = () => {
             <p className={styles.galleryDescription}>{album.description}</p>
           </div>
           <div className={styles.galleryContainer}>
-            <UnifiedGallery
+            {/* Передаємо пропси до OttoplasticGallery */}
+            <OttoplasticGallery
               images={album.images}
               albumId={album.id}
               initialLikes={album.initialLikes}
+              aspectRatio={galleryAspectRatio}
+              objectFit={galleryObjectFit}
+              imageHeight={galleryImageHeight}
             />
           </div>
         </div>
@@ -34,4 +51,5 @@ const OttoplasticAlbumPage: React.FC = () => {
     </div>
   );
 };
+
 export default OttoplasticAlbumPage;

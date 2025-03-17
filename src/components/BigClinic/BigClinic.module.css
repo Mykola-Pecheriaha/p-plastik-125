@@ -10,7 +10,7 @@
 .bigClinicTitle {
   text-align: center;
   margin: 20px 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
@@ -31,6 +31,7 @@
   justify-content: flex-start;
   text-align: left;
   padding: 10px;
+  font-size: 2rem;
 }
 
 .bigClinicImage {
@@ -43,7 +44,7 @@
 
 .subTitle {
   margin-top: 10px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   color: #555;
 }

@@ -12,12 +12,78 @@ interface PreOpGuidelinestProps {
 const PreOpGuidelinest: React.FC<PreOpGuidelinestProps> = ({
   backgroundColor = '#f0f4f8',
 }) => {
-  const galleryImages = [
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
+  // Окремі масиви зображень для кожної галереї
+  const prepGallery1Images = [
+    '/images/prep/prep1.jpg',
+    '/images/prep/prep2.jpg',
+    '/images/prep/prep3.jpg',
+    '/images/prep/prep4.jpg',
   ];
+
+  const consultationGalleryImages = [
+    '/images/consultation/consult1.jpg',
+    '/images/consultation/consult2.jpg',
+    '/images/consultation/consult3.jpg',
+    '/images/consultation/consult4.jpg',
+  ];
+
+  const questionsGalleryImages = [
+    '/images/questions/question1.jpg',
+    '/images/questions/question2.jpg',
+    '/images/questions/question3.jpg',
+    '/images/questions/question4.jpg',
+  ];
+
+  const analysisGalleryImages = [
+    '/images/analysis/analysis1.jpg',
+    '/images/analysis/analysis2.jpg',
+    '/images/analysis/analysis3.jpg',
+    '/images/analysis/analysis4.jpg',
+  ];
+
+  const preparationGalleryImages = [
+    '/images/preparation/preparation1.jpg',
+    '/images/preparation/preparation2.jpg',
+    '/images/preparation/preparation3.jpg',
+    '/images/preparation/preparation4.jpg',
+  ];
+
+  const beforeSurgeryGalleryImages = [
+    '/images/before-surgery/before1.jpg',
+    '/images/before-surgery/before2.jpg',
+    '/images/before-surgery/before3.jpg',
+    '/images/before-surgery/before4.jpg',
+  ];
+
+  const surgeryDayGalleryImages = [
+    '/images/surgery-day/day1.jpg',
+    '/images/surgery-day/day2.jpg',
+    '/images/surgery-day/day3.jpg',
+    '/images/surgery-day/day4.jpg',
+  ];
+
+  const thingsToTakeGalleryImages = [
+    '/images/things-to-take/things1.jpg',
+    '/images/things-to-take/things2.jpg',
+    '/images/things-to-take/things3.jpg',
+    '/images/things-to-take/things4.jpg',
+  ];
+
+  const finalGalleryImages = [
+    '/images/final/final1.jpg',
+    '/images/final/final2.jpg',
+    '/images/final/final3.jpg',
+    '/images/final/final4.jpg',
+  ];
+
+  // Якщо зображення ще не доступні, можна використовувати плейсхолдери
+  const getPlaceholders = (count = 4) => {
+    return Array(count)
+      .fill(0)
+      .map(
+        (_, i) => `/placeholder.svg?height=300&width=300&text=Image${i + 1}`
+      );
+  };
 
   return (
     <div className={styles.preOpGuidelinest} style={{ backgroundColor }}>
@@ -43,7 +109,14 @@ const PreOpGuidelinest: React.FC<PreOpGuidelinestProps> = ({
             </p>
           </div>
           <div className={styles.galleryContent}>
-            <PrimmaGallery images={galleryImages} galleryId="prep-gallery-1" />
+            <PrimmaGallery
+              images={
+                prepGallery1Images.length
+                  ? prepGallery1Images
+                  : getPlaceholders()
+              }
+              galleryId="prep-gallery-1"
+            />
           </div>
         </div>
 
@@ -104,7 +177,11 @@ const PreOpGuidelinest: React.FC<PreOpGuidelinestProps> = ({
           </div>
           <div className={styles.galleryContent}>
             <PrimmaGallery
-              images={galleryImages}
+              images={
+                consultationGalleryImages.length
+                  ? consultationGalleryImages
+                  : getPlaceholders()
+              }
               galleryId="consultation-gallery"
             />
           </div>
@@ -175,7 +252,11 @@ const PreOpGuidelinest: React.FC<PreOpGuidelinestProps> = ({
           </div>
           <div className={styles.galleryContent}>
             <PrimmaGallery
-              images={galleryImages}
+              images={
+                questionsGalleryImages.length
+                  ? questionsGalleryImages
+                  : getPlaceholders()
+              }
               galleryId="questions-gallery"
             />
           </div>
@@ -206,7 +287,11 @@ const PreOpGuidelinest: React.FC<PreOpGuidelinestProps> = ({
           </div>
           <div className={styles.galleryContent}>
             <PrimmaGallery
-              images={galleryImages}
+              images={
+                analysisGalleryImages.length
+                  ? analysisGalleryImages
+                  : getPlaceholders()
+              }
               galleryId="analysis-gallery"
             />
           </div>
@@ -269,7 +354,11 @@ const PreOpGuidelinest: React.FC<PreOpGuidelinestProps> = ({
           </div>
           <div className={styles.galleryContent}>
             <PrimmaGallery
-              images={galleryImages}
+              images={
+                preparationGalleryImages.length
+                  ? preparationGalleryImages
+                  : getPlaceholders()
+              }
               galleryId="preparation-gallery"
             />
           </div>
@@ -310,7 +399,11 @@ const PreOpGuidelinest: React.FC<PreOpGuidelinestProps> = ({
           </div>
           <div className={styles.galleryContent}>
             <PrimmaGallery
-              images={galleryImages}
+              images={
+                beforeSurgeryGalleryImages.length
+                  ? beforeSurgeryGalleryImages
+                  : getPlaceholders()
+              }
               galleryId="before-surgery-gallery"
             />
           </div>
@@ -340,7 +433,11 @@ const PreOpGuidelinest: React.FC<PreOpGuidelinestProps> = ({
           </div>
           <div className={styles.galleryContent}>
             <PrimmaGallery
-              images={galleryImages}
+              images={
+                surgeryDayGalleryImages.length
+                  ? surgeryDayGalleryImages
+                  : getPlaceholders()
+              }
               galleryId="surgery-day-gallery"
             />
           </div>
@@ -378,7 +475,11 @@ const PreOpGuidelinest: React.FC<PreOpGuidelinestProps> = ({
           </div>
           <div className={styles.galleryContent}>
             <PrimmaGallery
-              images={galleryImages}
+              images={
+                thingsToTakeGalleryImages.length
+                  ? thingsToTakeGalleryImages
+                  : getPlaceholders()
+              }
               galleryId="things-to-take-gallery"
             />
           </div>
@@ -405,7 +506,14 @@ const PreOpGuidelinest: React.FC<PreOpGuidelinestProps> = ({
             </p>
           </div>
           <div className={styles.galleryContent}>
-            <PrimmaGallery images={galleryImages} galleryId="final-gallery" />
+            <PrimmaGallery
+              images={
+                finalGalleryImages.length
+                  ? finalGalleryImages
+                  : getPlaceholders()
+              }
+              galleryId="final-gallery"
+            />
           </div>
         </div>
       </div>

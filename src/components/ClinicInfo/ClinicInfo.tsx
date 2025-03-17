@@ -11,10 +11,16 @@ const galleryImages = [
   '/images/clinic/clinic_info4.jpg',
 ];
 
-const ClinicInfo: React.FC = () => {
+interface ClinicInfoProps {
+  backgroundColor?: string;
+}
+
+const ClinicInfo: React.FC<ClinicInfoProps> = ({
+  backgroundColor = '#d3e29d',
+}) => {
   return (
     <div className={styles.backgroundWrapper}>
-      <div className={styles.background}>
+      <div className={styles.background} style={{ backgroundColor }}>
         <div className={styles.container}>
           <h2 className={styles.mainTitle}>Інформація про нашу клініку</h2>
           <div className={styles.content}>

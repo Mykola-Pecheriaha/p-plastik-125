@@ -32,21 +32,22 @@
 /* Секція з текстом */
 .bigText {
   flex: 2; /* Займає 2/3 ширини */
-  padding: 20px;
+  padding: 30px;
   text-align: left; /* Текст вирівнюється по лівому краю */
   font-family: var(--font-geist-sans), sans-serif; /* Застосування основного шрифту */
 }
 
 .mainTitle {
   color: #f1f6f7ff;
-  margin-bottom: 25px;
-  font-size: 3rem;
+  margin-bottom: 20px;
+
+  font-size: 4rem;
 }
 
 .subTitle {
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-  color: #f0f1a9ff;
+  font-size: 2rem;
+  margin-bottom: 80px;
+  color: rgb(128, 129, 32);
 }
 
 /* Секція зображення */
@@ -69,7 +70,7 @@
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
   transition: background-color 0.3s ease;
 }
 

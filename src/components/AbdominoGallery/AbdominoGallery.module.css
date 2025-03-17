@@ -1,0 +1,16 @@
+.abdominoGalleryWrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Специфічні налаштування для галереї абдомінопластики */
+.abdominoGalleryWrapper :global(.imageContainer) {
+  aspect-ratio: 4 / 3;
+}
+
+.abdominoGalleryWrapper :global(img) {
+  object-fit: cover;
+}

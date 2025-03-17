@@ -4,7 +4,7 @@ import OttoplasticAlbumPage from '../../../components/OttoplasticAlbumPage/Ottop
 const OttoAlbums: React.FC = () => {
   return (
     <div>
-      <OttoplasticAlbumPage />
+      <OttoplasticAlbumPage backgroundColor="#AAD7ECFF" />
     </div>
   );
 };

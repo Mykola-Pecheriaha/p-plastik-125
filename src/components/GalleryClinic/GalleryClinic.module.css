@@ -24,6 +24,7 @@
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 1000;
   display: flex;
+  flex-direction: column; /* Забезпечує вертикальне розташування елементів */
   justify-content: center;
   align-items: center;
 }
@@ -194,7 +195,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: #eec3c3;
   margin: 0 4px;
   cursor: pointer;
 }
@@ -215,12 +216,9 @@
 
 /* Стилі для повноекранного режиму */
 .fullscreen .mainClinicContent {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 90vw;
-  height: 90vh;
+  height: 80vh; /* Зменшуємо висоту, щоб залишити місце для панелі інструментів */
+  margin-bottom: 20px; /* Додаємо відступ знизу */
 }
 
 .fullscreen .imageClinicContainer {
@@ -237,4 +235,52 @@
   width: 100%;
   height: 100%;
   object-fit: contain !important;
+}
+
+/* Стилі для панелі інструментів у повноекранному режимі */
+.fullscreen .footerClinic {
+  position: relative; /* Змінюємо з absolute на relative */
+  bottom: 0;
+  width: 90vw; /* Ширина відповідає ширині контейнера зображення */
+  max-width: 800px; /* Обмежуємо максимальну ширину */
+  background-color: rgba(255, 255, 255, 0.8); /* Напівпрозорий фон */
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px; /* Додаємо відступ зверху */
+}
+
+/* Альтернативний варіант - панель інструментів вгорі справа */
+/* Розкоментуйте цей блок і закоментуйте попередній, якщо хочете розмістити панель вгорі справа */
+/*
+.fullscreen .footerClinic {
+  position: absolute;
+  top: 20px;
+  right: 80px;
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+} 
+
+.fullscreen .likeSection {
+  margin-right: 15px;
+}
+*/
+
+/* Адаптивні стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+  .imageClinicContainer {
+    width: 100%;
+    height: 400px;
+  }
+
+  .fullscreen .mainClinicContent {
+    width: 100vw;
+    height: 70vh;
+  }
+
+  .fullscreen .footerClinic {
+    width: 95vw;
+  }
 }

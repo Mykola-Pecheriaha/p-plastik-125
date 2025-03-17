@@ -11,12 +11,43 @@ interface BreastSurgeryRecoveryProps {
 const BreastSurgeryRecovery: React.FC<BreastSurgeryRecoveryProps> = ({
   backgroundColor = '#f0f4f8',
 }) => {
-  const galleryImages = [
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
+  // Окремі масиви зображень для кожної галереї
+  const compressionGalleryImages = [
+    '/images/breast-recovery/compression1.jpg',
+    '/images/breast-recovery/compression2.jpg',
+    '/images/breast-recovery/compression3.jpg',
+    '/images/breast-recovery/compression4.jpg',
   ];
+
+  const showerGalleryImages = [
+    '/images/breast-recovery/shower1.jpg',
+    '/images/breast-recovery/shower2.jpg',
+    '/images/breast-recovery/shower3.jpg',
+    '/images/breast-recovery/shower4.jpg',
+  ];
+
+  const sportGalleryImages = [
+    '/images/breast-recovery/sport1.jpg',
+    '/images/breast-recovery/sport2.jpg',
+    '/images/breast-recovery/sport3.jpg',
+    '/images/breast-recovery/sport4.jpg',
+  ];
+
+  const beachGalleryImages = [
+    '/images/breast-recovery/beach1.jpg',
+    '/images/breast-recovery/beach2.jpg',
+    '/images/breast-recovery/beach3.jpg',
+    '/images/breast-recovery/beach4.jpg',
+  ];
+
+  // Функція для створення плейсхолдерів, якщо зображення ще не доступні
+  const getPlaceholders = (count = 4) => {
+    return Array(count)
+      .fill(0)
+      .map(
+        (_, i) => `/placeholder.svg?height=300&width=300&text=Image${i + 1}`
+      );
+  };
 
   return (
     <div className={styles.breastSurgeryRecovery} style={{ backgroundColor }}>
@@ -47,7 +78,11 @@ const BreastSurgeryRecovery: React.FC<BreastSurgeryRecoveryProps> = ({
           </div>
           <div className={styles.galleryContent}>
             <PrimmaGallery
-              images={galleryImages}
+              images={
+                compressionGalleryImages.length
+                  ? compressionGalleryImages
+                  : getPlaceholders()
+              }
               galleryId="compression-gallery"
             />
           </div>
@@ -65,7 +100,14 @@ const BreastSurgeryRecovery: React.FC<BreastSurgeryRecoveryProps> = ({
             </p>
           </div>
           <div className={styles.galleryContent}>
-            <PrimmaGallery images={galleryImages} galleryId="shower-gallery" />
+            <PrimmaGallery
+              images={
+                showerGalleryImages.length
+                  ? showerGalleryImages
+                  : getPlaceholders()
+              }
+              galleryId="shower-gallery"
+            />
           </div>
         </div>
 
@@ -89,7 +131,14 @@ const BreastSurgeryRecovery: React.FC<BreastSurgeryRecoveryProps> = ({
             </p>
           </div>
           <div className={styles.galleryContent}>
-            <PrimmaGallery images={galleryImages} galleryId="sport-gallery" />
+            <PrimmaGallery
+              images={
+                sportGalleryImages.length
+                  ? sportGalleryImages
+                  : getPlaceholders()
+              }
+              galleryId="sport-gallery"
+            />
           </div>
         </div>
 
@@ -104,7 +153,14 @@ const BreastSurgeryRecovery: React.FC<BreastSurgeryRecoveryProps> = ({
             </p>
           </div>
           <div className={styles.galleryContent}>
-            <PrimmaGallery images={galleryImages} galleryId="beach-gallery" />
+            <PrimmaGallery
+              images={
+                beachGalleryImages.length
+                  ? beachGalleryImages
+                  : getPlaceholders()
+              }
+              galleryId="beach-gallery"
+            />
           </div>
         </div>
       </div>

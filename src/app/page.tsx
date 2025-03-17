@@ -19,7 +19,7 @@ const Home: React.FC = () => {
 
       <BigBlefaro />
 
-      <BigAbdomino />
+      <BigAbdomino backgroundColor="#EAD3F3FF" />
 
       <BigClinic />
 

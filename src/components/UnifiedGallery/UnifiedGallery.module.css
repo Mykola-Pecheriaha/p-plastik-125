@@ -1,30 +1,14 @@
 .unifiedGallery {
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
+  position: relative;
 }
 
 .gallery {
-  width: 100%;
-  position: relative;
-}
-
-.imageContainer {
-  position: relative;
-  width: 100%;
-  padding-top: 75%; /* Співвідношення сторін 4:3 */
+  width: 90%;
+  border-radius: 8px;
   overflow: hidden;
-}
-
-.imageWrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .fullscreen {
@@ -33,55 +17,68 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
   z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.fullscreen .imageContainer {
-  width: 90vw;
-  height: 90vh;
-  padding-top: 0;
 }
 
 .closeButton {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: none;
+  background: rgba(255, 255, 255, 0.2);
   border: none;
-  font-size: 24px;
-  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  color: white;
   z-index: 10;
 }
 
 .mainContent {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.imageContainer {
+  position: relative;
   width: 100%;
+  /* Базовий розмір, який буде перевизначено через інлайн-стилі */
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .navButton {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
+  background: rgba(255, 255, 255, 0.7);
   border: none;
+  border-radius: 50%;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .navButton:first-child {
@@ -92,13 +89,22 @@
   right: 10px;
 }
 
+.fullscreen .navButton {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
 .footer {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  background-color: #f0f0f0;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #f8f9fa;
+}
+
+.fullscreen .footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 .controlsLeft,
@@ -113,13 +119,12 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  color: #333;
   margin-right: 15px;
+  color: #555;
 }
 
-.controlButton svg {
-  width: 20px;
-  height: 20px;
+.fullscreen .controlButton {
+  color: white;
 }
 
 .controlButton span {
@@ -127,8 +132,8 @@
 }
 
 .liked {
-  fill: #ff4081;
-  color: #ff4081;
+  color: #e74c3c;
+  fill: #e74c3c;
 }
 
 .dots {
@@ -141,23 +146,32 @@
   height: 8px;
   border-radius: 50%;
   background-color: #ccc;
-  margin: 0 4px;
+  margin: 0 3px;
   cursor: pointer;
 }
 
 .dot.active {
-  background-color: #333;
+  background-color: #555;
+}
+
+.fullscreen .dot {
+  background-color: #555;
+}
+
+.fullscreen .dot.active {
+  background-color: white;
 }
 
 .commentsSection {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-color: white;
   padding: 20px;
+  height: 100%;
   overflow-y: auto;
+}
+
+.fullscreen .commentsSection {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
 }
 
 .commentsSection h3 {
@@ -168,68 +182,60 @@
 .commentsSection ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin-bottom: 20px;
 }
 
 .commentsSection li {
-  margin-bottom: 10px;
   padding: 10px;
-  background-color: #f5f5f5;
-  border-radius: 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.fullscreen .commentsSection li {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
 }
 
 .commentsSection form {
   display: flex;
-  gap: 10px;
-  margin-top: 20px;
 }
 
 .commentsSection input {
   flex-grow: 1;
   padding: 8px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 4px 0 0 4px;
 }
 
 .commentsSection button {
-  padding: 8px 16px;
-  background-color: #0070f3;
+  padding: 8px 15px;
+  background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 0 4px 4px 0;
   cursor: pointer;
 }
 
 .commentsSection button:hover {
-  background-color: #0060df;
+  background-color: #0056b3;
 }
 
 @media (max-width: 768px) {
-  .unifiedGallery {
-    margin: 0;
-  }
-
   .navButton {
-    width: 32px;
-    height: 32px;
-    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
   }
 
-  .footer {
-    flex-wrap: wrap;
-  }
-
-  .controlsLeft,
-  .controlsRight {
-    width: 100%;
-    justify-content: space-between;
-    margin-bottom: 10px;
+  .controlButton {
+    margin-right: 10px;
   }
 
   .dots {
-    order: -1;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    margin: 0 2px;
   }
 }

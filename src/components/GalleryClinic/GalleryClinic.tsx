@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import type React from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/legacy/image';
 import styles from './GalleryClinic.module.css';
 
@@ -24,7 +25,7 @@ const GalleryClinic: React.FC<GalleryClinicProps> = ({ images }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const savedLikes = localStorage.getItem('clinicLikes');
-      setLikes(savedLikes ? parseInt(savedLikes, 10) : 0);
+      setLikes(savedLikes ? Number.parseInt(savedLikes, 10) : 0);
       const savedComments = localStorage.getItem('clinicComments');
       setComments(savedComments ? JSON.parse(savedComments) : []);
     }
@@ -98,7 +99,7 @@ const GalleryClinic: React.FC<GalleryClinicProps> = ({ images }) => {
             {!showComments ? (
               <div className={styles.imageClinicWrapper}>
                 <Image
-                  src={images[currentImageIndex]}
+                  src={images[currentImageIndex] || '/placeholder.svg'}
                   alt={`Gallery Image ${currentImageIndex + 1}`}
                   layout="fill"
                   objectFit="cover"
@@ -143,9 +144,7 @@ const GalleryClinic: React.FC<GalleryClinicProps> = ({ images }) => {
               {images.map((_, index) => (
                 <span
                   key={index}
-                  className={`${styles.dot} ${
-                    index === currentImageIndex ? styles.active : ''
-                  }`}
+                  className={`${styles.dot} ${index === currentImageIndex ? styles.active : ''}`}
                   onClick={() => setCurrentImageIndex(index)}
                 ></span>
               ))}

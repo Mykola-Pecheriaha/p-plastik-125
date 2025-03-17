@@ -2,7 +2,7 @@
 
 import type React from 'react';
 import { useState, useEffect } from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { Heart, MessageSquare, Plus, X } from 'lucide-react';
 import styles from './UnifiedGallery.module.css';
 
@@ -16,16 +16,27 @@ interface GalleryImage {
   alt: string;
 }
 
+// Перевіряємо інтерфейс пропсів
 interface UnifiedGalleryProps {
   images: GalleryImage[];
   albumId: string;
   initialLikes: number;
+  // Уточнюємо типи для пропсів розміру
+  aspectRatio?: string;
+  imageHeight?: number | string;
+  imageWidth?: number | string;
+  objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
 }
 
 const UnifiedGallery: React.FC<UnifiedGalleryProps> = ({
   images,
   albumId,
   initialLikes,
+  // Значення за замовчуванням для нових пропсів
+  aspectRatio = '16/9',
+  imageHeight,
+  imageWidth,
+  objectFit = 'cover',
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -89,6 +100,13 @@ const UnifiedGallery: React.FC<UnifiedGalleryProps> = ({
     return <div>Завантаження...</div>;
   }
 
+  // Створюємо стилі для контейнера зображення
+  const imageContainerStyle = {
+    aspectRatio: isFullscreen ? 'auto' : aspectRatio,
+    height: isFullscreen ? '100%' : imageHeight,
+    width: isFullscreen ? '100%' : imageWidth,
+  };
+
   return (
     <div className={styles.unifiedGallery}>
       <div
@@ -103,14 +121,14 @@ const UnifiedGallery: React.FC<UnifiedGalleryProps> = ({
           <button onClick={handlePrev} className={styles.navButton}>
             {'<'}
           </button>
-          <div className={styles.imageContainer}>
+          <div className={styles.imageContainer} style={imageContainerStyle}>
             {!showComments ? (
               <div className={styles.imageWrapper}>
                 <Image
                   src={images[currentImageIndex].src || '/placeholder.svg'}
                   alt={images[currentImageIndex].alt}
                   layout="fill"
-                  objectFit="cover"
+                  objectFit={objectFit}
                   quality={75}
                   priority={true}
                 />

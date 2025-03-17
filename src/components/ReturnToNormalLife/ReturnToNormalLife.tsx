@@ -12,12 +12,29 @@ interface ReturnToNormalLifeProps {
 const ReturnToNormalLife: React.FC<ReturnToNormalLifeProps> = ({
   backgroundColor = '#f0f4f8',
 }) => {
-  const galleryImages = [
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
+  // Окремі масиви зображень для кожної галереї
+  const returnToLifeGalleryImages = [
+    '/images/return-to-life/return1.jpg',
+    '/images/return-to-life/return2.jpg',
+    '/images/return-to-life/return3.jpg',
+    '/images/return-to-life/return4.jpg',
   ];
+
+  const symptomsGalleryImages = [
+    '/images/return-to-life/symptoms1.jpg',
+    '/images/return-to-life/symptoms2.jpg',
+    '/images/return-to-life/symptoms3.jpg',
+    '/images/return-to-life/symptoms4.jpg',
+  ];
+
+  // Функція для створення плейсхолдерів, якщо зображення ще не доступні
+  const getPlaceholders = (count = 4) => {
+    return Array(count)
+      .fill(0)
+      .map(
+        (_, i) => `/placeholder.svg?height=300&width=300&text=Image${i + 1}`
+      );
+  };
 
   const symptoms = [
     'надмірний біль або неприємні відчуття',
@@ -62,7 +79,11 @@ const ReturnToNormalLife: React.FC<ReturnToNormalLifeProps> = ({
           </div>
           <div className={styles.galleryContent}>
             <PrimmaGallery
-              images={galleryImages}
+              images={
+                returnToLifeGalleryImages.length
+                  ? returnToLifeGalleryImages
+                  : getPlaceholders()
+              }
               galleryId="return-to-life-gallery"
             />
           </div>
@@ -93,7 +114,11 @@ const ReturnToNormalLife: React.FC<ReturnToNormalLifeProps> = ({
           </div>
           <div className={styles.galleryContent}>
             <PrimmaGallery
-              images={galleryImages}
+              images={
+                symptomsGalleryImages.length
+                  ? symptomsGalleryImages
+                  : getPlaceholders()
+              }
               galleryId="symptoms-gallery"
             />
           </div>

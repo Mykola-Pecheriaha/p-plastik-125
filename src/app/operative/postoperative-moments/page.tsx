@@ -4,7 +4,7 @@ import PostOpRooms from '../../../components/PostOpRooms/PostOpRooms';
 const PostoperativeMoments: React.FC = () => {
   return (
     <div>
-      <PostOpRooms backgroundColor="#e5f0f8" />
+      <PostOpRooms backgroundColor="#4AD8C0FF" />
     </div>
   );
 };

@@ -1,9 +1,14 @@
-import React from 'react';
+import type React from 'react';
 import Link from 'next/link';
-
-import GalleryBlefaro from '../GalleryBlefaro/GalleryBlefaro';
+import BlefaroGallery from '../BlefaroGallery/BlefaroGallery-configurable';
 import styles from './BigBlefaro.module.css';
 import bigBlefaroImages from '../../data/bigBlefaro';
+
+// Transform the image strings into the required format
+const formattedImages = bigBlefaroImages.map((src, index) => ({
+  src,
+  alt: `Блефаропластика зображення ${index + 1}`,
+}));
 
 const BigBlefaro: React.FC = () => {
   return (
@@ -13,11 +18,16 @@ const BigBlefaro: React.FC = () => {
       </h2>
       <div className={styles.containerBigBlefaro}>
         <div className={styles.bigBlefaroImage}>
-          <GalleryBlefaro images={bigBlefaroImages} />
+          {/* Використовуємо спеціалізовану обгортку замість UnifiedGallery */}
+          <BlefaroGallery
+            images={formattedImages}
+            albumId="blefaro-main"
+            initialLikes={0}
+          />
         </div>
 
         <div className={styles.bigBlefaroText}>
-          <h4>Пластика грудей</h4>
+          <h4>Пластика повік</h4>
           <div className={styles.subTitle}>
             <ul>
               <li>
@@ -25,11 +35,11 @@ const BigBlefaro: React.FC = () => {
                 показаннями)
               </li>
               <li>Мінімальний термін реабілітації до 30 днів</li>
-              <li> Усунення «мішків» під очима </li>
+              <li>Усунення «мішків» під очима</li>
               <li>Корекція зморшок та вікових змін</li>
-              <li> Корекція жирових надлишків (псевдогриж) </li>
+              <li>Корекція жирових надлишків (псевдогриж)</li>
             </ul>
-            <Link href="/services/blefaro-plastic">
+            <Link href="/services/face-surgery/blefaro-plastic">
               <button className={styles.contactButton}>
                 Докладніше про послугу
               </button>

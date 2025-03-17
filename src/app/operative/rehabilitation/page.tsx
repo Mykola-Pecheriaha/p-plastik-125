@@ -9,12 +9,12 @@ import ReturnToNormalLife from '../../../components/ReturnToNormalLife/ReturnToN
 const RehabilitationPage: React.FC = () => {
   return (
     <div>
-      <SurgeryRehabilitation backgroundColor="#e5f0f8" />
-      <RehabilitationLimits backgroundColor="#e5f0f8" />
-      <BreastSurgeryRecovery backgroundColor="#e5f0f8" />
-      <AbdominoplastyRecovery backgroundColor="#e5f0f8" />
-      <FacialSurgeryRecovery backgroundColor="#e5f0f8" />
-      <ReturnToNormalLife backgroundColor="#e5f0f8" />
+      <SurgeryRehabilitation backgroundColor="#5CAEE9FF" />
+      <RehabilitationLimits backgroundColor="#3FE2D2FF" />
+      <BreastSurgeryRecovery backgroundColor="#DB9DEEFF" />
+      <AbdominoplastyRecovery backgroundColor="#EAF096FF" />
+      <FacialSurgeryRecovery backgroundColor="#C4F552FF" />
+      <ReturnToNormalLife backgroundColor="#64C4F0FF" />
     </div>
   );
 };

@@ -10,7 +10,7 @@
 .bigBlefaroTitle {
   text-align: center;
   margin: 20px 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
@@ -21,7 +21,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 40px;
+  gap: 30px;
 }
 
 .bigBlefaroText {
@@ -31,6 +31,7 @@
   justify-content: flex-start;
   text-align: left;
   padding: 10px;
+  font-size: 2rem;
 }
 
 .bigBlefaroImage {
@@ -43,7 +44,7 @@
 
 .subTitle {
   margin-top: 10px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   color: #555;
 }
@@ -51,6 +52,7 @@
 .subTitle ul {
   padding-left: 20px;
   margin-bottom: 20px;
+  font-size: 1.3rem;
 }
 
 .contactButton {

@@ -1,12 +1,12 @@
-import React from 'react';
-import OttoplasticAlbumPage from '../../../components/OttoplasticAlbumPage/OttoplasticAlbumPage';
+import type React from 'react';
+import OttoPlastic from '../../../components/OttotPlastic/OttotPlastic';
 
-const OttoPlastic: React.FC = () => {
+const OttoAlbums: React.FC = () => {
   return (
     <div>
-      <OttoplasticAlbumPage />
+      <OttoPlastic />
     </div>
   );
 };
 
-export default OttoPlastic;
+export default OttoAlbums;

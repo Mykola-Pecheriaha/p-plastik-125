@@ -10,7 +10,7 @@
 .createBeautyTitle {
   text-align: center;
   margin: 20px 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
@@ -31,6 +31,7 @@
   justify-content: flex-start;
   text-align: left;
   padding: 10px;
+  font-size: 2rem;
 }
 
 .createBeautyImage {
@@ -51,6 +52,7 @@
 .subTitle ul {
   padding-left: 20px;
   margin-bottom: 20px;
+  font-size: 1.3rem;
 }
 
 .contactButton {

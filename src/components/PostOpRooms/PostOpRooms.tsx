@@ -10,14 +10,32 @@ interface PostOpRoomsProps {
 }
 
 const PostOpRooms: React.FC<PostOpRoomsProps> = ({
-  backgroundColor = '#f0f4f8',
+  backgroundColor = '#22DFE6FF',
 }) => {
-  const galleryImages = [
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
+  // Окремий масив зображень для галереї "welcome-gallery"
+  const welcomeGalleryImages = [
+    '/images/post-op/welcome1.jpg',
+    '/images/post-op/welcome2.jpg',
+    '/images/post-op/welcome3.jpg',
+    '/images/post-op/welcome4.jpg',
   ];
+
+  // Окремий масив зображень для галереї "features-gallery"
+  const featuresGalleryImages = [
+    '/images/post-op/features1.jpg',
+    '/images/post-op/features2.jpg',
+    '/images/post-op/features3.jpg',
+    '/images/post-op/features4.jpg',
+  ];
+
+  // Функція для створення плейсхолдерів, якщо зображення ще не доступні
+  const getPlaceholders = (count = 4) => {
+    return Array(count)
+      .fill(0)
+      .map(
+        (_, i) => `/placeholder.svg?height=300&width=300&text=Image${i + 1}`
+      );
+  };
 
   const roomFeatures = [
     'В клініці передбачені просторі одномісні та двомісні кімнати з усім необхідним: доступом до Wi-Fi, телевізором, ванною кімнатою.',
@@ -54,7 +72,14 @@ const PostOpRooms: React.FC<PostOpRoomsProps> = ({
             </p>
           </div>
           <div className={styles.galleryContent}>
-            <PrimmaGallery images={galleryImages} galleryId="welcome-gallery" />
+            <PrimmaGallery
+              images={
+                welcomeGalleryImages.length
+                  ? welcomeGalleryImages
+                  : getPlaceholders()
+              }
+              galleryId="welcome-gallery"
+            />
           </div>
         </div>
 
@@ -76,7 +101,11 @@ const PostOpRooms: React.FC<PostOpRoomsProps> = ({
           </div>
           <div className={styles.galleryContent}>
             <PrimmaGallery
-              images={galleryImages}
+              images={
+                featuresGalleryImages.length
+                  ? featuresGalleryImages
+                  : getPlaceholders()
+              }
               galleryId="features-gallery"
             />
           </div>

@@ -1,9 +1,15 @@
-import React from 'react';
+import type React from 'react';
 import Link from 'next/link';
 
-import GalleryBreast from '../GalleryBreast/GalleryBreast';
+import BreastGallery from '../BreastGallery/BreastGallery';
 import styles from './CreateBeauty.module.css';
 import createBeautyImages from '../../data/createBeauty';
+
+// Перетворюємо масив рядків у масив об'єктів з src та alt
+const formattedImages = createBeautyImages.map((src, index) => ({
+  src,
+  alt: `Пластика грудей зображення ${index + 1}`,
+}));
 
 const CreateBeauty: React.FC = () => {
   return (
@@ -16,7 +22,7 @@ const CreateBeauty: React.FC = () => {
           <h4>Пластика грудей</h4>
           <div className={styles.subTitle}>
             <ul>
-              <li>Підхід з пахви без шрамів за італійським протоколом</li>
+              <li>Різні методики по збільшуванні молочних залоз</li>
               <li>Корекція асиметрії</li>
               <li>
                 Підтяжка грудей з імплантами або без них (тільки власні тканини)
@@ -28,7 +34,7 @@ const CreateBeauty: React.FC = () => {
               </li>
               <li>Комплект білизни для реабілітації у подарунок</li>
             </ul>
-            <Link href="/services/breast-augmentation">
+            <Link href="/services/breast-surgery/breast-augmentation">
               <button className={styles.contactButton}>
                 Докладніше про послугу
               </button>
@@ -36,7 +42,12 @@ const CreateBeauty: React.FC = () => {
           </div>
         </div>
         <div className={styles.createBeautyImage}>
-          <GalleryBreast images={createBeautyImages} />
+          {/* Використовуємо спеціалізовану обгортку замість UnifiedGallery */}
+          <BreastGallery
+            images={formattedImages}
+            albumId="breast-beauty"
+            initialLikes={0}
+          />
         </div>
       </div>
     </div>

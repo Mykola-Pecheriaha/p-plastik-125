@@ -12,10 +12,10 @@ const AbdominoplastyPage: React.FC = () => {
   return (
     <div className={styles.abdominoplastyPage}>
       <Abdominoplastic backgroundColor="#d3e29d" />
-      <PlasticSurgeons />
+      <PlasticSurgeons backgroundColor="#D9F086FF" />
       <AbdominoplastyIndications backgroundColor="#d3e29d" />
       <AbdominoplastyContraindications backgroundColor="#acc864" />
-      <ClinicInfo />
+      <ClinicInfo backgroundColor="#88A5F3FF" />
       <AbdominoplastyPreparation backgroundColor="#acc864" />
       <AbdominoplastyQuestions backgroundColor="#d3e29d" />
     </div>

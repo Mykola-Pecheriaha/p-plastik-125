@@ -12,12 +12,30 @@ interface SurgeryRehabilitationProps {
 const SurgeryRehabilitation: React.FC<SurgeryRehabilitationProps> = ({
   backgroundColor = '#f0f4f8',
 }) => {
-  const galleryImages = [
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
+  // Окремий масив зображень для першої галереї
+  const rehabGallery1Images = [
+    '/images/rehabilitation/rehab1.jpg',
+    '/images/rehabilitation/rehab2.jpg',
+    '/images/rehabilitation/rehab3.jpg',
+    '/images/rehabilitation/rehab4.jpg',
   ];
+
+  // Окремий масив зображень для другої галереї
+  const rehabGallery2Images = [
+    '/images/rehabilitation/recommendations1.jpg',
+    '/images/rehabilitation/recommendations2.jpg',
+    '/images/rehabilitation/recommendations3.jpg',
+    '/images/rehabilitation/recommendations4.jpg',
+  ];
+
+  // Функція для створення плейсхолдерів, якщо зображення ще не доступні
+  const getPlaceholders = (count = 4) => {
+    return Array(count)
+      .fill(0)
+      .map(
+        (_, i) => `/placeholder.svg?height=300&width=300&text=Image${i + 1}`
+      );
+  };
 
   const recommendations = [
     'слідкуйте за гігієною',
@@ -52,7 +70,14 @@ const SurgeryRehabilitation: React.FC<SurgeryRehabilitationProps> = ({
             </p>
           </div>
           <div className={styles.galleryContent}>
-            <PrimmaGallery images={galleryImages} galleryId="rehab-gallery-1" />
+            <PrimmaGallery
+              images={
+                rehabGallery1Images.length
+                  ? rehabGallery1Images
+                  : getPlaceholders()
+              }
+              galleryId="rehab-gallery-1"
+            />
           </div>
         </div>
 
@@ -79,7 +104,14 @@ const SurgeryRehabilitation: React.FC<SurgeryRehabilitationProps> = ({
             </ul>
           </div>
           <div className={styles.galleryContent}>
-            <PrimmaGallery images={galleryImages} galleryId="rehab-gallery-2" />
+            <PrimmaGallery
+              images={
+                rehabGallery2Images.length
+                  ? rehabGallery2Images
+                  : getPlaceholders()
+              }
+              galleryId="rehab-gallery-2"
+            />
           </div>
         </div>
 

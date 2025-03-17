@@ -4,7 +4,7 @@ import PreOpGuidelinest from '../../../components/PreOpGuidelinest/PreOpGuidelin
 const PreparationSurgeryPage: React.FC = () => {
   return (
     <div>
-      <PreOpGuidelinest backgroundColor="#e5f0f8" />
+      <PreOpGuidelinest backgroundColor="#F8F18DFF" />
     </div>
   );
 };

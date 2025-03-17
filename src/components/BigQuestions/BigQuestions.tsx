@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import styles from './BigQuestions.module.css';
+import Link from 'next/link';
 
 type Section = 'indication' | 'rehabilitation' | 'roadClinic';
 
@@ -45,10 +46,10 @@ const BigQuestions: React.FC = () => {
               </div>
               <div className={styles.bigQuestionsImage}>
                 <Image
-                  src="/images/bodi/bodiContur.jpg"
+                  src="/images/AbdominoplastyPreparation/preparation4.jpg"
                   alt="Liver1"
-                  width={600}
-                  height={600}
+                  width={500}
+                  height={400}
                 />
               </div>
             </div>
@@ -121,10 +122,16 @@ const BigQuestions: React.FC = () => {
               </div>
               <div className={styles.bigQuestionsImage}>
                 <Image
-                  src="/images/bodi/bodiContur.jpg"
+                  src="/images/blepharoplasty/facelifting19.jpg"
                   alt="Liver1"
-                  width={600}
-                  height={600}
+                  width={400}
+                  height={400}
+                />
+                <Image
+                  src="/images/blepharoplasty/facelifting20.jpg"
+                  alt="Liver1"
+                  width={400}
+                  height={400}
                 />
               </div>
             </div>
@@ -144,11 +151,8 @@ const BigQuestions: React.FC = () => {
                 <p>
                   Для пацієнтів з інших міст та країн у клініці передбачено
                   сервісну послугу трансферу. Для того, аби ним скористатися,
-                  повідомте про це телефоном медичного куратора. Він допоможе
-                  вам з придбанням квитків та підбере готель недалеко від
-                  клініки. Після прибуття до Чернівців вас зустріне особистий
-                  водій, який допоможе дістатися до клініки та після операції
-                  доставить у місце вашого від’їзду.
+                  повідомте про це телефоном медичного куратора. Він підскаже
+                  вам доїхати до клініки.
                 </p>
                 <p>
                   Завдяки злагодженій роботі нашого персоналу вам можна не
@@ -159,11 +163,17 @@ const BigQuestions: React.FC = () => {
               </div>
               <div className={styles.bigQuestionsImage}>
                 <Image
-                  src="/images/bodi/bodiContur.jpg"
+                  src="/images/blepharoplasty/facelifting21.jpg"
                   alt="Liver1"
                   width={600}
-                  height={600}
+                  height={300}
                 />
+
+                <Link href="/about-doctor/contacts">
+                  <button className={styles.contactButton}>
+                    Зв`язатися з нами
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
