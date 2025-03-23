@@ -17,7 +17,7 @@ const BreastSurgeryPage: React.FC = () => {
       <BreastSurgeryPreparation backgroundColor="#e5f0f8" />
       <BreastIncisions backgroundColor="#EADEF8FF" />
       <BreastSurgeryIndications backgroundColor="#e5f0f8" />
-      <BreastSurgeryCotraindications backgroundColor="#e5f0f8" />
+      <BreastSurgeryCotraindications backgroundColor="#9ED7FFFF" />
       <BreastSurgerySteps
         backgroundColor="#C6F5E5FF"
         collapsedColor="#ffffff"

@@ -8,7 +8,6 @@ interface ModifiablePlasticSurgeonsProps {
 }
 
 const surgeonImages = [
-  '/images/gallerysurgeons/chirurg10.jpg',
   '/images/gallerysurgeons/chirurg50.JPG',
   '/images/gallerysurgeons/chirurg51.jpg',
   '/images/sertificats/Sertificat4.jpg',
@@ -56,7 +55,7 @@ const ModifiablePlasticSurgeons: React.FC<ModifiablePlasticSurgeonsProps> = ({
                 привабливі пружні дівочі груди, струнка талія, відкритий погляд,
                 маленька мочка вуха. Від цих деталей залежить самопочуття,
                 гарний настрій, а іноді й щаслива доля! Ми з командою втілюємо
-                бажання жінок та створюємо досконалу красу, зберігаючи
+                бажання пацієнтів та створюємо досконалу красу, зберігаючи
                 індивідуальність.
               </p>
               <Link href="/about-doctor">

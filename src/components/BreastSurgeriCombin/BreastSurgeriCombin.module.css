@@ -22,14 +22,14 @@
 
 .leftContent h1 {
   font-size: 3rem;
-  color: #333;
+  color: #dd5f15;
   margin-bottom: 1rem;
 }
 
 .leftContent h4 {
-  font-size: 1.5rem;
-  color: #666;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #8f0b0b;
+  margin-bottom: 1.6rem;
   font-weight: normal;
 }
 
@@ -42,13 +42,13 @@
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #444;
 }
 
 .leftContent li svg {
   margin-right: 0.75rem;
-  color: #0070f3;
+  color: #e73509;
   flex-shrink: 0;
 }
 
@@ -88,7 +88,7 @@
   margin-bottom: 1.5rem;
   line-height: 1.6;
   color: #444;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 .textContent p:last-child {

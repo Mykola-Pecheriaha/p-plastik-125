@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import PrimmaGallery from '../PrimmaGallery/PrimmaGallery';
+
 import styles from './BreastCombinIndications.module.css';
 import type React from 'react';
 
@@ -13,13 +13,6 @@ interface BreastCombinIndicationsProps {
 const BreastCombinIndications: React.FC<BreastCombinIndicationsProps> = ({
   backgroundColor = '#f0f4f8',
 }) => {
-  const galleryImages = [
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-  ];
-
   return (
     <div className={styles.breastCombinIndications} style={{ backgroundColor }}>
       <div className={styles.container}>
@@ -34,7 +27,7 @@ const BreastCombinIndications: React.FC<BreastCombinIndicationsProps> = ({
             відеоконсультація.
           </p>
           <p>
-            Під час індивідуальної зустрічі зі Миколою Печерягою ви обговорюєте
+            Під час індивідуальної зустрічі з пластичним хірургом ви обговорюєте
             побажання, які стосуються майбутнього результату та дивитесь фото до
             аналогічних випадків. Лікар підбирає методику, яка підходить саме
             вам, виходячи з побажань та індивідуальних особливостей. Пластична
@@ -46,14 +39,14 @@ const BreastCombinIndications: React.FC<BreastCombinIndicationsProps> = ({
 
         <div className={styles.imageSection}>
           <Image
-            src="/placeholder.svg?height=400&width=500"
+            src="/images/BreastCombinIndications/grudnye-implanty-vidy-1.jpg"
             alt="Breast surgery consultation 1"
             width={500}
             height={400}
             className={styles.consultImage}
           />
           <Image
-            src="/placeholder.svg?height=400&width=500"
+            src="/images/BreastCombinIndications/augmentation2.jpg"
             alt="Breast surgery consultation 2"
             width={500}
             height={400}
@@ -90,37 +83,6 @@ const BreastCombinIndications: React.FC<BreastCombinIndicationsProps> = ({
             </Link>
             .
           </p>
-        </div>
-
-        <h2 className={styles.modelingTitle}>3D моделювання результату</h2>
-
-        <div className={styles.modelingSection}>
-          <div className={styles.textContent}>
-            <p>
-              На консультації пацієнтка зможе побачити свої нові груди ще до
-              операції! Це можливо завдяки унікальній технології 3D-моделювання
-              тіла на апараті нового покоління VECTRA. Пластичний хірург робить
-              фотографію пацієнтки з різних ракурсів.
-            </p>
-            <p>
-              Пластичний хірург робить фотографію пацієнта з різних ракурсів.
-              Фото обробляються в системі тривимірного моделювання та виводяться
-              на екран компютера у різноманітних проекціях. Разом із фахівцем
-              створюються нові форми!
-            </p>
-            <p>
-              3D-візуалізація дозволяє наочно визначитися з формою та розміром
-              імплантату. Також можна спрогнозувати результат заміни
-              встановлених імплантатів на нові. 3D-моделювання дозволяє досягти
-              абсолютно природної та красивої форми грудей!
-            </p>
-          </div>
-          <div className={styles.galleryContent}>
-            <PrimmaGallery
-              images={galleryImages}
-              galleryId="breast-modeling-gallery"
-            />
-          </div>
         </div>
       </div>
     </div>

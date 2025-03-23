@@ -11,7 +11,7 @@ interface BreastSurgeryCotraindicationsProps {
 
 const BreastSurgeryCotraindications: React.FC<
   BreastSurgeryCotraindicationsProps
-> = ({ backgroundColor = '#f0f4f8' }) => {
+> = ({ backgroundColor = '#5FAAF5FF' }) => {
   const galleryImages = [
     '/placeholder.svg?height=300&width=300',
     '/placeholder.svg?height=300&width=300',

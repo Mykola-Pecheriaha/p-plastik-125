@@ -1,7 +1,9 @@
 'use client';
 
 import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
+import BreastZoomGallery, {
+  type ImageType,
+} from '../BreastZoomGallery/BreastZoomGallery';
 import styles from './BreastSurgeryIndications.module.css';
 import type React from 'react';
 
@@ -12,11 +14,28 @@ interface BreastSurgeryIndicationsProps {
 const BreastSurgeryIndications: React.FC<BreastSurgeryIndicationsProps> = ({
   backgroundColor = '#f0f4f8',
 }) => {
-  const images = [
-    '/placeholder.svg?height=300&width=400&text=Image1',
-    '/placeholder.svg?height=300&width=400&text=Image2',
-    '/placeholder.svg?height=300&width=400&text=Image3',
-    '/placeholder.svg?height=300&width=400&text=Image4',
+  // Зображення галереї з індивідуальними розмірами
+  const galleryImages: ImageType[] = [
+    {
+      src: '/images/BreastSurgery/breast_surgery_1.jpg',
+      width: 800,
+      height: 600,
+    },
+    {
+      src: '/images/BreastSurgery/breast_surgery_2.jpg',
+      width: 800,
+      height: 600,
+    },
+    {
+      src: '/images/BreastSurgery/breast_surgery_3.jpg',
+      width: 800,
+      height: 600,
+    },
+    {
+      src: '/images/BreastSurgery/breast_surgery_4.jpg',
+      width: 800,
+      height: 600,
+    },
   ];
 
   return (
@@ -93,17 +112,12 @@ const BreastSurgeryIndications: React.FC<BreastSurgeryIndicationsProps> = ({
           </div>
 
           <div className={styles.imageContent}>
-            {images.map((src, index) => (
-              <div key={index} className={styles.imageWrapper}>
-                <Image
-                  src={src || '/placeholder.svg'}
-                  alt={`Breast surgery indication ${index + 1}`}
-                  width={400}
-                  height={300}
-                  className={styles.image}
-                />
-              </div>
-            ))}
+            {/* Використовуємо нашу нову галерею з масштабуванням */}
+            <BreastZoomGallery
+              images={galleryImages}
+              galleryId="breast-surgery-indications-gallery"
+              initialZoom={1}
+            />
           </div>
         </div>
       </div>

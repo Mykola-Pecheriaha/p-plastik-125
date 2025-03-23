@@ -15,10 +15,14 @@
   align-items: flex-start;
 }
 
-.leftContent,
+.leftContent {
+  flex: 1;
+  width: 30%;
+}
+
 .rightContent {
   flex: 1;
-  width: 50%;
+  width: 70%;
 }
 
 .title {
@@ -36,7 +40,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #444;
   line-height: 1.6;
 }
@@ -54,7 +58,7 @@
 
   .leftContent,
   .rightContent {
-    width: 100%;
+    width: 50%;
   }
 
   .title {

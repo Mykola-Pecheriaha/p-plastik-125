@@ -18,6 +18,8 @@ const FlapCorrection: React.FC<FlapCorrectionProps> = ({
     'Бажана форма вух',
     'Корекція асиметрії',
     'Без гематом та рубців',
+    'Корекція дольки вух',
+    'Видалення новоутворень вух',
   ];
 
   const benefits = [

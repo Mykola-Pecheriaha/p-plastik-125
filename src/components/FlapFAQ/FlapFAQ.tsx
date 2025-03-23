@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
-import PrimmaGallery from '../PrimmaGallery/PrimmaGallery';
+import { ChevronDown, AlertCircle } from 'lucide-react';
+import FlapFAQGallery from '../FlapFAQGallery/FlapFAQGallery';
+import type { ImageType } from '../GalleryFlapOperation/GalleryFlapOperation';
 import styles from './FlapFAQ.module.css';
 import type React from 'react';
 
@@ -14,7 +15,7 @@ interface FAQItemType {
   id: string;
   question: string;
   answer: string;
-  images: string[];
+  images: ImageType[];
 }
 
 const FlapFAQ: React.FC<FlapFAQProps> = ({ backgroundColor = '#f0f4f8' }) => {
@@ -25,12 +26,12 @@ const FlapFAQ: React.FC<FlapFAQProps> = ({ backgroundColor = '#f0f4f8' }) => {
       id: 'problems',
       question: 'Які проблеми вирішує пластика вух?',
       answer: `Отопластика переважно естетичне втручання, яке усуває вроджені та набуті дефекти. Воно допомагає:
-• скоригувати клаповухість;
-. асиметрія — якщо вуха мають явну асиметрію, наприклад, значні відмінності форми, розміру чи розташування на голові, за допомогою отопластики це можна виправити;
-. особисте бажання — якщо пацієнт свідомо хоче покращити форму вух.
-. деформації після попередньої операції чи інфекційних захворювань;
-• змінити форму та відновити цілісність мочки;
-• посттравматичні зміни — пацієнти, які пережили травму або нещасний випадок, внаслідок якого постраждали вуха, також іноді потребують отопластики;
+скоригувати клаповухість;
+асиметрія — якщо вуха мають явну асиметрію, наприклад, значні відмінності форми, розміру чи розташування на голові, за допомогою отопластики це можна виправити;
+Особисте бажання — якщо пацієнт свідомо хоче покращити форму вух.
+деформації після попередньої операції чи інфекційних захворювань;
+Змінити форму та відновити цілісність мочки;
+Посттравматичні зміни — пацієнти, які пережили травму або нещасний випадок, внаслідок якого постраждали вуха, також іноді потребують отопластики;
 
 Реконструктивна пластика вуха полягає в корекції вушних дефектів, відновленні втрачених або пошкоджених ділянок вух та відтворення їх природного вигляду.
 
@@ -39,12 +40,31 @@ const FlapFAQ: React.FC<FlapFAQProps> = ({ backgroundColor = '#f0f4f8' }) => {
 Важливий нюанс: дитина повинна сама розуміти те, що відбувається, і бути націленою на зміну своєї зовнішності. Тоді процес пройде комфортно і не обернеться стресом для малюка.`,
 
       images: [
-        '/images/flapFAQ/ottoplastic34.jpg',
-        '/images/flapFAQ/ottoplastic35.jpg',
-
-        '/images/flapFAQ/ottoplastic37.jpg',
-        '/images/flapFAQ/ottoplastic38.jpg',
-        '/images/flapFAQ/ottoplastic39.jpg',
+        {
+          src: '/images/flapFAQ/ottoplastic34.jpg',
+          width: 350,
+          height: 500,
+        },
+        {
+          src: '/images/flapFAQ/ottoplastic35.jpg',
+          width: 450,
+          height: 620,
+        },
+        {
+          src: '/images/flapFAQ/ottoplastic37.jpg',
+          width: 400,
+          height: 600,
+        },
+        {
+          src: '/images/flapFAQ/ottoplastic38.jpg',
+          width: 400,
+          height: 580,
+        },
+        {
+          src: '/images/flapFAQ/ottoplastic39.jpg',
+          width: 380,
+          height: 580,
+        },
       ],
     },
     {
@@ -56,11 +76,31 @@ const FlapFAQ: React.FC<FlapFAQProps> = ({ backgroundColor = '#f0f4f8' }) => {
 
 Пластичний хірург формує правильну позицію хряща, січе його частину, і стабільно фіксує вушну раковину в цьому положенні, закріплюючи ділянку внутрішніми швами і спеціальним косметичним. Післяопераційний рубець розташований ззаду на вушній раковині. Він прихований від сторонніх очей, а з часом стає непомітним, приймаючи колір шкіри.`,
       images: [
-        '/images/flapFAQ/ottoplastic29.jpg',
-        '/images/flapFAQ/ottoplastic30.jpg',
-        '/images/flapFAQ/ottoplastic31.jpg',
-        '/images/flapFAQ/ottoplastic32.jpg',
-        '/images/flapFAQ/ottoplastic33.jpg',
+        {
+          src: '/images/flapFAQ/ottoplastic29.jpg',
+          width: 450,
+          height: 600,
+        },
+        {
+          src: '/images/flapFAQ/ottoplastic30.jpg',
+          width: 450,
+          height: 600,
+        },
+        {
+          src: '/images/flapFAQ/ottoplastic31.jpg',
+          width: 450,
+          height: 600,
+        },
+        {
+          src: '/images/flapFAQ/ottoplastic32.jpg',
+          width: 450,
+          height: 565,
+        },
+        {
+          src: '/images/flapFAQ/ottoplastic33.jpg',
+          width: 450,
+          height: 600,
+        },
       ],
     },
     {
@@ -70,16 +110,106 @@ const FlapFAQ: React.FC<FlapFAQProps> = ({ backgroundColor = '#f0f4f8' }) => {
       answer:
         "Завдяки застосуванню сучасних методик операція зменшення вух займає всього 30-40 хвилин залежно від індивідуальних особливостей людини. Період носіння пов'язки після отопластики залежить від рекомендацій хірурга. Зазвичай, пацієнтам рекомендується носити вушну пов'язку протягом перших 1-2 тижнів після операції. Пов'язка допомагає фіксувати вуха у правильному положенні та сприяє загоєнню. Підсумковий результат отопластики стає видимим після повного загоєння тканин, на що потрібно кілька тижнів. Однак покращення форми та положення вух помітно вже перші тижні після операції. Результат отопластики є стабільним та довгостроковим.",
       images: [
-        '/images/flapFAQ/ottoplastic40.jpg',
-        '/images/flapFAQ/ottoplastic42.jpg',
-        '/images/flapFAQ/ottoplastic41.jpg',
-        '/images/flapFAQ/ottoplastic43.jpg',
+        {
+          src: '/images/flapFAQ/ottoplastic40.jpg',
+          width: 350,
+          height: 350,
+        },
+        {
+          src: '/images/flapFAQ/ottoplastic42.jpg',
+          width: 400,
+          height: 380,
+        },
+        {
+          src: '/images/flapFAQ/ottoplastic41.jpg',
+          width: 420,
+          height: 300,
+        },
+        {
+          src: '/images/flapFAQ/ottoplastic43.jpg',
+          width: 480,
+          height: 80,
+        },
       ],
     },
   ];
 
   const toggleItem = (itemId: string) => {
     setOpenItemId(openItemId === itemId ? null : itemId);
+  };
+
+  // Функція для форматування тексту відповіді
+  const formatAnswer = (answer: string) => {
+    // Розділяємо текст на абзаци
+    const paragraphs = answer.split('\n\n');
+
+    return paragraphs.map((paragraph, pIndex) => {
+      // Перевіряємо, чи абзац містить список (рядки, що починаються з певних маркерів)
+      if (paragraph.includes(';\n')) {
+        // Це може бути список
+        const lines = paragraph.split('\n');
+        const title = lines[0].endsWith(':') ? lines[0] : null;
+
+        // Створюємо елементи списку
+        const listItems = lines
+          .filter((line) => line !== title && line.trim() !== '')
+          .map((line) => {
+            // Видаляємо крапку з кінця, якщо вона є
+            let cleanLine = line.trim();
+            if (cleanLine.endsWith(';')) {
+              cleanLine = cleanLine.slice(0, -1);
+            }
+
+            // Перевіряємо, чи є в рядку виділений термін
+            const parts = cleanLine.split(' — ');
+            if (parts.length > 1) {
+              return (
+                <li key={cleanLine}>
+                  <span className={styles.term}>{parts[0]}</span> —{' '}
+                  {parts.slice(1).join(' — ')}
+                </li>
+              );
+            }
+
+            return <li key={cleanLine}>{cleanLine}</li>;
+          });
+
+        return (
+          <div key={`p-${pIndex}`} className={styles.listSection}>
+            {title && <h3 className={styles.listTitle}>{title}</h3>}
+            <ul className={styles.bulletList}>{listItems}</ul>
+          </div>
+        );
+      }
+      // Перевіряємо, чи абзац починається з "Важливий нюанс:" або подібного
+      else if (
+        paragraph.startsWith('Важливий нюанс:') ||
+        paragraph.startsWith('Важливо:')
+      ) {
+        return (
+          <div key={`p-${pIndex}`} className={styles.importantNote}>
+            <AlertCircle className={styles.alertIcon} />
+            <p>{paragraph}</p>
+          </div>
+        );
+      }
+      // Перевіряємо, чи абзац виглядає як заголовок (короткий і закінчується двокрапкою)
+      else if (paragraph.length < 100 && paragraph.includes(':')) {
+        return (
+          <h3 key={`p-${pIndex}`} className={styles.sectionTitle}>
+            {paragraph}
+          </h3>
+        );
+      }
+      // Звичайний абзац
+      else {
+        return (
+          <p key={`p-${pIndex}`} className={styles.paragraph}>
+            {paragraph}
+          </p>
+        );
+      }
+    });
   };
 
   return (
@@ -107,14 +237,13 @@ const FlapFAQ: React.FC<FlapFAQProps> = ({ backgroundColor = '#f0f4f8' }) => {
               {openItemId === item.id && (
                 <div className={styles.faqContent}>
                   <div className={styles.textContent}>
-                    {item.answer.split('\n\n').map((paragraph, index) => (
-                      <p key={index}>{paragraph}</p>
-                    ))}
+                    {formatAnswer(item.answer)}
                   </div>
                   <div className={styles.galleryContent}>
-                    <PrimmaGallery
+                    <FlapFAQGallery
                       images={item.images}
                       galleryId={`faq-gallery-${item.id}`}
+                      initialZoom={1}
                     />
                   </div>
                 </div>

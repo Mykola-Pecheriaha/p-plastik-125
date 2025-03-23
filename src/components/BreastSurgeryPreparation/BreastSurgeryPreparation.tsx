@@ -12,10 +12,10 @@ const BreastSurgeryPreparation: React.FC<BreastSurgeryPreparationProps> = ({
   backgroundColor = '#f0f4f8',
 }) => {
   const galleryImages = [
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
+    '/images/breast-prepfrftion/breast.jpg',
+    '/images/breast-prepfrftion/breast2.bmp',
+    '/images/breast-prepfrftion/breast3.bmp',
+    '/images/breast-prepfrftion/breast7.bmp',
   ];
 
   return (

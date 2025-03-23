@@ -56,18 +56,17 @@ const BreastIncisions: React.FC<BreastIncisionsProps> = ({
 
   // Галерея для першої секції - види хірургічного доступу
   const surgeryGalleryImages = [
-    '/placeholder.svg?height=300&width=300&text=Surgery1',
-    '/placeholder.svg?height=300&width=300&text=Surgery2',
-    '/placeholder.svg?height=300&width=300&text=Surgery3',
-    '/placeholder.svg?height=300&width=300&text=Surgery4',
+    '/images/breast-prepfrftion/breast21.bmp',
+    '/images/breast-prepfrftion/breast18.bmp',
+    '/images/breast-prepfrftion/breast20.bmp',
   ];
 
   // Галерея для другої секції - методики підтяжки
   const liftGalleryImages = [
-    '/placeholder.svg?height=300&width=300&text=Lift1',
-    '/placeholder.svg?height=300&width=300&text=Lift2',
-    '/placeholder.svg?height=300&width=300&text=Lift3',
-    '/placeholder.svg?height=300&width=300&text=Lift4',
+    '/images/breast-prepfrftion/breast25.bmp',
+    '/images/breast-prepfrftion/breast31.bmp',
+    '/images/breast-prepfrftion/breast30.bmp',
+    '/images/breast-prepfrftion/breast27.bmp',
   ];
 
   return (
@@ -103,14 +102,14 @@ const BreastIncisions: React.FC<BreastIncisionsProps> = ({
 
         <div className={styles.imageRow}>
           <Image
-            src="/placeholder.svg?height=400&width=600"
+            src="/images/breast-prepfrftion/breast11.jpg"
             alt="Breast surgery technique 1"
             width={600}
             height={400}
             className={styles.rowImage}
           />
           <Image
-            src="/placeholder.svg?height=400&width=600"
+            src="/images/breast-prepfrftion/breast13.bmp"
             alt="Breast surgery technique 2"
             width={600}
             height={400}
@@ -150,6 +149,23 @@ const BreastIncisions: React.FC<BreastIncisionsProps> = ({
           сосково-ареолярного комплексу. Операція виконується із застосуванням
           вертикального чи «якірного» розрізів.
         </p>
+        <div className={styles.imageRow}>
+          <Image
+            src="/images/breast-prepfrftion/breast33.bmp"
+            alt="Breast surgery technique 1"
+            width={600}
+            height={200}
+            className={styles.rowImage}
+          />
+
+          <Image
+            src="/images/breast-prepfrftion/breast34.bmp"
+            alt="Breast surgery technique 2"
+            width={400}
+            height={200}
+            className={styles.rowImage}
+          />
+        </div>
       </div>
     </div>
   );

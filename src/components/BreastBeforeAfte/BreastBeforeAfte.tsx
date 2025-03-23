@@ -1,7 +1,9 @@
 'use client';
 
 import { ChevronRight } from 'lucide-react';
-import PrimmaGallery from '../PrimmaGallery/PrimmaGallery';
+import BreastZoomGallery, {
+  type ImageType,
+} from '../BreastZoomGallery/BreastZoomGallery';
 import styles from './BreastBeforeAfte.module.css';
 import type React from 'react';
 
@@ -20,11 +22,33 @@ const BreastBeforeAfte: React.FC<BreastBeforeAfteProps> = ({
     'Комплект білизни для реабілітації у подарунок',
   ];
 
-  const galleryImages = [
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
-    '/placeholder.svg?height=300&width=300',
+  // Зображення галереї з індивідуальними розмірами
+  const galleryImages: ImageType[] = [
+    {
+      src: '/images/breastSizeProblem/implant6.jpg',
+      width: 700,
+      height: 400,
+    },
+    {
+      src: '/images/breastSizeProblem/sizeProblem1.jpg',
+      width: 680,
+      height: 500,
+    },
+    {
+      src: '/images/breastSizeProblem/sizeProblem2.jpg',
+      width: 900,
+      height: 500,
+    },
+    {
+      src: '/images/breastSizeProblem/sizeProblem3.jpg',
+      width: 800,
+      height: 426,
+    },
+    {
+      src: '/images/FlapIndications/flap1.bmp',
+      width: 300,
+      height: 345,
+    },
   ];
 
   return (
@@ -43,9 +67,11 @@ const BreastBeforeAfte: React.FC<BreastBeforeAfteProps> = ({
             </ul>
           </div>
           <div className={styles.rightContent}>
-            <PrimmaGallery
+            {/* Використовуємо нашу нову галерею з масштабуванням та індивідуальними розмірами зображень */}
+            <BreastZoomGallery
               images={galleryImages}
               galleryId="breast-before-after-gallery"
+              initialZoom={1}
             />
           </div>
         </div>
